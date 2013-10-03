@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:jdbc="http://www.metamatrix.com/metamodels/JDBC" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:f6a4df08-044b-4664-a32b-34aa03cef152" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="PHYSICAL" maxSetSize="16000" ProducerName="Teiid Designer" ProducerVersion="8.0.0.Final-v20121212-1505-H1987">
+    <modelImports xmi:uuid="mmuuid:2a6617f0-9142-4d59-9cad-399fa5181bf5" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:756f16a3-5914-497a-bcff-ea90cae1c4c5" name="SimpleDatatypes-instance" modelLocation="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+  </mmcore:ModelAnnotation>
+  <relational:BaseTable xmi:uuid="mmuuid:5fbfbed9-ed0b-4a54-997b-74be5cc985bc" name="AHFederacio" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;AHFederacio&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:a888ec83-bfdd-4f54-a3b6-9479c1b298aa" name="nomCategoriaMare" nameInSource="nomCategoriaMare" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:5d53d801-3eac-4ea7-ad96-9bf75c8e2914" name="nomCategoria" nameInSource="nomCategoria" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d49ace52-467b-4f11-bab6-9bbe79d329c7" name="id_AHFEderacio" nameInSource="id_AHFEderacio" nativeType="varchar" length="20" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0581121f-47a1-4131-8730-8bb4a43abc04" name="denominacio" nameInSource="denominacio" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:56f77a3b-163f-4346-b4f7-721965c06eab" name="ubicacio" nameInSource="ubicacio" nativeType="varchar" length="150" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f1fb35fa-d44f-4772-af02-e6291f6989b8" name="cp" nameInSource="cp" nativeType="varchar" length="10" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:66443146-6cdd-4aa4-b2b3-62163cd2a89f" name="telefon" nameInSource="telefon" nativeType="varchar" length="30" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:dd5ae518-46ef-4c9b-adcb-6603d9f17774" name="diaDescans" nameInSource="diaDescans" nativeType="varchar" length="30" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d3a4a1a5-ab53-4f30-b392-84e68db9679a" name="email" nameInSource="email" nativeType="varchar" length="150" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:cdf81a27-15ab-4d0d-94d0-aebe14317914" name="web" nameInSource="web" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:33fc3b5e-7252-4b53-9343-d14437640510" name="coorx" nameInSource="coorx" nativeType="varchar" length="40" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:371b33d5-65fd-4752-9647-b958a9f81d8a" name="coory" nameInSource="coory" nativeType="varchar" length="40" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:243a2085-4083-48ff-a157-06b71e8ff8f3" name="xetr89" nameInSource="xetr89" nativeType="varchar" length="40" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:73eea798-f28b-4f07-a547-b35cd4c8314f" name="yetr89" nameInSource="yetr89" nativeType="varchar" length="40" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:e8a9637d-31b1-4a18-bb96-252b176c42ee" name="lon" nameInSource="lon" nativeType="varchar" length="40" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:27700032-a964-4b88-b509-519a3387b3f5" name="lat" nameInSource="lat" nativeType="varchar" length="40" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:3330b0be-115c-4cc1-8469-54184a7fe9f7" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/fdc9dedc-900c-47f5-b06a-d553d4ab9649">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:fdc9dedc-900c-47f5-b06a-d553d4ab9649" name="PK__AHFedera__3213E83F6EAB62A3" nameInSource="PK__AHFedera__3213E83F6EAB62A3" columns="mmuuid/3330b0be-115c-4cc1-8469-54184a7fe9f7"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:0c523146-d55c-4873-ad8c-68877dcc5cb4" name="Centres_educacio" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;Centres_educacio&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:a2f548a1-188c-4ac7-abd0-016039fed7eb" name="nom" nameInSource="nom" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:649fb6d3-56ca-4f78-9be3-6116786eef10" name="altresadreca" nameInSource="altresadreca" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:cee12516-f78a-47ce-9e9c-f4b1e18f0ea5" name="horari" nameInSource="horari" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:5725accd-46a3-4fc8-993e-61e73cbc6f50" name="municipi" nameInSource="municipi" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2f26dbd9-ed6d-452f-93bd-a40fc1c32dd5" name="cp" nameInSource="cp" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:5cbc6759-2538-4a25-b358-498ec808688b" name="tel1" nameInSource="tel1" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:730f540c-8d59-4551-9716-b429821d1bd6" name="correu1" nameInSource="correu1" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:1eef118a-d7fb-43ae-8b0c-303e2691c57a" name="web1" nameInSource="web1" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:5cbbf4e7-9f9f-49d0-bbfd-1e02d3fcc52d" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/d9610037-cf9c-4f19-b4e8-375c22dd2d58">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:d9610037-cf9c-4f19-b4e8-375c22dd2d58" name="PK__Centres___3213E83F53F76C67" nameInSource="PK__Centres___3213E83F53F76C67" columns="mmuuid/5cbbf4e7-9f9f-49d0-bbfd-1e02d3fcc52d"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:1d50595b-e2dd-407f-8897-d691cd239ec9" name="EducacioInfantil0a3" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;EducacioInfantil0a3&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:9860638e-8710-4c32-bffe-f90db902d9bf" name="kml" nameInSource="kml" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:460ad823-9cf8-4731-9602-77c35768f49f" name="document" nameInSource="document" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:dae876d4-bf78-4dd4-ab5b-c4daec17d73a" name="folder" nameInSource="folder" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9b90f3e6-8778-46e5-8356-206d6c5027aa" name="style" nameInSource="style" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:26254582-0ae1-4282-8a36-5030cb0b5310" name="name" nameInSource="name" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:95e83ea2-dfb0-4bdf-92e1-b1d1a61a3bde" name="name1" nameInSource="name1" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c6c27c51-da36-4da1-afaf-ba60feda806b" name="color" nameInSource="color" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b88adcdb-9f4a-4421-b109-089e20fe50a6" name="placemarkName" nameInSource="placemarkName" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4d5e334f-eac1-400f-b041-0b2ad95689e1" name="scale" nameInSource="scale" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:7bca6f59-2075-48e0-bc96-1e595f70a4fe" name="styleUrl" nameInSource="styleUrl" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a566d7bc-a77c-40f7-b5ee-d158e2722a6c" name="altitudeMode" nameInSource="altitudeMode" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:59e99330-6410-4996-955d-3d80113f338f" name="coordinates" nameInSource="coordinates" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6ad4a91d-d128-4be5-a7a1-58e28baf397a" name="extrude" nameInSource="extrude" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:da1275d6-b65b-4afc-bbed-5faedb96a6ac" name="href" nameInSource="href" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:3fcbd72c-e855-4153-b3b4-3c44907845f2" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/1135f63c-f09e-403b-bf43-0f2e105e74ee">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:1135f63c-f09e-403b-bf43-0f2e105e74ee" name="PK__Educacio__3213E83F095F58DF" nameInSource="PK__Educacio__3213E83F095F58DF" columns="mmuuid/3fcbd72c-e855-4153-b3b4-3c44907845f2"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:d095b4bf-3331-447d-b7c9-1b53ea6b2192" name="EducacioInfantil3a6" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;EducacioInfantil3a6&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:969dc22d-6542-4235-b6b1-6f8f74951a60" name="kml" nameInSource="kml" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:78928df8-dbb5-4e22-8009-f89a03fce2a4" name="document" nameInSource="document" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:62eafc78-abbc-4e6e-af69-9aa32b849ea9" name="folder" nameInSource="folder" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0d50c692-cffb-44bf-a76a-88a63fb8f889" name="style" nameInSource="style" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8ad6a82f-69d2-4eba-8cce-8285c623326f" name="name" nameInSource="name" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6bbbccb3-8560-4ae5-9b5a-52073cbacb9d" name="name1" nameInSource="name1" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:cda3a619-ff76-41a2-962b-78c6dd3ebddd" name="color" nameInSource="color" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:84e51fb1-7091-4b79-a14b-5ebedd17ce6a" name="placemarkName" nameInSource="placemarkName" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b3cd3fc4-a1cc-47f1-90f7-9bdd166be88d" name="scale" nameInSource="scale" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b2d38ce6-b20d-4809-bb00-0ddab4f58ad5" name="styleUrl" nameInSource="styleUrl" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:94a3397d-5750-4fe8-ac11-32fb80022aa0" name="altitudeMode" nameInSource="altitudeMode" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:e6786952-a5c0-45bd-b24e-1eefe706ffba" name="coordinates" nameInSource="coordinates" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d01a4ff9-0a33-4fc8-bd93-7a434c031d13" name="extrude" nameInSource="extrude" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9afb00f4-afeb-4ce0-897c-c523d80f2389" name="href" nameInSource="href" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:48290003-b4f4-4ec0-904d-bb9be08512a9" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/24bcecaa-5dd7-4609-80f0-058bce34c520">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:24bcecaa-5dd7-4609-80f0-058bce34c520" name="PK__Educacio__3213E83F058EC7FB" nameInSource="PK__Educacio__3213E83F058EC7FB" columns="mmuuid/48290003-b4f4-4ec0-904d-bb9be08512a9"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:dd323f11-4e5c-47cc-9dc9-e5a202596340" name="EducacioPrimaria" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;EducacioPrimaria&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:46e7ec3f-29eb-4abd-9ed1-7aff32ed2654" name="kml" nameInSource="kml" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4507070b-4962-4617-8568-ef90505aa234" name="document" nameInSource="document" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f11eb864-4504-4cd3-9ee2-e072a363506a" name="folder" nameInSource="folder" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d4c9a11f-9d5d-41cc-bde9-98a89d2713e7" name="style" nameInSource="style" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:fbd51842-6a9b-4bb9-a232-ac37717d749b" name="name" nameInSource="name" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:7f6dd870-314c-445d-babd-ce3c940958f0" name="name1" nameInSource="name1" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:552cd7f6-c772-40f4-8f7f-6fdec3710638" name="color" nameInSource="color" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2322a584-0c86-4500-bb90-08eeae3d7729" name="placemarkName" nameInSource="placemarkName" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d37859e4-6379-4f33-9f0d-174499b7d97b" name="scale" nameInSource="scale" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8cc923bd-efa9-4ac0-b384-9990bdd9d5d2" name="styleUrl" nameInSource="styleUrl" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0e34f2f2-9c9a-455e-af30-29a605aecd42" name="altitudeMode" nameInSource="altitudeMode" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9676e70a-c5ab-4f12-aaed-6e1cc9097d62" name="coordinates" nameInSource="coordinates" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0064eeff-6a65-4e9e-bf78-03d82c10a35a" name="extrude" nameInSource="extrude" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6efc32cb-c0e1-4e61-94b2-112f7649c202" name="href" nameInSource="href" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:dcc7b4ca-fa55-4175-b874-fcb9efe13ddb" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/abbb5c08-7051-4735-ab57-db22f918ba68">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:abbb5c08-7051-4735-ab57-db22f918ba68" name="PK__Educacio__3213E83F7DEDA633" nameInSource="PK__Educacio__3213E83F7DEDA633" columns="mmuuid/dcc7b4ca-fa55-4175-b874-fcb9efe13ddb"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:6713b274-e768-4324-a987-edd3bc4d4529" name="EducacioSecundaria" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;EducacioSecundaria&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:1e109882-eae2-4945-99f5-486becfbfa4b" name="kml" nameInSource="kml" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8ca4a82a-b6ee-4151-b76b-165f8ce2307f" name="document" nameInSource="document" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a11e8518-9f7e-42f8-a972-17687420249c" name="folder" nameInSource="folder" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a673d970-a2e7-42dc-aa6b-ea55ba01531b" name="style" nameInSource="style" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b82d6921-efd1-4c77-99eb-769e5d1bca90" name="name" nameInSource="name" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:aa307d98-db38-4515-a820-ea1da6ecd8d0" name="name1" nameInSource="name1" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a5ba4ab4-2872-4b06-9470-dc491443fe65" name="color" nameInSource="color" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8870d696-e9b8-4d23-b0e5-d85a97126407" name="placemarkName" nameInSource="placemarkName" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:53e42a8b-b7e1-4b17-ac8b-b8f250b7ce13" name="scale" nameInSource="scale" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d782c23f-b19e-4e10-a427-2d1e1789d0b0" name="styleUrl" nameInSource="styleUrl" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:de195ce3-d218-4531-a659-4ac884581835" name="altitudeMode" nameInSource="altitudeMode" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:88df05ec-4822-4ded-a73b-ddb750eeff03" name="coordinates" nameInSource="coordinates" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:72e973fe-9170-4bb1-831f-3fd9532f9442" name="extrude" nameInSource="extrude" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:39de70fe-b441-445e-8447-eaf959ec6a53" name="href" nameInSource="href" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d862be8f-4255-478e-8172-a9e22e60a8d6" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/f6907469-89b2-4c23-bea7-1dd73cb51962">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:f6907469-89b2-4c23-bea7-1dd73cb51962" name="PK__Educacio__3213E83F01BE3717" nameInSource="PK__Educacio__3213E83F01BE3717" columns="mmuuid/d862be8f-4255-478e-8172-a9e22e60a8d6"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:34371775-5428-4cb6-bd12-f1f716ab365a" name="EHFederacio" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;EHFederacio&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:6e669c2f-fc31-41cc-b9ef-3660df999986" name="nomCategoriaMare" nameInSource="nomCategoriaMare" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:34b36f79-ce08-4ab6-9605-e3b54ada6b51" name="nomCategoria" nameInSource="nomCategoria" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:438f7d0c-469c-4db5-8aa6-2ff5efbc7dce" name="id_AHFEderacio" nameInSource="id_AHFEderacio" nativeType="varchar" length="20" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d3a700be-d202-4c0c-844c-8edbb6567fec" name="denominacio" nameInSource="denominacio" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:309e6f5b-d3e5-4e2d-a69e-6288bebbddd7" name="ubicacio" nameInSource="ubicacio" nativeType="varchar" length="150" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9a4d5c4c-794e-4e52-a4a5-a3a98dd78f58" name="cp" nameInSource="cp" nativeType="varchar" length="10" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:db88764b-ac37-43b6-b7e2-ef6f8948410f" name="telefon" nameInSource="telefon" nativeType="varchar" length="30" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b27e1eb0-5c65-4534-90b2-8611b1f72aa2" name="diaDescans" nameInSource="diaDescans" nativeType="varchar" length="30" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:dc6397f0-5ce7-4ca7-a9e0-0399d92ba126" name="email" nameInSource="email" nativeType="varchar" length="150" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:73da76a7-719a-4305-b0fe-fe4913671649" name="web" nameInSource="web" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:1761089e-5c97-4a1c-94cc-56ffccde46f5" name="coorx" nameInSource="coorx" nativeType="varchar" length="40" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:72ad5927-c4d8-4668-aee2-1fc73e71b6cb" name="coory" nameInSource="coory" nativeType="varchar" length="40" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0a8103f5-7272-4803-846b-66020d77a668" name="xetr89" nameInSource="xetr89" nativeType="varchar" length="40" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b1a55c38-0aed-4b89-b353-da69d91cf0a7" name="yetr89" nameInSource="yetr89" nativeType="varchar" length="40" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:35749861-5a15-45e7-8305-653eb554c231" name="lon" nameInSource="lon" nativeType="varchar" length="40" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9ff26ffe-47ba-4e96-bbec-d1e07b61680f" name="lat" nameInSource="lat" nativeType="varchar" length="40" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:64b4ec00-ab04-4768-b639-3dde89e05d99" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/56aca865-446e-4445-a2ac-b022ab2addda">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:56aca865-446e-4445-a2ac-b022ab2addda" name="PK__EHFedera__3213E83F727BF387" nameInSource="PK__EHFedera__3213E83F727BF387" columns="mmuuid/64b4ec00-ab04-4768-b639-3dde89e05d99"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:2b1a04af-2c79-48b7-a7fc-728fc4ce8631" name="Esports" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;Esports&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:d45e4fa6-df8f-45ca-a225-2c2f5ee82821" name="nom" nameInSource="nom" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b04a2c13-03f7-4a39-8b6f-94be65c602be" name="altresadreca" nameInSource="altresadreca" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:99214832-601e-4538-a9c1-fc1ac6b52c85" name="horari" nameInSource="horari" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f0c35791-a63d-4962-9ced-eca303cb27b4" name="municipi" nameInSource="municipi" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:1468edb9-02bf-4fd0-9c9b-5aded8f035fd" name="cp" nameInSource="cp" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ec28a118-3401-4205-9d76-341866354e35" name="tel1" nameInSource="tel1" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a0ce0fce-e529-4e13-b2f1-f0c2dcada5f3" name="correu1" nameInSource="correu1" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c41e580e-7932-4b6c-b8e4-3b420f20d766" name="web1" nameInSource="web1" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a8f42cbe-c6ae-4e9d-8e46-01370ce75e15" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/27face95-6492-4d76-9098-ee53817b3d04">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:27face95-6492-4d76-9098-ee53817b3d04" name="PK__Esports__3213E83F764C846B" nameInSource="PK__Esports__3213E83F764C846B" columns="mmuuid/a8f42cbe-c6ae-4e9d-8e46-01370ce75e15"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:74ad4f59-895d-44e0-8a34-bceac28fc8a3" name="Farmacies" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;Farmacies&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:8769a70e-a5be-4501-8e1b-259be9b35f6c" name="nom" nameInSource="nom" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f56c6337-1016-4690-b0e2-e731c8fad362" name="altresadreca" nameInSource="altresadreca" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b3d8696a-d5e9-43dd-953f-1b6930a5a8a2" name="horari" nameInSource="horari" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:028fd072-352c-4e51-9a8f-4e30f2a48da0" name="municipi" nameInSource="municipi" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:49171221-e636-4f35-a452-b0bbaa9df751" name="cp" nameInSource="cp" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:cd39cfeb-26c2-493e-97ee-1ee40f74ec39" name="tel1" nameInSource="tel1" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:780e48a2-993f-4ee3-9a4d-cb67d21db3e2" name="correu1" nameInSource="correu1" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:896579e4-7235-4f2a-9deb-7904d3279e79" name="web1" nameInSource="web1" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:fd7e71d9-9bf0-4464-8ed3-14882b9fce3c" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/17643b38-3b9d-481e-ab82-95adc14fc76d">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:17643b38-3b9d-481e-ab82-95adc14fc76d" name="PK__Farmacie__3213E83F5B988E2F" nameInSource="PK__Farmacie__3213E83F5B988E2F" columns="mmuuid/fd7e71d9-9bf0-4464-8ed3-14882b9fce3c"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:9b98e50e-8711-4ece-a252-ee9f35691d6b" name="LineaBus" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;LineaBus&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:14cb4f6b-b162-469a-8564-86c36487696b" name="kml" nameInSource="kml" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:3900a449-f9e2-46a4-894e-391aae4736ec" name="kml2" nameInSource="kml2" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ae07cbb0-1277-4451-9f9a-a815e33922df" name="kml3" nameInSource="kml3" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:1b487375-e8e8-4270-94be-545b130170e6" name="kml4" nameInSource="kml4" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:e3cce655-c116-4e47-b8b6-a7601d83eb34" name="descriptions" nameInSource="descriptions" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4509229d-1450-487b-884f-6fb31a7f0831" name="name" nameInSource="name" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:93d9edeb-f831-4423-a71d-b17973ecf2e3" name="styleUrl" nameInSource="styleUrl" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ba77d581-db53-46ce-8c84-8542429d7738" name="coordinates" nameInSource="coordinates" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6e338b78-2442-46cf-886f-81a189410947" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/8e9ad731-5fc2-4c29-b6ef-5e2de8d46f33">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:8e9ad731-5fc2-4c29-b6ef-5e2de8d46f33" name="PK__LineaBus__3213E83F0D2FE9C3" nameInSource="PK__LineaBus__3213E83F0D2FE9C3" columns="mmuuid/6e338b78-2442-46cf-886f-81a189410947"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:af512768-f8f2-4207-a201-7d297dc1ef68" name="MEComers" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;MEComers&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:05c5e74e-b37a-4a0e-894f-8ef0a3b19bbb" name="nom" nameInSource="nom" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f1a13cd0-13ba-4f85-afe4-457c11c88897" name="altresadreca" nameInSource="altresadreca" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:57e5e0f6-6427-463b-a13e-39e96f3762ae" name="horari" nameInSource="horari" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:10fcb81d-4a1a-4675-a080-69ba31ebf87c" name="municipi" nameInSource="municipi" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:fad82973-f3aa-42ee-8660-bd22dab2585f" name="cp" nameInSource="cp" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d7b2bf5e-eac3-49be-acfa-4067ab175229" name="tel1" nameInSource="tel1" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:50a0259b-925a-4934-885a-9c4d77218df7" name="correu1" nameInSource="correu1" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d334f242-522d-4521-86b9-5fdfa14503b7" name="web1" nameInSource="web1" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b1bb83a0-1684-4b75-8b00-ec0fa6070085" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/360da3f2-2647-4aa7-9639-26b777b1d042">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:360da3f2-2647-4aa7-9639-26b777b1d042" name="PK__MEComers__3213E83F6339AFF7" nameInSource="PK__MEComers__3213E83F6339AFF7" columns="mmuuid/b1bb83a0-1684-4b75-8b00-ec0fa6070085"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:056b67eb-b101-4424-aa8f-83e803d998e3" name="nomenclatura_callejero" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;nomenclatura_callejero&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:add0a51e-f2c3-405c-84ca-2e26aa1f112c" name="codi" nameInSource="codi" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:00d0b80f-d396-4987-b048-acbda2a73ce0" name="tipus" nameInSource="tipus" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f914449d-d264-42ce-b941-a50f99bdacef" name="nomcar" nameInSource="nomcar" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d7d3e1a0-b931-411e-8852-a7cdaf1ce1ff" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/5ad6bdc8-72ba-4be5-be5a-28bea00fcfd8">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:5ad6bdc8-72ba-4be5-be5a-28bea00fcfd8" name="PK__nomencla__3213E83F5026DB83" nameInSource="PK__nomencla__3213E83F5026DB83" columns="mmuuid/d7d3e1a0-b931-411e-8852-a7cdaf1ce1ff"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:13f27725-95fd-4728-bc12-f1d5f8c27a6c" name="OficinesTurisme" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;OficinesTurisme&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:440ead2e-3cc6-427d-a44a-16a7d7be6f3b" name="nom" nameInSource="nom" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:7d190666-8a7c-4a85-831a-e3ffe61aa4de" name="altresadreca" nameInSource="altresadreca" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:55bec4d7-0997-446a-8cc5-ec11da75eefa" name="horari" nameInSource="horari" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:fc25eb67-6bb1-4741-add6-d0c4ee821f03" name="municipi" nameInSource="municipi" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4b436025-003f-474c-bf3a-88216c87b9de" name="cp" nameInSource="cp" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:bee51c1c-f752-48c2-b801-15011e23eb1a" name="tel1" nameInSource="tel1" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d6b4e3da-f57b-4e1a-af16-4268ce565c52" name="correu1" nameInSource="correu1" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:fcf142a3-f9de-40ef-aaa1-da4a66306fe5" name="web1" nameInSource="web1" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4b9a450e-787a-43b8-b2d5-5a5804500b37" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/474ca0f9-a311-44c0-a25b-0660e85dff5d">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:474ca0f9-a311-44c0-a25b-0660e85dff5d" name="PK__Oficines__3213E83F5F691F13" nameInSource="PK__Oficines__3213E83F5F691F13" columns="mmuuid/4b9a450e-787a-43b8-b2d5-5a5804500b37"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:5662f738-97ac-4a6a-ad9f-cf8500a3d75c" name="openDAI" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;openDAI&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:bad8428c-b08a-457b-bb9e-fa029b218df2" name="id" nameInSource="id" nativeType="bigint" fixedLength="true" precision="19" nullable="NO_NULLS" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/e093e733-7ffd-424e-b247-59d589a6a8b3">
+      <type href="http://www.w3.org/2001/XMLSchema#long"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9548ed59-348b-406e-928a-a2181b244366" name="descripcio" nameInSource="descripcio" nativeType="nvarchar" length="250" fixedLength="true" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2329c1a4-2dd5-457d-a9e3-461915ecdd27" name="fitxer" nameInSource="fitxer" nativeType="varbinary" length="2147483647" updateable="false" caseSensitive="false" searchability="UNSEARCHABLE">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#object"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f06a38f0-6c0c-454b-b2b9-9083e78aaed2" name="format" nameInSource="format" nativeType="nvarchar" length="50" fixedLength="true" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:05b2dbb7-8eb9-4210-9497-58d57d46e774" name="data" nameInSource="data" nativeType="datetime" fixedLength="true" precision="23" scale="3" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#timestamp"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6d775942-5785-4b49-b030-6ae618ffd15c" name="nom" nameInSource="nom" nativeType="nvarchar" length="50" fixedLength="true" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:e093e733-7ffd-424e-b247-59d589a6a8b3" name="PK_openDAI" nameInSource="PK_openDAI" columns="mmuuid/bad8428c-b08a-457b-bb9e-fa029b218df2"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:851e03a3-ea47-465c-b8e6-d821b9f4dcbc" name="parades" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;parades&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:f44f6efc-7536-4c63-a892-3a0333390431" name="ObjectId" nameInSource="ObjectId" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:84566668-81a0-4173-a050-1a469bfdd11f" name="Parada" nameInSource="Parada" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:64368254-38fb-469b-b02c-a14cc5d5f7bc" name="X" nameInSource="X" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:138e0903-1679-445e-b6c0-ea4fa0fa5121" name="Y" nameInSource="Y" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:e09789d5-aca3-48a1-8541-92f70af5a8bf" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/3b0a72ef-ce48-4b33-a68d-355dc34c9fee">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:3b0a72ef-ce48-4b33-a68d-355dc34c9fee" name="PK__parades__3213E83F4C564A9F" nameInSource="PK__parades__3213E83F4C564A9F" columns="mmuuid/e09789d5-aca3-48a1-8541-92f70af5a8bf"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:d415bd1f-a378-4d84-83c4-bbfed2c607b2" name="RSSanitaris" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;RSSanitaris&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:f26f861a-e8fe-4ac2-9487-3febf05dd33d" name="nom" nameInSource="nom" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a4e33b3a-b060-45c4-a295-f28e694a2387" name="altresadreca" nameInSource="altresadreca" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:5ed7b76a-6e2f-4b88-9f6e-81360f663bd8" name="horari" nameInSource="horari" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:be0e0fe2-e4f1-4a97-be97-610c9fae7b89" name="municipi" nameInSource="municipi" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:287fd658-66d8-4565-8ba2-8c2ce23b40a4" name="cp" nameInSource="cp" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f499a689-0420-462d-aff5-1e3f3d009638" name="tel1" nameInSource="tel1" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0b617413-ed0a-4355-a839-7e5f7f9635c9" name="correu1" nameInSource="correu1" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:179477de-2a95-41ac-b45d-e406e91ee8f2" name="web1" nameInSource="web1" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:fb703f2f-b272-4633-9bd6-7d0cc0f710d2" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/1d342633-3739-4539-bba4-9ced559526a3">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:1d342633-3739-4539-bba4-9ced559526a3" name="PK__RSSanita__3213E83F57C7FD4B" nameInSource="PK__RSSanita__3213E83F57C7FD4B" columns="mmuuid/fb703f2f-b272-4633-9bd6-7d0cc0f710d2"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:fd1ed7c4-8714-4550-9b33-ec7ecf2eb9e2" name="ServeisMunicipals" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;ServeisMunicipals&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:8e416677-ecfb-4312-bb00-cac6f1b2c633" name="nom" nameInSource="nom" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:994c2b21-5dd1-40eb-9788-050eaa24e037" name="altresadreca" nameInSource="altresadreca" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:88e5c060-ba92-4605-8e02-0a474c0b9ad2" name="horari" nameInSource="horari" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b355202c-d0cf-4694-8abe-ddf82505855e" name="municipi" nameInSource="municipi" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:23403e8e-86e0-4638-b7b7-c88e091e80ed" name="cp" nameInSource="cp" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0222c1e9-1fa3-4d85-a8b4-9fbc96c03f95" name="tel1" nameInSource="tel1" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:fc13894d-892c-431f-b5e7-14f158b0e1c2" name="correu1" nameInSource="correu1" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:291216de-b44b-4278-8244-48e9748f1e9d" name="web1" nameInSource="web1" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:394d49e5-3579-454e-8a7f-d02cf7cef931" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/c68875fe-c931-4845-a571-9719093e176f">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:c68875fe-c931-4845-a571-9719093e176f" name="PK__ServeisM__3213E83F670A40DB" nameInSource="PK__ServeisM__3213E83F670A40DB" columns="mmuuid/394d49e5-3579-454e-8a7f-d02cf7cef931"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:6096fb02-3349-4a06-abdd-6a471b50f893" name="ServeisNoMunicipals" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;ServeisNoMunicipals&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:d9389d03-1ceb-4d58-a117-047fc3a4935e" name="nom" nameInSource="nom" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a9aa7ef1-0f6e-4da7-8828-c08ede7da5f9" name="altresadreca" nameInSource="altresadreca" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a285a8dd-e559-40c1-8d6c-7ef3e80a1955" name="horari" nameInSource="horari" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:7d6828dd-e40c-40ed-80c2-92479415d25e" name="municipi" nameInSource="municipi" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6b6f6f40-009c-44fe-ada2-0425a93741f5" name="cp" nameInSource="cp" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9476722d-0255-4090-8b78-a9e49c17eecd" name="tel1" nameInSource="tel1" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:945c4d44-0b54-45a8-b64e-1c9f16dd597f" name="correu1" nameInSource="correu1" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:11034375-4684-4b51-86ec-0c19ab460898" name="web1" nameInSource="web1" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:38d05baa-2975-4511-b2dd-4ee8728cccef" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/dcdeb2e7-ede1-4be3-9338-163ba2a4b90e">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:dcdeb2e7-ede1-4be3-9338-163ba2a4b90e" name="PK__ServeisN__3213E83F6ADAD1BF" nameInSource="PK__ServeisN__3213E83F6ADAD1BF" columns="mmuuid/38d05baa-2975-4511-b2dd-4ee8728cccef"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:9fc119e8-eb9f-40a0-99a5-32f0480b2aff" name="transports" nameInSource="&quot;opendai&quot;.&quot;openData&quot;.&quot;transports&quot;" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:72bbfa87-1619-4abe-ac8f-ae5d88f0b48c" name="nom" nameInSource="nom" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2b270870-031c-42a3-b67a-0017c2a62b39" name="altresadreca" nameInSource="altresadreca" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9e6f1c36-a5d4-49e4-a42c-dcc26ad09f92" name="horari" nameInSource="horari" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:58fcfe0b-c85f-4eb6-8eff-1a5e9bf3787d" name="municipi" nameInSource="municipi" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:7b8d24f0-31f8-4d2b-9f34-f0a202500665" name="cp" nameInSource="cp" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:adae0f01-16a0-4656-b171-bc04a3829561" name="tel1" nameInSource="tel1" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:e63b1c37-fd7a-4b52-973c-ccfbb1befaac" name="correu1" nameInSource="correu1" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:11515cb7-9a64-4590-82c8-76557c822fb1" name="web1" nameInSource="web1" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:80ff53fa-4c4b-4198-97fa-8c3a2ba6ffad" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/52454db0-d4a0-4032-8245-0d31213af86b">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:52454db0-d4a0-4032-8245-0d31213af86b" name="PK__transpor__3213E83F7A1D154F" nameInSource="PK__transpor__3213E83F7A1D154F" columns="mmuuid/80ff53fa-4c4b-4198-97fa-8c3a2ba6ffad"/>
+  </relational:BaseTable>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:b7d4c3e5-45d0-4907-97d3-74a750ff0dca">
+    <annotations xmi:uuid="mmuuid:a0f58469-4ee7-47ed-a014-09e8f4ae3260" annotatedObject="mmuuid/f6a4df08-044b-4664-a32b-34aa03cef152">
+      <tags xmi:uuid="mmuuid:34ab20d1-f8e5-4cc6-8282-719927afd374" key="connection:driver-class" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <tags xmi:uuid="mmuuid:d15f8a09-f9a1-4b09-9708-526be00f03f7" key="connectionProfile:connectionProfileName" value="SQL Server Lleida"/>
+      <tags xmi:uuid="mmuuid:769f9928-23a4-471c-a74f-2b6b3d6a0d3c" key="connection:jarList" value="C:\Program Files\Microsoft JDBC Driver 4.0 for SQL Server\sqljdbc_4.0\esn\sqljdbc4.jar"/>
+      <tags xmi:uuid="mmuuid:9d252853-6195-440f-8eb7-d55263cf7d81" key="connectionProfile:connectionProfileProviderId" value="org.eclipse.datatools.enablement.msft.sqlserver.connectionProfile"/>
+      <tags xmi:uuid="mmuuid:b68ca4f2-0211-4769-8008-fd235d6ea772" key="translator:name" value="sqlserver"/>
+      <tags xmi:uuid="mmuuid:b91f7729-3e84-4a97-a703-d376990f709b" key="connection:connection-url" value="jdbc:sqlserver://194.224.186.141:1433;databaseName=opendai"/>
+      <tags xmi:uuid="mmuuid:3b5b2310-c65c-4be7-941d-7a54159f6dc9" key="connectionProfile:connectionProfileInstanceID" value="2efc3c31-450d-11e2-b3ba-dc47a3f34c27"/>
+      <tags xmi:uuid="mmuuid:816f86c9-253f-4571-9e75-c320bf91b86a" key="connection:connectionProfileInstanceID" value="org.eclipse.datatools.enablement.msft.sqlserver.connectionProfile"/>
+      <tags xmi:uuid="mmuuid:69055cbf-4ff6-4470-87e3-507a86070965" key="connectionProfile:connectionProfileDescription" value=""/>
+      <tags xmi:uuid="mmuuid:92122c8d-261f-424d-ad60-42cafaea05c8" key="connection:user-name" value="opendai_external_user"/>
+      <tags xmi:uuid="mmuuid:b336e473-3939-443f-a21e-6b5c3a2e3cf7" key="connectionProfile:connectionProfileCategory" value="org.eclipse.datatools.connectivity.db.category"/>
+      <tags xmi:uuid="mmuuid:da1e2002-5f19-4a5d-8352-e567e85a6845" key="modelExtensionDefinition:relational" value="relational"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:1a3f45f2-515f-4385-8a25-6b1d8f95ba04" annotatedObject="mmuuid/da1e2002-5f19-4a5d-8352-e567e85a6845">
+      <tags xmi:uuid="mmuuid:719993ed-8463-4b85-a1ef-ca426a84f1d6" key="metamodel" value="http://www.metamatrix.com/metamodels/Relational"/>
+      <tags xmi:uuid="mmuuid:f5192b34-dcc6-4d7d-9cab-9a1bddb3f83f" key="namespacePrefix" value="relational"/>
+      <tags xmi:uuid="mmuuid:d3dbe7e0-98a0-46c6-afa9-fa3aa7308937" key="namespaceUri" value="http://www.teiid.org/ext/relational/2012"/>
+      <tags xmi:uuid="mmuuid:4daff609-23bc-4102-8077-e8e3b5efd983" key="version" value="2"/>
+      <tags xmi:uuid="mmuuid:d57e4078-0148-4d87-bcef-8fca398a48cb" key="description" value="Relational metamodel extension properties"/>
+      <tags xmi:uuid="mmuuid:decff59e-fb05-4ec5-a807-ab93608664b9" key="modelTypes" value=""/>
+      <tags xmi:uuid="mmuuid:f31b7224-4178-49e9-8378-0f4d828e0cf6" key="extendedMetaclass:org.teiid.designer.metamodels.relational.impl.ProcedureImpl" value="org.teiid.designer.metamodels.relational.impl.ProcedureImpl"/>
+      <tags xmi:uuid="mmuuid:0481809f-fe0f-4a27-ab2e-99d6a0876aae" key="extendedMetaclass:org.teiid.designer.metamodels.relational.impl.BaseTableImpl" value="org.teiid.designer.metamodels.relational.impl.BaseTableImpl"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:5768b2a7-55e9-464f-9654-03563d2f925b" annotatedObject="mmuuid/decff59e-fb05-4ec5-a807-ab93608664b9">
+      <tags xmi:uuid="mmuuid:a9de9518-1712-4a1f-b670-24594b2d07f2" key="VIRTUAL" value=""/>
+      <tags xmi:uuid="mmuuid:c44924da-24ea-4e03-a699-592026c2fd2b" key="PHYSICAL" value=""/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:e293c976-f6d2-4470-a237-97292b654e41" annotatedObject="mmuuid/f31b7224-4178-49e9-8378-0f4d828e0cf6">
+      <tags xmi:uuid="mmuuid:8f03e5c2-d1ad-49b2-bd88-9470a3816e2d" key="propertyDefinition:deterministic" value="deterministic"/>
+      <tags xmi:uuid="mmuuid:be069e89-d03c-402b-bb12-a3b71cf4d172" key="propertyDefinition:non-prepared" value="non-prepared"/>
+      <tags xmi:uuid="mmuuid:b4f359ec-d2e7-4131-a2ab-a397b998d271" key="propertyDefinition:aggregate" value="aggregate"/>
+      <tags xmi:uuid="mmuuid:a5f3e8e0-2bc8-4917-87b8-cce2c13d33a2" key="propertyDefinition:analytic" value="analytic"/>
+      <tags xmi:uuid="mmuuid:f50dea80-5e23-4396-9aaf-9d1f3e42d90b" key="propertyDefinition:allows-orderby" value="allows-orderby"/>
+      <tags xmi:uuid="mmuuid:a975c0da-b40b-4a2d-94e9-ec709fc9a5d9" key="propertyDefinition:uses-distinct-rows" value="uses-distinct-rows"/>
+      <tags xmi:uuid="mmuuid:2ebd2209-8c6c-49c2-b6df-9a459abd0c24" key="propertyDefinition:allows-distinct" value="allows-distinct"/>
+      <tags xmi:uuid="mmuuid:5ac13785-a47d-4c67-8caf-f908563541ff" key="propertyDefinition:decomposable" value="decomposable"/>
+      <tags xmi:uuid="mmuuid:aca2c843-ef82-45ff-b08b-d23c7cde21e5" key="propertyDefinition:varargs" value="varargs"/>
+      <tags xmi:uuid="mmuuid:e4ebef89-03e5-4ff9-b4e0-baf572f29da6" key="propertyDefinition:null-on-null" value="null-on-null"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:fd938495-08df-4670-9929-2d274835eb90" annotatedObject="mmuuid/8f03e5c2-d1ad-49b2-bd88-9470a3816e2d">
+      <tags xmi:uuid="mmuuid:9ad67470-9dff-44d0-9c70-861e9457207f" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:df8a580c-d6bf-49fe-abac-b5661ebcdd8d" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:a5394011-11dd-4db5-805e-79e92a0bd602" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:143ec86c-ddaf-4f32-8946-c4fc13422277" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:0dccdfb8-bab7-42c8-b68a-531153927c40" key="id" value="deterministic"/>
+      <tags xmi:uuid="mmuuid:d8e308e3-f7e4-46e4-a78e-49cf18693149" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:302c1c80-b58a-4c56-8155-245d457fcd2f" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:945cc1c6-a8dd-481d-8515-5a93dcd72856" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:831ab455-0d30-4426-9d2c-4cf39f75c07a" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:a7f67a24-a3f2-445e-b2d5-ce58c6e4eee4" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:00d9f9a1-9a27-4d35-a246-34decad1aaf1" annotatedObject="mmuuid/df8a580c-d6bf-49fe-abac-b5661ebcdd8d">
+      <tags xmi:uuid="mmuuid:e95bc9b8-b72b-4ad5-a13d-397e09165ce1" key="en" value="Deterministic"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:3f3a90ac-2d53-4912-9356-8c6272a069fe" annotatedObject="mmuuid/143ec86c-ddaf-4f32-8946-c4fc13422277">
+      <tags xmi:uuid="mmuuid:e06a0baf-5398-4d84-ba17-b5087f310850" key="en" value="Specifies that the source function will always return the same result for a specific input value"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:37962d4f-de90-4fcd-9c6f-046d1ca5520b" annotatedObject="mmuuid/be069e89-d03c-402b-bb12-a3b71cf4d172">
+      <tags xmi:uuid="mmuuid:1eaf9a45-f7d6-4b91-8362-a417afaccfc3" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:8163df8d-cb77-4476-950f-c32417042eaa" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:bb175fb8-1bd4-4004-883a-82fd0dcd493e" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:65e8135e-d4ff-469a-ba3e-b6661293c15f" key="id" value="non-prepared"/>
+      <tags xmi:uuid="mmuuid:bdb4b619-5334-45af-8d73-771f576d0f60" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:fae60e25-4228-4907-a1bb-6ac3a2aaa46a" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:6c0f55e1-fce8-4db4-b301-f9af7e54a2d4" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:1fbf5b26-7c78-4422-b04e-0a63506bb492" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:7ec891d1-194b-4c4a-95a5-71609ac99feb" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:a43fa49d-f628-45cf-bf4b-d6159b409c0b" annotatedObject="mmuuid/8163df8d-cb77-4476-950f-c32417042eaa">
+      <tags xmi:uuid="mmuuid:a296daf5-3286-4fa5-b939-8215ddbea8ec" key="en" value="Non-Prepared"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:cb7d84ce-343b-42f9-b131-c123434801cd" annotatedObject="mmuuid/b4f359ec-d2e7-4131-a2ab-a397b998d271">
+      <tags xmi:uuid="mmuuid:0649f270-6192-42be-b973-153bb73d6c12" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:89738c3e-d214-4bca-b7bd-54bba3b162af" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:660045bf-6d23-4e99-93f0-7c2fbef4f6bc" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:a8ad09b0-94a9-496e-994c-136ccb3b52e9" key="id" value="aggregate"/>
+      <tags xmi:uuid="mmuuid:e657362a-5f86-4d55-9f7e-08bacb9c2ad0" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:bc8b72bf-4b12-4579-b6d9-e6388c7fe0ac" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:1871b987-453c-43f7-b432-1ac786ae75a1" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:8ba2b8f4-3e08-4159-8bbc-48dcc3bc5709" key="required" value="true"/>
+      <tags xmi:uuid="mmuuid:f2f66680-4dcc-4a2b-b264-a11927ca72f9" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:23de09ff-43c0-4f69-887e-3d2feec48a5d" annotatedObject="mmuuid/89738c3e-d214-4bca-b7bd-54bba3b162af">
+      <tags xmi:uuid="mmuuid:b4c9c477-0bb3-47e4-846e-62f6721e9ff4" key="en" value="Aggregate"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:333d2903-ce99-441a-8830-8e30a7ff7e16" annotatedObject="mmuuid/a5f3e8e0-2bc8-4917-87b8-cce2c13d33a2">
+      <tags xmi:uuid="mmuuid:03a61c84-202b-4348-b720-25019305f009" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:74abf8f2-cb8d-4c26-ae94-10037825dac3" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:f224665a-dd7b-4589-b019-4953ceea875f" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:a775d7ac-d286-45d5-b312-da6a27135789" key="id" value="analytic"/>
+      <tags xmi:uuid="mmuuid:43422a0b-8278-41b9-9b8c-e8de23edd956" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:bbe8724f-762e-42a3-bac7-44faa17ab1bf" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:7cf67252-69f5-4547-bc01-2a9577fa7c97" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:70694270-96b0-402a-a280-e4cbe20cee38" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:3c12b6a2-dbca-4821-a556-4ffae87775d3" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:4cbd43eb-9b50-4feb-9c43-e2dbe7d8b90d" annotatedObject="mmuuid/74abf8f2-cb8d-4c26-ae94-10037825dac3">
+      <tags xmi:uuid="mmuuid:9beb1b0b-490a-4525-8d96-7d47984cc894" key="en" value="Analytic"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:41f9f0b6-7d49-4356-9efe-c4b14c9f5149" annotatedObject="mmuuid/f50dea80-5e23-4396-9aaf-9d1f3e42d90b">
+      <tags xmi:uuid="mmuuid:fd59cf3f-a952-485d-a502-f89707519c71" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:962ed9bd-18c9-4ee6-aed2-672ff32c4d70" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:5e77fe29-6326-43e8-bd4b-a17f904a6b1f" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:c5107d62-a4b4-4753-8e45-c35cfd15a4a4" key="id" value="allows-orderby"/>
+      <tags xmi:uuid="mmuuid:d75de178-9ca2-4393-aa9c-c63469a4bb2e" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:6e9b3510-05ea-4381-a6e3-6acfb8671bcd" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:341a0ce9-f762-4ef3-9c33-75b77e957c62" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:64700acc-cc7d-4a66-ba56-0f76d438e4e2" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:14522b1f-9bcd-45d1-9da2-71aef38703db" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:5e40ec65-1f47-4398-91e1-c18693285bfc" annotatedObject="mmuuid/962ed9bd-18c9-4ee6-aed2-672ff32c4d70">
+      <tags xmi:uuid="mmuuid:f8aa0f24-48ef-488f-8f3f-10be4f81fe0d" key="en" value="Allows Order-by"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:336f54f4-9366-4fa4-8d4b-391cd09b9ba5" annotatedObject="mmuuid/a975c0da-b40b-4a2d-94e9-ec709fc9a5d9">
+      <tags xmi:uuid="mmuuid:3ada966f-8bec-4f1c-a3fc-eb1f992e6dae" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:a5beb899-3da3-4a5d-92cd-00e345765539" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:a7f37e74-4da4-4615-94fa-318f1cfda796" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:1c6b050c-c4dc-4657-98eb-15d2efd6f430" key="id" value="uses-distinct-rows"/>
+      <tags xmi:uuid="mmuuid:ea38b066-d861-4c26-8c36-11b3ac09e738" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:0f8541b7-e261-43b9-9d79-f2931f28f812" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:abafb496-2fd7-4d7f-94e5-2f3f400bc5a0" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:0d274c89-7a34-4630-b5bb-44cf2495d55b" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:b4958ae1-d11f-4d55-8bde-b6fef28bc6de" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:76fa828b-5ab7-42b3-a326-292240b3c269" annotatedObject="mmuuid/a5beb899-3da3-4a5d-92cd-00e345765539">
+      <tags xmi:uuid="mmuuid:be091245-80c6-435a-bac1-b8ba2234ecb7" key="en" value="Uses Distinct Rows"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:8ca30fe6-8fb3-468b-9a4e-0b3a2288c970" annotatedObject="mmuuid/2ebd2209-8c6c-49c2-b6df-9a459abd0c24">
+      <tags xmi:uuid="mmuuid:95408cd1-6a84-4316-b545-527e873376a1" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:fa1836a8-e81a-4269-a26b-d47aac4da5d6" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:41cdf174-3ba4-485d-a478-12ab408d7482" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:30922821-d6bd-4b05-98ae-667793bf6f46" key="id" value="allows-distinct"/>
+      <tags xmi:uuid="mmuuid:94cc1c4e-bd20-455c-ac2b-455aa3dcb6dd" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:7d3f3a88-70a5-4369-a315-14d73639ae44" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:f2593f1c-9348-4c69-a047-7256c3a0200b" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:2a05b4a7-0dd2-4fe0-ae87-afbb11035ca5" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:6bb64e70-53f4-4c37-8a31-af7ffa343968" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:e2d5c49e-2d49-4776-b808-69a368315ac9" annotatedObject="mmuuid/fa1836a8-e81a-4269-a26b-d47aac4da5d6">
+      <tags xmi:uuid="mmuuid:06cf5554-256f-4244-bc23-5b946bf1ed83" key="en" value="Allows Distinct"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:20ebdfd6-99ae-4cc7-8908-7bd0ac159dca" annotatedObject="mmuuid/5ac13785-a47d-4c67-8caf-f908563541ff">
+      <tags xmi:uuid="mmuuid:acf97bcb-8169-4ca1-a252-76eb6a3ee6c3" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:8037cebf-2f4f-491d-b38c-c7aea37fba32" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:f934799f-f5c8-4200-863c-b6caed762638" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:cb7dbe09-7c8c-4920-baa2-a36022f31648" key="id" value="decomposable"/>
+      <tags xmi:uuid="mmuuid:c1afc071-ca4b-44f9-bae2-818fbafcd843" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:a40481fb-3f9f-45cb-87d4-ad7523e81866" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:cf5f69c9-f925-4c71-9a7b-7fb7fb5404ab" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:7408aa6d-9387-4d20-b546-ae2672ca2139" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:24b82836-173f-442e-9efd-4b9a3bdf1911" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:56bcce97-7f72-4433-bfb1-6933f446962a" annotatedObject="mmuuid/8037cebf-2f4f-491d-b38c-c7aea37fba32">
+      <tags xmi:uuid="mmuuid:c8fa9363-65fc-4a36-b8e5-2bc9e5ebbeef" key="en" value="Decomposable"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:0a4c5275-2f71-46c4-bebc-589366c937b4" annotatedObject="mmuuid/aca2c843-ef82-45ff-b08b-d23c7cde21e5">
+      <tags xmi:uuid="mmuuid:7c5d4a60-bb5c-4162-a50d-817ec2e308d6" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:c28a96d5-bac1-43b9-a934-7b95fa13c91c" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:8e61514e-658d-4226-9c19-bf146fca9e0d" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:69773a26-d4ea-4c43-8320-9457c30ae97b" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:228c58c2-71c7-4a9e-bff5-6a1b2d5c0a40" key="id" value="varargs"/>
+      <tags xmi:uuid="mmuuid:59f5b532-059b-4893-9ab8-b0ab8985013d" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:bace3279-08a9-4c6a-9840-264363637734" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:ce92d4d2-f3ec-4beb-8947-31623d0f001c" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:33a44a71-2aad-452d-a903-e68402213200" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:673d69d2-21d3-41d8-a330-873fec2667ee" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:d42f9d97-7015-4534-a37c-b2644035300a" annotatedObject="mmuuid/c28a96d5-bac1-43b9-a934-7b95fa13c91c">
+      <tags xmi:uuid="mmuuid:48e1a424-bb0a-4cdf-8d69-4326733a7b91" key="en_US" value="Variable Arguments"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:e5b86415-fb34-460e-8d01-6eb94e9af16d" annotatedObject="mmuuid/69773a26-d4ea-4c43-8320-9457c30ae97b">
+      <tags xmi:uuid="mmuuid:a174e985-2103-4e32-ab34-2128b1c4db43" key="en_US" value="Indicates that the last arg may be repeated a variable number of times."/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:fa1167fc-c053-49f3-abb9-36c46ff4d8ef" annotatedObject="mmuuid/e4ebef89-03e5-4ff9-b4e0-baf572f29da6">
+      <tags xmi:uuid="mmuuid:fef45346-fcfb-46f3-8e7e-96cfe69383d4" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:468917f9-3fb6-4e01-a6b5-efd488eaa883" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:fe2deea4-75e9-470b-baf4-8be83bb3f80d" key="defaultValue" value="false"/>
+      <tags xmi:uuid="mmuuid:f7070bf8-cdae-4ddf-bb2a-64acac550a0d" key="description" value=""/>
+      <tags xmi:uuid="mmuuid:b4f502ab-0c13-497b-99e6-636886808f37" key="id" value="null-on-null"/>
+      <tags xmi:uuid="mmuuid:3008032c-2df2-4e5c-942e-34791a1d1ade" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:12196a2c-7e57-456b-829e-343419ecd25f" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:72c23c77-f8b8-47e1-98aa-51e3974cd17f" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:89dcd63f-42ab-4482-8c7b-413e04a58c3e" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:37dce2e7-8556-4ba5-a49d-8fe38ec163c6" key="runtimeType" value="boolean"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:c348ffdf-e0b0-4bc3-9865-a2e9eb3cdbf3" annotatedObject="mmuuid/468917f9-3fb6-4e01-a6b5-efd488eaa883">
+      <tags xmi:uuid="mmuuid:e1e77267-9528-4925-849a-ce74dd8d05c6" key="en_US" value="Returns null on null"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:a0db9878-3827-473d-9883-037243da18a5" annotatedObject="mmuuid/f7070bf8-cdae-4ddf-bb2a-64acac550a0d">
+      <tags xmi:uuid="mmuuid:54fb1279-c712-497b-a79b-5141443b7417" key="en_US" value="indicates that the function will return null."/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:f47fed1c-f033-4edc-83d8-d2507201fe90" annotatedObject="mmuuid/0481809f-fe0f-4a27-ab2e-99d6a0876aae">
+      <tags xmi:uuid="mmuuid:ac2d00ff-2658-42da-b436-386c8ed3b306" key="propertyDefinition:native-query" value="native-query"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:9e919e51-2897-48fb-8357-fed91d439d99" annotatedObject="mmuuid/ac2d00ff-2658-42da-b436-386c8ed3b306">
+      <tags xmi:uuid="mmuuid:671cb0da-fb56-4e49-a7fd-e4bc6e3bf6a8" key="advanced" value="false"/>
+      <tags xmi:uuid="mmuuid:f8dfdab0-ea41-4b0c-9bb5-de183fe07b1b" key="displayName" value=""/>
+      <tags xmi:uuid="mmuuid:99aa31ea-bbe8-47e8-b3ea-f1fe491f8651" key="id" value="native-query"/>
+      <tags xmi:uuid="mmuuid:cd9cbe75-4f8d-4999-acb5-37856bbb6e76" key="index" value="true"/>
+      <tags xmi:uuid="mmuuid:a35ed2ce-269c-48f8-aad3-444d118a3259" key="modifiable" value="true"/>
+      <tags xmi:uuid="mmuuid:2ea6bbc2-eea5-4de0-ac96-836fc3863aec" key="masked" value="false"/>
+      <tags xmi:uuid="mmuuid:8c2da143-8c6a-4696-875d-77809510e20f" key="required" value="false"/>
+      <tags xmi:uuid="mmuuid:bf7de08c-a103-4a41-883e-e76bc5b72af6" key="runtimeType" value="string"/>
+    </annotations>
+    <annotations xmi:uuid="mmuuid:d4e12144-8050-4cc2-bcf8-ff09cc494626" annotatedObject="mmuuid/f8dfdab0-ea41-4b0c-9bb5-de183fe07b1b">
+      <tags xmi:uuid="mmuuid:1ccca262-a393-4a2b-9bd3-cd8d38387a9e" key="en" value="Native Query"/>
+    </annotations>
+  </mmcore:AnnotationContainer>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:433815e2-75d0-4fdb-8ed8-1b3220aa33d0">
+    <diagram xmi:uuid="mmuuid:3e82d290-eaaa-479f-9b5a-05da994118ab" type="packageDiagramType" target="mmuuid/f6a4df08-044b-4664-a32b-34aa03cef152">
+      <diagramEntity xmi:uuid="mmuuid:14438904-69f9-4e7f-8d2a-ed08d361905a" name="AHFederacio" modelObject="mmuuid/5fbfbed9-ed0b-4a54-997b-74be5cc985bc" xPosition="787" yPosition="287"/>
+      <diagramEntity xmi:uuid="mmuuid:2be00f4d-ac15-4823-9923-1920e8a12e2a" name="Centres_educacio" modelObject="mmuuid/0c523146-d55c-4873-ad8c-68877dcc5cb4" xPosition="787" yPosition="708"/>
+      <diagramEntity xmi:uuid="mmuuid:e925cc0e-9885-461e-80ec-b0b96158d0d3" name="EducacioInfantil0a3" modelObject="mmuuid/1d50595b-e2dd-407f-8897-d691cd239ec9" xPosition="269" yPosition="10"/>
+      <diagramEntity xmi:uuid="mmuuid:f06808ed-810e-4997-9e2c-68d397ec6f3e" name="EducacioInfantil3a6" modelObject="mmuuid/d095b4bf-3331-447d-b7c9-1b53ea6b2192" xPosition="269" yPosition="395"/>
+      <diagramEntity xmi:uuid="mmuuid:3b01a3e1-6ca9-4431-b886-8bd56eb3def9" name="EducacioPrimaria" modelObject="mmuuid/dd323f11-4e5c-47cc-9dc9-e5a202596340" xPosition="10" yPosition="600"/>
+      <diagramEntity xmi:uuid="mmuuid:03b6a33b-0a3d-4085-b1de-9b1de197beb0" name="EducacioSecundaria" modelObject="mmuuid/6713b274-e768-4324-a987-edd3bc4d4529" xPosition="10" yPosition="10"/>
+      <diagramEntity xmi:uuid="mmuuid:d150de68-0070-4d1b-930b-dec8ad05564d" name="EHFederacio" modelObject="mmuuid/34371775-5428-4cb6-bd12-f1f716ab365a" xPosition="1305" yPosition="474"/>
+      <diagramEntity xmi:uuid="mmuuid:9d1bba9b-5168-4087-b43e-4bb19d6d94eb" name="Esports" modelObject="mmuuid/2b1a04af-2c79-48b7-a7fc-728fc4ce8631" xPosition="269" yPosition="780"/>
+      <diagramEntity xmi:uuid="mmuuid:c4d859e4-a21a-4a49-9cc4-33f00a4072cd" name="Farmacies" modelObject="mmuuid/74ad4f59-895d-44e0-8a34-bceac28fc8a3" xPosition="1046" yPosition="787"/>
+      <diagramEntity xmi:uuid="mmuuid:6aeafbaa-5323-4649-99c7-0c6f4596a159" name="LineaBus" modelObject="mmuuid/9b98e50e-8711-4ece-a252-ee9f35691d6b" xPosition="528" yPosition="10"/>
+      <diagramEntity xmi:uuid="mmuuid:56ed1465-09db-4966-a8a1-912d0dc27c7c" name="MEComers" modelObject="mmuuid/af512768-f8f2-4207-a201-7d297dc1ef68" xPosition="528" yPosition="564"/>
+      <diagramEntity xmi:uuid="mmuuid:8de9a07a-eeac-460d-b94e-f60ee5a5a145" name="nomenclatura_callejero" modelObject="mmuuid/056b67eb-b101-4424-aa8f-83e803d998e3" xPosition="1305" yPosition="287"/>
+      <diagramEntity xmi:uuid="mmuuid:0db523da-8f8d-43fb-a2f3-d783c6e825bc" name="OficinesTurisme" modelObject="mmuuid/13f27725-95fd-4728-bc12-f1d5f8c27a6c" xPosition="1046" yPosition="510"/>
+      <diagramEntity xmi:uuid="mmuuid:1735f7ae-470a-4b65-a95b-51be3df267e4" name="openDAI" modelObject="mmuuid/5662f738-97ac-4a6a-ad9f-cf8500a3d75c" xPosition="1046" yPosition="287"/>
+      <diagramEntity xmi:uuid="mmuuid:4ac299d4-cb8c-4ada-9395-2d3e65a964c6" name="parades" modelObject="mmuuid/851e03a3-ea47-465c-b8e6-d821b9f4dcbc" xPosition="10" yPosition="395"/>
+      <diagramEntity xmi:uuid="mmuuid:8d6524c1-a7d0-41d7-a223-54ed57980f3f" name="RSSanitaris" modelObject="mmuuid/d415bd1f-a378-4d84-83c4-bbfed2c607b2" xPosition="1305" yPosition="10"/>
+      <diagramEntity xmi:uuid="mmuuid:effe63d4-e949-436d-8906-b33dee27acea" name="ServeisMunicipals" modelObject="mmuuid/fd1ed7c4-8714-4550-9b33-ec7ecf2eb9e2" xPosition="528" yPosition="287"/>
+      <diagramEntity xmi:uuid="mmuuid:82b9c367-1b14-41da-b4a7-52271503f880" name="ServeisNoMunicipals" modelObject="mmuuid/6096fb02-3349-4a06-abdd-6a471b50f893" xPosition="1046" yPosition="10"/>
+      <diagramEntity xmi:uuid="mmuuid:3978079c-6379-4075-9efa-848d8c1b3c9a" name="transports" modelObject="mmuuid/9fc119e8-eb9f-40a0-99a5-32f0480b2aff" xPosition="787" yPosition="10"/>
+      <diagramEntity xmi:uuid="mmuuid:d5d73b94-b539-4df9-9a46-d448b4a38a5e" modelObject="mmuuid/fd93e323-0cd6-4d3f-96d1-bb5e059a6ce1" xPosition="80" yPosition="50"/>
+    </diagram>
+  </diagram:DiagramContainer>
+  <jdbc:JdbcSource xmi:uuid="mmuuid:c37ca6c2-7630-4e35-a7f6-90ec21d2bbdb" name="SQL Server Lleida" driverName="Microsoft SQL Server 2008 JDBC Driver" driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver" username="opendai_external_user" url="jdbc:sqlserver://194.224.186.141:1433;databaseName=opendai">
+    <importSettings xmi:uuid="mmuuid:2b73fc2f-ec3c-4c77-9000-b5835867f2d8" createSchemasInModel="false" includeIndexes="false" includeApproximateIndexes="false">
+      <includedCatalogPaths>/opendai</includedCatalogPaths>
+      <includedSchemaPaths>/opendai/openData</includedSchemaPaths>
+      <includedTableTypes>SYSTEM TABLE</includedTableTypes>
+      <includedTableTypes>TABLE</includedTableTypes>
+      <includedTableTypes>VIEW</includedTableTypes>
+    </importSettings>
+  </jdbc:JdbcSource>
+  <relational:BaseTable xmi:uuid="mmuuid:fd93e323-0cd6-4d3f-96d1-bb5e059a6ce1" name="LineaBus2013" nameInSource="LineaBus2013" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:d335175c-0796-4ea6-b130-2acf9be5ecb8" name="coordinates" length="4000" nullable="NULLABLE_UNKNOWN" caseSensitive="false" radix="0" signed="false" distinctValueCount="0" nullValueCount="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:30079929-f5af-44a7-94a1-38fcf789793e" name="SimpleData1" length="4000" nullable="NULLABLE_UNKNOWN" caseSensitive="false" radix="0" signed="false" distinctValueCount="0" nullValueCount="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c7720b68-64fd-41b6-94f4-f3b853485371" name="SimpleData2" length="100" nullable="NULLABLE_UNKNOWN" caseSensitive="false" radix="0" signed="false" distinctValueCount="0" nullValueCount="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:fd11b947-d5fe-42f2-bce7-0a8b738a5ba7" name="id" length="4000" nullable="NULLABLE_UNKNOWN" caseSensitive="false" radix="0" signed="false" distinctValueCount="0" nullValueCount="0" uniqueKeys="mmuuid/bd4c3bed-5d67-4264-b9cc-4b6b55908dfb">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#integer"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:bd4c3bed-5d67-4264-b9cc-4b6b55908dfb" name="id" nameInSource="id" columns="mmuuid/fd11b947-d5fe-42f2-bce7-0a8b738a5ba7"/>
+  </relational:BaseTable>
+</xmi:XMI>

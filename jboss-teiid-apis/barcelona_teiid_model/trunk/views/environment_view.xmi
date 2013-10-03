@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational" xmlns:transformation="http://www.metamatrix.com/metamodels/Transformation">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:054f412a-6398-428a-921b-f2a1bd2a2784" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="VIRTUAL" ProducerName="Teiid Designer" ProducerVersion="8.0.0.Final-v20121212-1505-H1987">
+    <modelImports xmi:uuid="mmuuid:e1cee6c7-93b5-4fe9-9b6c-bdb47e041fa8" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:5244a098-2f79-4c0d-8a54-8e2ee8013768" name="polen_uab_source" modelLocation="../sources/polen_uab_source.xmi" uuid="mmuuid:e854f038-c6eb-4037-94f6-98381fb3f1d5" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
+    <modelImports xmi:uuid="mmuuid:99897ed9-ea00-4e03-8b86-d174d88a4ae4" name="remote_files_source" modelLocation="../sources/remote_files_source.xmi" uuid="mmuuid:d6cfc0ea-6055-4b68-8c05-4a0bd19d4dfa" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
+    <modelImports xmi:uuid="mmuuid:afaaa8e1-3508-4c5d-860f-f63ae3652520" name="streets_source" modelLocation="../sources/streets_source.xmi" uuid="mmuuid:b1be377c-99ec-4c65-b6aa-0ab9c5753f63" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
+    <modelImports xmi:uuid="mmuuid:62fe2a33-157d-4bd3-82be-cf93fe7b2569" name="http_post_source" modelLocation="../sources/http_post_source.xmi" uuid="mmuuid:f5507467-d6ec-42c5-90dd-0b28aaf0d44c" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
+    <modelImports xmi:uuid="mmuuid:4409f44b-5051-4f0d-9de2-edc9b0a1b0ea" name="meteo_source" modelLocation="../sources/meteo_source.xmi" uuid="mmuuid:2d39d3f2-5ad3-44fc-a928-51d0449f8f5a" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
+  </mmcore:ModelAnnotation>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:3c525632-f94c-4c92-b1d2-ba4e94bd06cf">
+    <diagram xmi:uuid="mmuuid:0f77b903-a4aa-44f0-940f-914799733abb" type="packageDiagramType" target="mmuuid/054f412a-6398-428a-921b-f2a1bd2a2784">
+      <diagramEntity xmi:uuid="mmuuid:95e49627-4a93-4425-9c40-e63e05144913" modelObject="mmuuid/f9b5879b-28a3-4dd4-bb08-1c59b93abdc8" xPosition="10" yPosition="8"/>
+      <diagramEntity xmi:uuid="mmuuid:cfd9fa51-daaa-4d44-9ade-a7958fe88019" modelObject="mmuuid/f53a2ecc-58c2-4e77-a75e-55a3823b957e" xPosition="674" yPosition="11"/>
+      <diagramEntity xmi:uuid="mmuuid:1c13551a-9487-4d9d-b34f-a629993853c9" name="barcelona_streets_view" modelObject="mmuuid/d8ada5dc-99fc-442c-9cc4-409d56668469" xPosition="7" yPosition="6"/>
+      <diagramEntity xmi:uuid="mmuuid:45625ca9-9443-4a07-9709-12aaedec81d4" modelObject="mmuuid/0df6796a-dad1-490a-8560-0575e435c070" xPosition="8" yPosition="134"/>
+      <diagramEntity xmi:uuid="mmuuid:0e74650b-076d-47d0-ac39-1498eeeec8c9" name="barcelona_trams_via" modelObject="mmuuid/5ed2c2f3-5784-40d3-966a-61459c68db13" xPosition="9" yPosition="353"/>
+      <diagramEntity xmi:uuid="mmuuid:738552dc-7c49-4f89-a890-a71835c2c730" modelObject="mmuuid/c446ed75-e03b-486d-9599-1c202c8f8320" xPosition="7" yPosition="467"/>
+      <diagramEntity xmi:uuid="mmuuid:14f3b19b-be48-4b84-b5c1-6d6de68797ca" name="barcelona_transit_previst" modelObject="mmuuid/f50ba542-4f1e-4977-949a-128a032b8ec5" xPosition="340" yPosition="6"/>
+      <diagramEntity xmi:uuid="mmuuid:3850263a-d48a-4242-88a2-4bc5a64c6b0a" name="spGetBarcelonaTransitPrevist" modelObject="mmuuid/03614056-fe6d-48b0-8b49-8f649012681d" xPosition="339" yPosition="198"/>
+      <diagramEntity xmi:uuid="mmuuid:6cb743b9-2205-499a-b412-9291dd89b064" name="barcelona_adreces_postals" modelObject="mmuuid/5adf1796-2ad4-4660-98a5-86b12b3ae1fb" xPosition="7" yPosition="668"/>
+      <diagramEntity xmi:uuid="mmuuid:546aa6bf-28c8-429a-afac-2be459706809" name="spGetBarcelonaAdrecesPostals" modelObject="mmuuid/0ac9b8c2-c37e-4533-aade-d7ebdfe4c747" xPosition="8" yPosition="879"/>
+      <diagramEntity xmi:uuid="mmuuid:ad9856ab-26ec-4ac6-b632-5f3bc09227d6" modelObject="mmuuid/632644d8-faf2-41a1-9f21-b880bd9cbc10" xPosition="676" yPosition="184"/>
+      <diagramEntity xmi:uuid="mmuuid:660de803-14f2-4f01-a8d4-1986cf75fc99" name="estacions_contaminacio" modelObject="mmuuid/5f156d9b-d0d9-488d-85c2-0b422574cd5f" xPosition="679" yPosition="404"/>
+      <diagramEntity xmi:uuid="mmuuid:2a6fceb9-176d-4ca9-bbc6-edb79df3ef46" name="spGetBarcelonaContaminacio" modelObject="mmuuid/06cd723a-bb49-4a74-9b9b-bedfcc7fcec3" xPosition="683" yPosition="722"/>
+      <diagramEntity xmi:uuid="mmuuid:310da5c2-ab5f-4f94-bf8c-799860b351a4" name="spGetBarcelonaParametresContaminacio" modelObject="mmuuid/3dcacdfc-ebf9-4944-b51d-6b83f9c3cc09" xPosition="681" yPosition="520"/>
+      <diagramEntity xmi:uuid="mmuuid:de05d6bd-b307-457c-b518-b1d9f9ee636c" name="barcelona_transit_actual" modelObject="mmuuid/3d7908f0-8f6f-4d48-aab5-02c524408736" xPosition="339" yPosition="453"/>
+      <diagramEntity xmi:uuid="mmuuid:42dc3a25-c796-4ebd-9316-603a7c3135b3" name="spGetBarcelonaTransitActual" modelObject="mmuuid/7469a9f8-0dd1-4f5a-9227-f151d07df969" xPosition="341" yPosition="584"/>
+      <diagramEntity xmi:uuid="mmuuid:f2084096-6813-427f-943a-629e8a29c233" name="barcelona_transit_incidencies" modelObject="mmuuid/9207fbed-a67f-44c8-a570-0ae7f7dca1d8" xPosition="342" yPosition="775"/>
+      <diagramEntity xmi:uuid="mmuuid:a04cb482-07d2-47e2-a1a6-75128854e4a2" name="spGetBarcelonaTransitIncidencies" modelObject="mmuuid/4b430383-6a32-4aac-8e7e-c7b87bca721d" xPosition="342" yPosition="857"/>
+      <diagramEntity xmi:uuid="mmuuid:639e6e39-92b5-4d28-a63a-66e7c57f9dfb" modelObject="mmuuid/3ff84ca3-fa20-491e-ae1a-3c55a6965c14" xPosition="949" yPosition="19"/>
+      <diagramEntity xmi:uuid="mmuuid:14570f02-16a8-4979-89cd-2e4117ab29fc" modelObject="mmuuid/9aeada3c-4db7-43cc-b650-3c722f0697f8" xPosition="1008" yPosition="267"/>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:f1672ce6-67c8-4829-8959-008fd9e2c5cb" type="transformationDiagramType" target="mmuuid/f9b5879b-28a3-4dd4-bb08-1c59b93abdc8">
+      <diagramEntity xmi:uuid="mmuuid:b19c68b8-7afe-44e6-b164-9a036dfaa12b" name="polen_uab_table" modelObject="mmuuid/f9b5879b-28a3-4dd4-bb08-1c59b93abdc8" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:b3ef38cd-7024-44c8-8aaa-2ab34ced4412" name="T" modelObject="mmuuid/51a2ed65-9353-4424-940b-fe83acb364db" xPosition="226" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:6c69c125-33e2-4fcc-ab8a-7e417409afd1" xPosition="276" yPosition="50">
+        <modelObject href="../sources/polen_uab_source.xmi#mmuuid/634c8c7c-a194-42ad-aece-9f0919f7e0a9"/>
+      </diagramEntity>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:6396f6f9-585b-4212-b85d-99bd2a4d0f65" type="transformationDiagramType" target="mmuuid/f53a2ecc-58c2-4e77-a75e-55a3823b957e">
+      <diagramEntity xmi:uuid="mmuuid:a180bf1d-d799-4fa2-82ee-ba2e82357dd9" name="spGetPolenUab" modelObject="mmuuid/f53a2ecc-58c2-4e77-a75e-55a3823b957e" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:94dc412b-9f9c-4bd6-954d-a493a1f1a15e" name="T" modelObject="mmuuid/bdd05b91-4fdb-47cd-bcb2-36b5456c26d6" xPosition="290" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:f9bd76fe-bbe4-4cf7-890e-c10d353bd7c9" modelObject="mmuuid/f9b5879b-28a3-4dd4-bb08-1c59b93abdc8" xPosition="340" yPosition="50"/>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:84f46917-602c-4b0f-bf4e-76d90622eec9" type="transformationDiagramType" target="mmuuid/d8ada5dc-99fc-442c-9cc4-409d56668469">
+      <diagramEntity xmi:uuid="mmuuid:565d350c-26cf-4941-b693-4cfdb594ad57" name="barcelona_streets_view" modelObject="mmuuid/d8ada5dc-99fc-442c-9cc4-409d56668469" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:999dd861-3ae5-4309-a748-a35a1b891738" name="T" modelObject="mmuuid/bab6f33d-1cc6-4fc5-bfd4-d14521bd2a46" xPosition="261" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:1256e7b7-9fc8-4904-a72d-6df3f21446d8" xPosition="311" yPosition="50">
+        <modelObject href="../sources/remote_files_source.xmi#mmuuid/aa2f6f6f-6bf7-4b1e-9eb8-bc7e557f0795"/>
+      </diagramEntity>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:f1ce4247-c5d6-4ac4-9153-2b45adc9875a" type="transformationDiagramType" target="mmuuid/0df6796a-dad1-490a-8560-0575e435c070">
+      <diagramEntity xmi:uuid="mmuuid:f155f246-8b96-4554-ba2e-f07e64afee6b" name="spGetBarcelonaStreets" modelObject="mmuuid/0df6796a-dad1-490a-8560-0575e435c070" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:6f325f3c-35dd-444c-925c-d21dc5a3fd27" name="T" modelObject="mmuuid/d684ff61-667d-4892-80de-1b7016774555" xPosition="336" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:d2796bc6-1b2f-45fa-ae7d-cabd60038094" modelObject="mmuuid/d8ada5dc-99fc-442c-9cc4-409d56668469" xPosition="386" yPosition="50"/>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:2ccb8106-bdc8-403f-8ef0-208330a54ec7" type="transformationDiagramType" target="mmuuid/5ed2c2f3-5784-40d3-966a-61459c68db13">
+      <diagramEntity xmi:uuid="mmuuid:470672b7-e202-405d-8aa1-4af75c5c2669" modelObject="mmuuid/5ed2c2f3-5784-40d3-966a-61459c68db13" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:580dc847-c4ad-4c37-bb7e-fda129f45388" name="T" modelObject="mmuuid/7ba7ee7f-0c8f-45a2-89a2-72ae6b96e267" xPosition="243" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:9643b786-b850-4b2c-bb4b-66d37b94dc22" xPosition="293" yPosition="50">
+        <modelObject href="../sources/streets_source.xmi#mmuuid/ef3d87e1-c425-4c17-9a7f-cde588fefb9a"/>
+      </diagramEntity>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:c148e573-aaed-4261-a7b4-c0d47bb9bfdd" type="transformationDiagramType" target="mmuuid/c446ed75-e03b-486d-9599-1c202c8f8320">
+      <diagramEntity xmi:uuid="mmuuid:53a8f981-dec2-451b-a005-0da75e14929a" name="spGetBarcelonaTramsVia" modelObject="mmuuid/c446ed75-e03b-486d-9599-1c202c8f8320" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:a4f63687-ec10-4755-a4d2-3312533801ec" name="T" modelObject="mmuuid/470c8250-6ac7-4d7d-a0e3-a37359269d3f" xPosition="306" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:48b00fb5-693c-486a-8e58-db8ce2991b0a" modelObject="mmuuid/5ed2c2f3-5784-40d3-966a-61459c68db13" xPosition="356" yPosition="50"/>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:a6250776-77dd-4f96-bef1-59aa5e3c88af" type="transformationDiagramType" target="mmuuid/f50ba542-4f1e-4977-949a-128a032b8ec5">
+      <diagramEntity xmi:uuid="mmuuid:4cdd21b0-3d5b-4b3c-b51c-c7408b8ba5a3" name="barcelona_dades_itineraris" modelObject="mmuuid/f50ba542-4f1e-4977-949a-128a032b8ec5" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:544f4949-dc83-4b43-b4d9-3c5aaf112828" name="T" modelObject="mmuuid/2ca3ff5a-de9c-4285-86b1-c1692a51a23b" xPosition="283" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:23682a21-6fe9-4645-bd57-b4e50cb3688d" xPosition="333" yPosition="50">
+        <modelObject href="../sources/remote_files_source.xmi#mmuuid/aa2f6f6f-6bf7-4b1e-9eb8-bc7e557f0795"/>
+      </diagramEntity>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:ec98c1fa-b369-4871-a109-d36bcbaa14ba" type="transformationDiagramType" target="mmuuid/03614056-fe6d-48b0-8b49-8f649012681d">
+      <diagramEntity xmi:uuid="mmuuid:8e2ce2f2-0589-4cc1-9366-4695e42af14f" name="spGetBarcelonaItineraris" modelObject="mmuuid/03614056-fe6d-48b0-8b49-8f649012681d" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:028f6b25-91c6-473b-9741-b0a27a3a263c" name="T" modelObject="mmuuid/c1a738dc-f18e-4b50-b9df-909e209756dd" xPosition="335" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:214ecee2-cb9e-4397-b94e-5e3ec8fb51e2" modelObject="mmuuid/f50ba542-4f1e-4977-949a-128a032b8ec5" xPosition="385" yPosition="50"/>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:9ff67d21-712c-4321-803e-1ba3b2632e2b" type="transformationDiagramType" target="mmuuid/5adf1796-2ad4-4660-98a5-86b12b3ae1fb">
+      <diagramEntity xmi:uuid="mmuuid:b068d906-54ed-44e8-99e6-ec57a1438cf2" name="barcelona_adreces_postals" modelObject="mmuuid/5adf1796-2ad4-4660-98a5-86b12b3ae1fb" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:aed0018b-65be-44e2-8cf4-653fda9a7acb" name="T" modelObject="mmuuid/4f4fb9f0-b9e4-4234-ba9c-34cda324e965" xPosition="284" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:42cf0ea4-7ccb-4ea1-9060-36b200e64fd7" xPosition="334" yPosition="50">
+        <modelObject href="../sources/remote_files_source.xmi#mmuuid/aa2f6f6f-6bf7-4b1e-9eb8-bc7e557f0795"/>
+      </diagramEntity>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:35611705-6f9b-4943-a6b1-e6b9e7d814fa" type="transformationDiagramType" target="mmuuid/0ac9b8c2-c37e-4533-aade-d7ebdfe4c747">
+      <diagramEntity xmi:uuid="mmuuid:e684404e-4bde-4e19-b73a-68b17b3d4e8a" modelObject="mmuuid/0ac9b8c2-c37e-4533-aade-d7ebdfe4c747" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:c4c0b2ff-bd8b-4169-bb53-bbbfa3f45265" name="T" modelObject="mmuuid/173b46d5-07c4-4c8a-9287-8c060bf5f7a0" xPosition="334" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:5fc062de-441d-4a0f-ad75-336acbf1975e" modelObject="mmuuid/5adf1796-2ad4-4660-98a5-86b12b3ae1fb" xPosition="384" yPosition="50"/>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:a4d6bff9-517b-45d5-88fc-01d86ac17ce7" type="transformationDiagramType" target="mmuuid/632644d8-faf2-41a1-9f21-b880bd9cbc10">
+      <diagramEntity xmi:uuid="mmuuid:e4f5901a-ed5c-4c0c-ae05-6f6f643c34c6" name="spGetBarcelonaNoiseLevels" modelObject="mmuuid/632644d8-faf2-41a1-9f21-b880bd9cbc10" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:7d58da79-3473-4d01-a4ac-dd9b38ff167d" name="T" modelObject="mmuuid/5a58d687-0aa4-4085-ab67-a833e1a46322" xPosition="307" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:1166c24a-4ea0-4b0c-bbca-3ee8be8548c0" xPosition="357" yPosition="50">
+        <modelObject href="../sources/http_post_source.xmi#mmuuid/992ddd4b-30c3-457e-aa35-2beab855a035"/>
+      </diagramEntity>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:3ade2adf-9c87-4d62-a596-b57041fd5192" type="transformationDiagramType" target="mmuuid/5f156d9b-d0d9-488d-85c2-0b422574cd5f">
+      <diagramEntity xmi:uuid="mmuuid:dec909ad-411d-4df4-a44b-69d14e578e46" modelObject="mmuuid/5f156d9b-d0d9-488d-85c2-0b422574cd5f" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:b202add7-fbc9-4f21-b97d-8bba1b64ef37" name="T" modelObject="mmuuid/79f1d367-195c-40a7-b602-145d9ff8b199" xPosition="276" yPosition="50"/>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:5f4d3d7a-cc75-4bf8-af28-862a5e78d717" type="transformationDiagramType" target="mmuuid/06cd723a-bb49-4a74-9b9b-bedfcc7fcec3">
+      <diagramEntity xmi:uuid="mmuuid:ebe491da-7eee-437a-b907-794193bca18d" modelObject="mmuuid/06cd723a-bb49-4a74-9b9b-bedfcc7fcec3" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:6e440aef-bf0e-4fd9-967f-97347f07830b" name="T" modelObject="mmuuid/c8062407-c5aa-4441-8c9e-25901af4900e" xPosition="334" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:0a675035-277d-448b-97aa-7ce6ee166985" modelObject="mmuuid/5f156d9b-d0d9-488d-85c2-0b422574cd5f" xPosition="384" yPosition="50"/>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:7c6d2921-89a7-44dc-b206-552cceb3b7be" type="transformationDiagramType" target="mmuuid/3dcacdfc-ebf9-4944-b51d-6b83f9c3cc09">
+      <diagramEntity xmi:uuid="mmuuid:59360c8e-5539-49cd-888a-b8b83d62569a" modelObject="mmuuid/3dcacdfc-ebf9-4944-b51d-6b83f9c3cc09" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:94f0f34c-971f-4e75-afa6-cd3c91291120" name="T" modelObject="mmuuid/a269b5a9-290b-4bfc-b75f-e0e222016a0c" xPosition="403" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:0bc50763-afe9-485d-9aab-26132d7bc3ac" modelObject="mmuuid/5f156d9b-d0d9-488d-85c2-0b422574cd5f" xPosition="453" yPosition="50"/>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:727dbf46-4387-459e-9ec1-6ec446074dd3" type="transformationDiagramType" target="mmuuid/3d7908f0-8f6f-4d48-aab5-02c524408736">
+      <diagramEntity xmi:uuid="mmuuid:23defa37-ea2f-429e-9a3f-840c3ebef480" name="barcelona_transit_estat" modelObject="mmuuid/3d7908f0-8f6f-4d48-aab5-02c524408736" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:1ef455b6-c812-41f3-aaef-9478b19850c1" name="T" modelObject="mmuuid/83364d81-70b0-4ed4-bc83-ca7654b5d7a6" xPosition="251" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:7c8fdfe0-0358-4025-b167-58a1ab4d4a0d" xPosition="301" yPosition="50">
+        <modelObject href="../sources/remote_files_source.xmi#mmuuid/aa2f6f6f-6bf7-4b1e-9eb8-bc7e557f0795"/>
+      </diagramEntity>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:fe2183b9-3167-4158-829b-52ea6e88f9d8" type="transformationDiagramType" target="mmuuid/7469a9f8-0dd1-4f5a-9227-f151d07df969">
+      <diagramEntity xmi:uuid="mmuuid:e957f599-6de2-4b3d-b98a-ce1bac8abf34" modelObject="mmuuid/7469a9f8-0dd1-4f5a-9227-f151d07df969" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:a75def55-d568-4a7c-bc46-2ca57c242b53" name="T" modelObject="mmuuid/b73fea3b-ace3-4d34-b2f0-181b82845114" xPosition="332" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:29c04f12-cc52-4f95-9b34-6ebfcb639fa1" modelObject="mmuuid/3d7908f0-8f6f-4d48-aab5-02c524408736" xPosition="382" yPosition="50"/>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:2233772c-5b78-4d84-af9f-d52f4c730604" type="transformationDiagramType" target="mmuuid/9207fbed-a67f-44c8-a570-0ae7f7dca1d8">
+      <diagramEntity xmi:uuid="mmuuid:b8a948a8-ad1b-4fcf-9e1c-76583a91db20" modelObject="mmuuid/9207fbed-a67f-44c8-a570-0ae7f7dca1d8" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:cf6a8435-ac2a-4e79-a410-03a299b23892" name="T" modelObject="mmuuid/daa98bee-d26d-40a1-83ee-1631b4323a54" xPosition="302" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:6cb2b703-e002-4065-9f21-1ea6b75bf9b9" xPosition="352" yPosition="50">
+        <modelObject href="../sources/remote_files_source.xmi#mmuuid/aa2f6f6f-6bf7-4b1e-9eb8-bc7e557f0795"/>
+      </diagramEntity>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:ec31f148-ea3b-47b8-9a95-e3761c0c80a8" type="transformationDiagramType" target="mmuuid/4b430383-6a32-4aac-8e7e-c7b87bca721d">
+      <diagramEntity xmi:uuid="mmuuid:ce5664ef-ae7f-46ea-ab6d-0224812d2ad4" modelObject="mmuuid/4b430383-6a32-4aac-8e7e-c7b87bca721d" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:1d772a2c-ef14-4af9-a970-8eba7dd6c7d0" name="T" modelObject="mmuuid/6816b308-46f5-42d3-9179-38bcedbd81c2" xPosition="363" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:13d95995-ecaa-45a4-8d71-096dc6bc0c07" modelObject="mmuuid/9207fbed-a67f-44c8-a570-0ae7f7dca1d8" xPosition="413" yPosition="50"/>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:f71bd232-ff8c-49a8-8e72-d1d273b49e2a" type="transformationDiagramType" target="mmuuid/3ff84ca3-fa20-491e-ae1a-3c55a6965c14">
+      <diagramEntity xmi:uuid="mmuuid:308e920a-21f5-4e3a-9503-be62976c9ffe" name="spGetBarcelonaNoiseLevelsByStretch" modelObject="mmuuid/3ff84ca3-fa20-491e-ae1a-3c55a6965c14" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:e3afbfe8-4760-417e-af34-06cde0ee4051" name="T" modelObject="mmuuid/7d638867-51e3-4582-b6fd-e0852a59eab0" xPosition="348" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:91eac578-5983-414c-a883-5359d59b8858" xPosition="398" yPosition="50">
+        <modelObject href="../sources/http_post_source.xmi#mmuuid/7b8676ca-59aa-45ef-9e58-f2ffe1819ec7"/>
+      </diagramEntity>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:1abdf2f9-e4ab-4a10-a86b-a903fc19f2ae" type="transformationDiagramType" target="mmuuid/9aeada3c-4db7-43cc-b650-3c722f0697f8">
+      <diagramEntity xmi:uuid="mmuuid:d8b6973e-f0c0-4b81-a8fd-5fbd81c06d95" modelObject="mmuuid/9aeada3c-4db7-43cc-b650-3c722f0697f8" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:a24fe966-f8c5-46e0-8242-21d5fdaf1d19" name="T" modelObject="mmuuid/1f52732e-2c1d-41f3-9570-c0d134884b7b" xPosition="353" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:fff6ce9e-357d-4204-a749-514bd6c471a5" xPosition="403" yPosition="50">
+        <modelObject href="../sources/meteo_source.xmi#mmuuid/3f5ab8bd-453c-4bc7-9c4c-685e1b936853"/>
+      </diagramEntity>
+    </diagram>
+  </diagram:DiagramContainer>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:98622d2c-b5b6-48da-a76f-c644070ab93a"/>
+  <transformation:TransformationContainer xmi:uuid="mmuuid:9ae71ed3-f4ae-47bc-bee5-53849c0a44fd">
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:51a2ed65-9353-4424-940b-fe83acb364db" outputs="mmuuid/f9b5879b-28a3-4dd4-bb08-1c59b93abdc8" target="mmuuid/f9b5879b-28a3-4dd4-bb08-1c59b93abdc8">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:0e9be0cc-b8c5-44f1-85c4-3be4125090ae">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:b79e4dbf-8bf9-4b87-a6db-e1cb8ff46b82" selectSql="SELECT&#xa;&#x9;&#x9;s.out_tipo_polen AS tipo_polen, s.out_concentracion AS concentracion, s.out_variacion AS variacion&#xa;&#x9;FROM&#xa;&#x9;&#x9;(EXEC spParsePolenUab('http://lap.uab.cat/aerobiologia/es/forecast/barcelona')) AS s"/>
+        <aliases xmi:uuid="mmuuid:545a6884-afef-4629-a02a-826dd83efec9" alias="spParsePolenUab">
+          <aliasedObject href="../sources/polen_uab_source.xmi#mmuuid/634c8c7c-a194-42ad-aece-9f0919f7e0a9"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:6a559f4f-47a5-466c-b1cd-bc76e59c0f28" outputs="mmuuid/3e66a5b3-9dd3-481c-b1db-2264b925eb1e">
+        <inputs href="../sources/polen_uab_source.xmi#mmuuid/c7eef366-61a1-49ce-b2e9-c7e5ce9ac960"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:68c69405-d337-42ff-b3e6-ef60e4e5d1ff" outputs="mmuuid/f45657d1-3d4b-4341-bcd0-d45ada0ddb3b">
+        <inputs href="../sources/polen_uab_source.xmi#mmuuid/98a15fbf-4af1-4eba-b389-98f6a7f9ec40"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:643c989c-2628-4c40-86d6-dcaf0cf40083" outputs="mmuuid/dbb95587-7e9e-491d-b0b9-4779c4a936ab">
+        <inputs href="../sources/polen_uab_source.xmi#mmuuid/294e147e-2b8e-409a-ba88-7a17bbab0262"/>
+      </nested>
+      <inputs href="../sources/polen_uab_source.xmi#mmuuid/634c8c7c-a194-42ad-aece-9f0919f7e0a9"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:bdd05b91-4fdb-47cd-bcb2-36b5456c26d6" inputs="mmuuid/f9b5879b-28a3-4dd4-bb08-1c59b93abdc8" outputs="mmuuid/f53a2ecc-58c2-4e77-a75e-55a3823b957e" target="mmuuid/f53a2ecc-58c2-4e77-a75e-55a3823b957e">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:8a7330be-03f5-422d-88fd-93849a8fb94f">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:4bc4fe83-4a46-40b3-ae2d-ce30a74eefe6" selectSql="CREATE VIRTUAL PROCEDURE&#xa;BEGIN&#xa;&#x9;SELECT environment_view.polen_uab_table.tipo_polen AS out_tipo_polen, environment_view.polen_uab_table.concentracion AS out_concentracion, environment_view.polen_uab_table.variacion AS out_variacion FROM environment_view.polen_uab_table;&#xa;END"/>
+        <aliases xmi:uuid="mmuuid:425419a3-28ad-4233-b469-569505078a0c" alias="polen_uab_table" aliasedObject="mmuuid/f9b5879b-28a3-4dd4-bb08-1c59b93abdc8"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:f1597fbf-d402-4281-8ec7-ddfb6a69d90f" inputs="mmuuid/176fc561-f932-4a41-8ba3-5fbfc302399b" outputs="mmuuid/176fc561-f932-4a41-8ba3-5fbfc302399b"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:043c1c5d-23cd-485b-bc2c-453ac4f5f419" inputs="mmuuid/8fe3447d-88f9-4ca0-b9d1-01dd188596b1" outputs="mmuuid/8fe3447d-88f9-4ca0-b9d1-01dd188596b1"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:8f7e0b10-3b65-4752-b995-bd402180381a" inputs="mmuuid/7f9b04fc-d77a-4412-b365-551b686bbaf4" outputs="mmuuid/7f9b04fc-d77a-4412-b365-551b686bbaf4"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:bab6f33d-1cc6-4fc5-bfd4-d14521bd2a46" outputs="mmuuid/d8ada5dc-99fc-442c-9cc4-409d56668469" target="mmuuid/d8ada5dc-99fc-442c-9cc4-409d56668469">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:59e392d6-0f14-48c1-9a9a-33b3a03ec353">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:b67dab64-7241-4c29-882e-56917142dbfa" selectSql="SELECT&#xa;&#x9;&#x9;A.codi, A.tipus, A.nom18, A.nom_oficial&#xa;&#x9;FROM&#xa;&#x9;&#x9;(EXEC remote_files_source.invokeHttp(action => 'GET', endpoint => 'http://opendata.bcn.cat/opendata/download.aspx?id=7807&amp;ready=1', stream => TRUE)) AS f, TEXTTABLE(TO_CHARS(f.result, 'ISO-8859-1') COLUMNS codi string, tipus string, nom18 string, nom_oficial string DELIMITER ';' HEADER) AS A"/>
+        <aliases xmi:uuid="mmuuid:b7947436-585c-4814-a627-23b6b086cc38" alias="invokeHttp">
+          <aliasedObject href="../sources/remote_files_source.xmi#mmuuid/aa2f6f6f-6bf7-4b1e-9eb8-bc7e557f0795"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:449dad87-e18b-4204-9e93-94e5a7d3bb25" outputs="mmuuid/20b9cbc8-b42d-4a2d-bc24-95a1eead0bd0"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:4c41f0cd-1838-441e-a342-5e62bed74a19" outputs="mmuuid/e8776507-f1e7-4a04-8e51-eca927c2e77f"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:e4f3a05b-7af4-447a-bdf5-638c283b0335" outputs="mmuuid/b566432f-7ffb-4056-af7f-efc92eed83c0"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:a7a8672b-3ad6-470e-802e-2bc3a80bec69" outputs="mmuuid/4e880f36-192d-43f5-a7a2-427a0b4b5597"/>
+      <inputs href="../sources/remote_files_source.xmi#mmuuid/aa2f6f6f-6bf7-4b1e-9eb8-bc7e557f0795"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:d684ff61-667d-4892-80de-1b7016774555" inputs="mmuuid/d8ada5dc-99fc-442c-9cc4-409d56668469" outputs="mmuuid/0df6796a-dad1-490a-8560-0575e435c070" target="mmuuid/0df6796a-dad1-490a-8560-0575e435c070">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:63a1f8ab-3677-43b1-ac9e-43fc4d4122e4">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:00cd77d8-d625-4060-82db-6eb9d4b93e84" selectSql="CREATE VIRTUAL PROCEDURE&#xa;BEGIN&#xa;&#x9;SELECT environment_view.barcelona_streets_view.codi AS out_codi, environment_view.barcelona_streets_view.tipus AS out_tipus, environment_view.barcelona_streets_view.nom18 AS out_nom18, environment_view.barcelona_streets_view.nom_oficial AS out_nom_oficial FROM barcelona_streets_view WHERE (environment_view.spGetBarcelonaStreets.in_codi IS NULL) OR (environment_view.spGetBarcelonaStreets.in_codi = environment_view.barcelona_streets_view.codi);&#xa;END"/>
+        <aliases xmi:uuid="mmuuid:a4014273-fe57-49de-a72d-469ffb04a705" alias="barcelona_streets_view" aliasedObject="mmuuid/d8ada5dc-99fc-442c-9cc4-409d56668469"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:74b04c56-ea89-49ea-9dbd-29a5e23af32d" inputs="mmuuid/bbba4e69-408b-4ca8-b4da-e555564b4e15" outputs="mmuuid/bbba4e69-408b-4ca8-b4da-e555564b4e15"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:c6d7a00e-de49-43c9-aa36-1386ac222e51" inputs="mmuuid/378b2637-312b-4e50-9bf8-0ee642f8c47a" outputs="mmuuid/378b2637-312b-4e50-9bf8-0ee642f8c47a"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:21ea740a-b052-4e87-ab8d-2381e8172d0e" inputs="mmuuid/c483e60b-1b6a-4e25-8334-5b89730efc7d" outputs="mmuuid/c483e60b-1b6a-4e25-8334-5b89730efc7d"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:a30db7cb-4964-435e-b0c0-d378f9b05a18" inputs="mmuuid/13bf76a6-bb9b-4686-848c-0e890191b49f" outputs="mmuuid/13bf76a6-bb9b-4686-848c-0e890191b49f"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:7ba7ee7f-0c8f-45a2-89a2-72ae6b96e267" outputs="mmuuid/5ed2c2f3-5784-40d3-966a-61459c68db13" target="mmuuid/5ed2c2f3-5784-40d3-966a-61459c68db13">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:a92c37af-1398-431c-b631-7419c58e2778">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:62790471-561a-4bfe-9690-b58e5884c4fb" selectSql="SELECT&#xa;&#x9;&#x9;A.out_tram AS tram, A.out_descripcio AS descripcio, A.out_coordenades AS coordenades&#xa;&#x9;FROM&#xa;&#x9;&#x9;(EXEC streets_source.spParseExcelTramsVia('http://opendata.bcn.cat/opendata/download.aspx?id=3001&amp;ready=1', 1, 3, 'INT,STRING,STRING')) AS A"/>
+        <aliases xmi:uuid="mmuuid:141c5deb-54b9-4ddf-b618-55d9afc82455" alias="spParseExcelTramsVia">
+          <aliasedObject href="../sources/streets_source.xmi#mmuuid/ef3d87e1-c425-4c17-9a7f-cde588fefb9a"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:ded21412-48e6-4176-920f-e32c264d1983" outputs="mmuuid/e8626734-e997-4293-ad57-60c1e223de75">
+        <inputs href="../sources/streets_source.xmi#mmuuid/75922bda-4bac-4337-a8c8-19d388562d4d"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:4a4b7936-31d9-4e52-899e-4c85eafd0d60" outputs="mmuuid/ec51f5fa-0bcb-42bb-9ef1-7fcfc15da17b">
+        <inputs href="../sources/streets_source.xmi#mmuuid/ec40d958-c52e-414e-9652-22f51fe994a2"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:f20fd329-0ade-42b1-b100-e6eee07b0c24" outputs="mmuuid/8277812c-b6f4-4d15-94c1-3c3b0516682a">
+        <inputs href="../sources/streets_source.xmi#mmuuid/0edb626d-4897-436c-aa00-9cb54c5f464f"/>
+      </nested>
+      <inputs href="../sources/streets_source.xmi#mmuuid/ef3d87e1-c425-4c17-9a7f-cde588fefb9a"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:470c8250-6ac7-4d7d-a0e3-a37359269d3f" inputs="mmuuid/5ed2c2f3-5784-40d3-966a-61459c68db13" outputs="mmuuid/c446ed75-e03b-486d-9599-1c202c8f8320" target="mmuuid/c446ed75-e03b-486d-9599-1c202c8f8320">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:e4d79a40-1097-4c32-a4df-f09ed3287439">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:4d7ae0c9-53cb-4182-880d-5313743c5723" selectSql="CREATE VIRTUAL PROCEDURE&#xa;BEGIN&#xa;&#x9;SELECT b.tram AS out_tram, b.descripcio AS out_descripcio, b.coordenades AS out_coordenades FROM environment_view.barcelona_trams_via AS b WHERE (environment_view.spGetBarcelonaTramsVia.in_tram IS NULL) OR (environment_view.spGetBarcelonaTramsVia.in_tram = b.tram);&#xa;END"/>
+        <aliases xmi:uuid="mmuuid:61867896-2366-4f3e-83ea-5b95404d9391" alias="b" aliasedObject="mmuuid/5ed2c2f3-5784-40d3-966a-61459c68db13"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:3ceea3da-f5cc-4900-9145-61edd81ca90d" inputs="mmuuid/d1a97687-cb2f-4664-84cc-5c82e1e14edc" outputs="mmuuid/d1a97687-cb2f-4664-84cc-5c82e1e14edc"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:0fa0b354-4ff8-4c72-9ab7-7c734140cfe4" inputs="mmuuid/3bf23f5e-19c7-486c-81f0-abdb826259c5" outputs="mmuuid/3bf23f5e-19c7-486c-81f0-abdb826259c5"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:4bb60016-0d7f-4306-be86-82c2971993e2" inputs="mmuuid/788c87bb-4032-4c5c-9766-f7b7f060e63e" outputs="mmuuid/788c87bb-4032-4c5c-9766-f7b7f060e63e"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:2ca3ff5a-de9c-4285-86b1-c1692a51a23b" outputs="mmuuid/f50ba542-4f1e-4977-949a-128a032b8ec5" target="mmuuid/f50ba542-4f1e-4977-949a-128a032b8ec5">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:04b5ce97-547b-44eb-93f3-6df6e9855d4d">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:3ff50a5e-e1ea-48fb-9052-0bdd803d268e" selectSql="SELECT&#xa;&#x9;&#x9;A.id, A.available, A.tstamp, A.cur_time, A.exp_time, A.fut_time, A.ref_factor, A.tendency&#xa;&#x9;FROM&#xa;&#x9;&#x9;(EXEC remote_files_source.invokeHttp(action => 'GET', endpoint => 'http://www.bcn.cat/transit/dades/dadesitineraris.dat', stream => TRUE)) AS f, TEXTTABLE(TO_CHARS(f.result, 'ISO-8859-1') COLUMNS id string, available string, tstamp string, cur_time string, exp_time string, fut_time string, ref_factor string, tendency string DELIMITER '#') AS A"/>
+        <aliases xmi:uuid="mmuuid:c3586c5d-6917-47f8-aea1-6e08b895e310" alias="invokeHttp">
+          <aliasedObject href="../sources/remote_files_source.xmi#mmuuid/aa2f6f6f-6bf7-4b1e-9eb8-bc7e557f0795"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:0930147c-f7d0-4a89-b61a-4f49291583c4" outputs="mmuuid/3fd79cfe-23e6-442e-b4d0-622b4b04ccc5"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:0568f0d7-3d6c-4f85-9481-7f5792fa9c43" outputs="mmuuid/65d47005-92d6-40af-bb0d-f0557a74cd3a"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:7196f065-a25d-46b1-893f-7d1c2f6b5ac2" outputs="mmuuid/fd9bcacc-8215-41f1-8cdf-1ed1b66ab43c"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:bf97b5fc-2cd1-4d12-b985-58123c7df000" outputs="mmuuid/8c335014-5ff3-44ab-8651-e729ddf3aef4"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:1f51da6f-d607-4fed-8b2b-77242a11c934" outputs="mmuuid/9f2f801b-de04-4ade-bde6-d4246a466845"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:d89c1c70-f582-407f-bc4b-ab6b284cb3fa" outputs="mmuuid/e625a551-e68d-4bb1-9ad7-43580b7cbddb"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:7c329718-fcfc-4172-96ba-f71202003adc" outputs="mmuuid/9b450b6c-2e57-4928-8016-e99b833852a9"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:b8ad7003-d621-4d92-a355-c1788724edd2" outputs="mmuuid/226adf0a-80c4-42a5-9c08-36849c19280f"/>
+      <inputs href="../sources/remote_files_source.xmi#mmuuid/aa2f6f6f-6bf7-4b1e-9eb8-bc7e557f0795"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:83364d81-70b0-4ed4-bc83-ca7654b5d7a6" outputs="mmuuid/3d7908f0-8f6f-4d48-aab5-02c524408736" target="mmuuid/3d7908f0-8f6f-4d48-aab5-02c524408736">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:50fc8362-d3eb-46a1-b298-0631144c831e">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:4b0d7572-f404-4629-b40c-035293375090" selectSql="SELECT&#xa;&#x9;&#x9;A.id, A.tstamp, A.status, A.forecast&#xa;&#x9;FROM&#xa;&#x9;&#x9;(EXEC remote_files_source.invokeHttp(action => 'GET', endpoint => 'http://www.bcn.cat/transit/dades/dadestrams.dat', stream => TRUE)) AS f, TEXTTABLE(TO_CHARS(f.result, 'ISO-8859-1') COLUMNS id string, tstamp string, status string, forecast string DELIMITER '#') AS A"/>
+        <aliases xmi:uuid="mmuuid:bc99cfe1-9c36-4960-9e32-0f172d09ea94" alias="invokeHttp">
+          <aliasedObject href="../sources/remote_files_source.xmi#mmuuid/aa2f6f6f-6bf7-4b1e-9eb8-bc7e557f0795"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:1cc58049-b102-4632-b48b-d604781b7927" outputs="mmuuid/e5796a6b-eb2c-4e5b-9c8f-24ffd7ff45ca"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:0e5fd09f-9e04-4d71-924c-6ced7d2a91c8" outputs="mmuuid/f5594524-5e50-4821-a919-b14fa681b010"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:dfe09d9b-f093-456e-858d-3b4dcc5140f9" outputs="mmuuid/52ffeffb-e1e2-45df-9482-cb408d98d4f1"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:dbde05be-1823-4377-8e57-091e774147fb" outputs="mmuuid/4b0ccdcb-2697-47d0-a6ff-b1657d466056"/>
+      <inputs href="../sources/remote_files_source.xmi#mmuuid/aa2f6f6f-6bf7-4b1e-9eb8-bc7e557f0795"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:daa98bee-d26d-40a1-83ee-1631b4323a54" outputs="mmuuid/9207fbed-a67f-44c8-a570-0ae7f7dca1d8" target="mmuuid/9207fbed-a67f-44c8-a570-0ae7f7dca1d8">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:892a0d64-59c7-4ad4-ab3b-bf1cd453b218">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:a2db3efa-4caa-48ca-8649-bc390dc83e5c" selectSql="SELECT&#xa;&#x9;&#x9;A.msg&#xa;&#x9;FROM&#xa;&#x9;&#x9;(EXEC remote_files_source.invokeHttp(action => 'GET', endpoint => 'http://www.bcn.cat/transit/dades/frase.txt', stream => TRUE)) AS f, TEXTTABLE(TO_CHARS(f.result, 'ISO-8859-1') COLUMNS msg string) AS A"/>
+        <aliases xmi:uuid="mmuuid:3685b374-05d5-40ec-b712-7e6368aa859d" alias="invokeHttp">
+          <aliasedObject href="../sources/remote_files_source.xmi#mmuuid/aa2f6f6f-6bf7-4b1e-9eb8-bc7e557f0795"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:2e703538-ed2f-4f25-be56-1c87ec360bb6" outputs="mmuuid/18d1bfaa-6a84-4157-b737-6b22860b55c8"/>
+      <inputs href="../sources/remote_files_source.xmi#mmuuid/aa2f6f6f-6bf7-4b1e-9eb8-bc7e557f0795"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:c1a738dc-f18e-4b50-b9df-909e209756dd" inputs="mmuuid/f50ba542-4f1e-4977-949a-128a032b8ec5" outputs="mmuuid/03614056-fe6d-48b0-8b49-8f649012681d" target="mmuuid/03614056-fe6d-48b0-8b49-8f649012681d">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:531ad5e9-56dc-4912-b9a1-6826a7a9f5ef">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:cd6bd4ee-c8f7-44d8-a570-845958ebdc8f" selectSql="CREATE VIRTUAL PROCEDURE&#xa;BEGIN&#xa;&#x9;SELECT environment_view.barcelona_transit_previst.id AS out_id, environment_view.barcelona_transit_previst.available AS out_available, environment_view.barcelona_transit_previst.tstamp AS out_tstamp, environment_view.barcelona_transit_previst.cur_time AS out_cur_time, environment_view.barcelona_transit_previst.exp_time AS out_exp_time, environment_view.barcelona_transit_previst.fut_time AS out_fut_time, environment_view.barcelona_transit_previst.ref_factor AS out_ref_factor, environment_view.barcelona_transit_previst.tendency AS out_tendency FROM barcelona_transit_previst;&#xa;END"/>
+        <aliases xmi:uuid="mmuuid:67391668-8af1-4ea2-bb14-d843dd758f45" alias="barcelona_transit_previst" aliasedObject="mmuuid/f50ba542-4f1e-4977-949a-128a032b8ec5"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:ae251347-e044-4e3c-a7ac-89e175054315" inputs="mmuuid/4210732c-2761-4211-a262-61f06c20caee" outputs="mmuuid/4210732c-2761-4211-a262-61f06c20caee"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:6ffe5165-3678-4683-9ce6-febb3700f71e" inputs="mmuuid/2d66455d-ee55-4538-8c75-7a0bddf9d202" outputs="mmuuid/2d66455d-ee55-4538-8c75-7a0bddf9d202"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:efb098d5-e45c-4df7-aa73-e7a86ae10864" inputs="mmuuid/424c18c7-9e3e-460a-9acd-361e9bb61c72" outputs="mmuuid/424c18c7-9e3e-460a-9acd-361e9bb61c72"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:9ac7b58f-7b5e-454d-b255-06ca954686a8" inputs="mmuuid/80fdf43a-3b04-4091-9947-0ead958ae225" outputs="mmuuid/80fdf43a-3b04-4091-9947-0ead958ae225"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:6b3c5f54-9ac3-4c91-91cc-507b85336c3d" inputs="mmuuid/8441ee47-19a6-4b26-b3f6-2b0fd44075d8" outputs="mmuuid/8441ee47-19a6-4b26-b3f6-2b0fd44075d8"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:029031c3-4185-417b-82b7-66739aa384f7" inputs="mmuuid/5df3f102-dca7-4594-9cb6-bb38cbe62cf3" outputs="mmuuid/5df3f102-dca7-4594-9cb6-bb38cbe62cf3"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:92238f3f-0061-45b3-b92d-703eb14242c0" inputs="mmuuid/0780e876-f647-4391-a544-1e8be03865c0" outputs="mmuuid/0780e876-f647-4391-a544-1e8be03865c0"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:d570ba83-2211-4c49-b162-f184932c3e7d" inputs="mmuuid/0f234ddd-3d24-4e95-a22c-e029e051a035" outputs="mmuuid/0f234ddd-3d24-4e95-a22c-e029e051a035"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:4f4fb9f0-b9e4-4234-ba9c-34cda324e965" outputs="mmuuid/5adf1796-2ad4-4660-98a5-86b12b3ae1fb" target="mmuuid/5adf1796-2ad4-4660-98a5-86b12b3ae1fb">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:57a25e0c-475c-4536-90a1-1a305c01f017">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:30e8f9fa-f88e-4ef0-99b6-db2a1e09c8d6" selectSql="SELECT&#xa;&#x9;&#x9;A.codi_carrer, A.numpost, A.llepost, A.tipusnom, A.dte, A.dist_post, A.secc_cens, A.secc_est, A.barri&#xa;&#x9;FROM&#xa;&#x9;&#x9;(EXEC remote_files_source.invokeHttp(action => 'GET', endpoint => 'http://opendata.bcn.cat/opendata/download.aspx?id=7810&amp;ready=1', stream => TRUE)) AS f, TEXTTABLE(TO_CHARS(f.result, 'ISO-8859-1') COLUMNS codi_carrer string, numpost string, llepost string, tipusnom string, dte string, dist_post string, secc_cens string, secc_est string, barri string DELIMITER ';') AS A"/>
+        <aliases xmi:uuid="mmuuid:cfa96b42-2167-4dd6-a4b6-5ae37547b5f1" alias="invokeHttp">
+          <aliasedObject href="../sources/remote_files_source.xmi#mmuuid/aa2f6f6f-6bf7-4b1e-9eb8-bc7e557f0795"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:5793efd7-7df0-4cf5-81af-cca95f9994d1" outputs="mmuuid/394ea863-de5e-4e40-a30d-4dc09bf1ca9f"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:8fddf81a-31b2-4f57-91a0-e07e5cc7d9ae" outputs="mmuuid/cb5d86a7-99ff-4d78-8e0e-6e63cdd73dc3"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:f20e7ceb-c400-4bfe-84bb-22bb1e30b7f3" outputs="mmuuid/6f708f97-0aac-4ed0-9c98-689db2ed79fc"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:6777cc5b-3956-4374-8c8e-18e69e5e67c9" outputs="mmuuid/0cbf55f0-ae8a-4e4b-a671-908200345434"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:248e4a72-b5c1-4968-ae7f-865ba506e3a5" outputs="mmuuid/6696c1bd-96f5-4473-a7ba-59bfdcbe6f91"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:7a7a64f6-5223-4a8e-97b3-93df030b5bb8" outputs="mmuuid/34279d04-d2e8-415f-a917-b4257e6907d9"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:ebb33f64-d449-4d43-b906-7f61974e7cb7" outputs="mmuuid/9083fa05-3ca9-4ecc-a138-de7d51117d59"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:d748f348-1c8e-4537-85be-598be805ac02" outputs="mmuuid/2b5b72e8-1387-4596-91a8-587edc847b1b"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:a3cabc31-e371-4914-aab2-361e641dbb1b" outputs="mmuuid/05d2d414-4f20-4cf4-ac59-4944150fb49d"/>
+      <inputs href="../sources/remote_files_source.xmi#mmuuid/aa2f6f6f-6bf7-4b1e-9eb8-bc7e557f0795"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:173b46d5-07c4-4c8a-9287-8c060bf5f7a0" inputs="mmuuid/5adf1796-2ad4-4660-98a5-86b12b3ae1fb" outputs="mmuuid/0ac9b8c2-c37e-4533-aade-d7ebdfe4c747" target="mmuuid/0ac9b8c2-c37e-4533-aade-d7ebdfe4c747">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:c59c2f85-65db-4b3e-a9fd-e967f4e43252">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:39600fb3-e372-4fda-81f1-bd464b9f80a9" selectSql="CREATE VIRTUAL PROCEDURE&#xa;BEGIN&#xa;&#x9;SELECT environment_view.barcelona_adreces_postals.codi_carrer AS out_codi_carrer, environment_view.barcelona_adreces_postals.numpost AS out_numpost, environment_view.barcelona_adreces_postals.llepost AS out_llepost, environment_view.barcelona_adreces_postals.tipusnom AS out_tipusnom, environment_view.barcelona_adreces_postals.dte AS out_dte, environment_view.barcelona_adreces_postals.dist_post AS out_dist_post, environment_view.barcelona_adreces_postals.secc_cens AS out_secc_cens, environment_view.barcelona_adreces_postals.secc_est AS out_secc_est, environment_view.barcelona_adreces_postals.barri AS out_barri FROM barcelona_adreces_postals WHERE environment_view.barcelona_adreces_postals.codi_carrer = environment_view.spGetBarcelonaAdrecesPostals.in_codi_carrer;&#xa;END"/>
+        <aliases xmi:uuid="mmuuid:7bea5c06-f254-40eb-8872-b3aaee8caad0" alias="barcelona_adreces_postals" aliasedObject="mmuuid/5adf1796-2ad4-4660-98a5-86b12b3ae1fb"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:f287d206-ee96-499f-aa1e-fc62d06e570c" inputs="mmuuid/4ae05401-652f-4bdc-a2ef-c6875ee32882" outputs="mmuuid/4ae05401-652f-4bdc-a2ef-c6875ee32882"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:71de57ec-fd9a-4a02-bfd8-4ab47b82cf1a" inputs="mmuuid/45f193f0-093a-47cb-a636-27a92a4cff2d" outputs="mmuuid/45f193f0-093a-47cb-a636-27a92a4cff2d"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:8003af0d-aa44-45ac-8dff-1250ad0745d0" inputs="mmuuid/f2f9a627-7a99-4bc5-b209-77bb6cb011c0" outputs="mmuuid/f2f9a627-7a99-4bc5-b209-77bb6cb011c0"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:48b3e48e-917b-4383-828c-04f1f3fd965e" inputs="mmuuid/6b10e6e9-8a18-45da-a7d6-c9bb8db5e50a" outputs="mmuuid/6b10e6e9-8a18-45da-a7d6-c9bb8db5e50a"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:76e75b5b-73a3-486e-b466-99c9a38b595c" inputs="mmuuid/4be0c451-3b96-421a-b2c3-8b5334cdfd2a" outputs="mmuuid/4be0c451-3b96-421a-b2c3-8b5334cdfd2a"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:2238be0e-037e-4931-bef7-5c56e6206c35" inputs="mmuuid/419014c1-9fd0-45f2-8d7f-0d860d82d6e6" outputs="mmuuid/419014c1-9fd0-45f2-8d7f-0d860d82d6e6"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:65261b74-33a5-4e8d-86ff-e743320e5064" inputs="mmuuid/b3bb03ed-b950-4c3d-a996-1c5808fe1031" outputs="mmuuid/b3bb03ed-b950-4c3d-a996-1c5808fe1031"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:b850bd8d-8e1d-4c95-9b83-60d127c7e31b" inputs="mmuuid/46ab51c8-5c4f-4d61-ba1b-8c55752ac682" outputs="mmuuid/46ab51c8-5c4f-4d61-ba1b-8c55752ac682"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:da30eba8-2d86-4041-9ffc-19e884940b23" inputs="mmuuid/796e5ccc-934a-4dad-ad5a-6f82259b848c" outputs="mmuuid/796e5ccc-934a-4dad-ad5a-6f82259b848c"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:5a58d687-0aa4-4085-ab67-a833e1a46322" outputs="mmuuid/632644d8-faf2-41a1-9f21-b880bd9cbc10" target="mmuuid/632644d8-faf2-41a1-9f21-b880bd9cbc10">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:442c3956-f3ee-4f23-a17c-3e3e3f9afe49">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:f1cd5e4e-42fe-464e-b4b4-509b23c7a56c" selectSql="CREATE VIRTUAL PROCEDURE&#xa;BEGIN&#xa;&#x9;SELECT a.out_morning AS out_morning, a.out_evening AS out_evening, a.out_night AS out_night FROM (EXEC spParseNoiseByStreet('http://w20.bcn.cat/WebMapaAcustic/mapa_soroll.aspx?lang=ca&amp;bb=&amp;v=1&amp;m=s', environment_view.spGetBarcelonaNoiseLevels.in_street, environment_view.spGetBarcelonaNoiseLevels.in_number)) AS a;&#xa;END"/>
+        <aliases xmi:uuid="mmuuid:483224a7-cbf8-4b11-b525-a20092e48d47" alias="spParseNoiseByStreet">
+          <aliasedObject href="../sources/http_post_source.xmi#mmuuid/992ddd4b-30c3-457e-aa35-2beab855a035"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:37c3102c-5835-4882-b354-f2966f547df1" inputs="mmuuid/6d1bb0f2-4ede-4297-bf72-d768006e59c0" outputs="mmuuid/6d1bb0f2-4ede-4297-bf72-d768006e59c0"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:2804f4ff-2229-453d-943b-de308ce00c8c" inputs="mmuuid/6be41e6a-0d7e-4706-9e58-79331c853f6e" outputs="mmuuid/6be41e6a-0d7e-4706-9e58-79331c853f6e"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:45538efe-e55f-4481-ba78-42dcba83e8b9" inputs="mmuuid/31b8c2e8-ae45-44e8-84b7-aac1d58e5267" outputs="mmuuid/31b8c2e8-ae45-44e8-84b7-aac1d58e5267"/>
+      <inputs href="../sources/http_post_source.xmi#mmuuid/992ddd4b-30c3-457e-aa35-2beab855a035"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:7d638867-51e3-4582-b6fd-e0852a59eab0" outputs="mmuuid/3ff84ca3-fa20-491e-ae1a-3c55a6965c14" target="mmuuid/3ff84ca3-fa20-491e-ae1a-3c55a6965c14">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:d7556207-677a-4cb7-981c-aec562fed09d">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:08c404c2-93b9-4d58-bb9f-a14331b83dfa" selectSql="CREATE VIRTUAL PROCEDURE&#xa;BEGIN&#xa;&#x9;SELECT a.out_morning AS out_morning, a.out_evening AS out_evening, a.out_night AS out_night FROM (EXEC spParseNoiseByStretch('http://w20.bcn.cat/WebMapaAcustic/mapa_soroll.aspx?lang=ca&amp;bb=&amp;v=1&amp;m=s', environment_view.spGetBarcelonaNoiseLevelsByStretch.in_street1, environment_view.spGetBarcelonaNoiseLevelsByStretch.in_street2)) AS a;&#xa;END"/>
+        <aliases xmi:uuid="mmuuid:c613b645-a558-486c-942e-24e0a9836511" alias="spParseNoiseByStretch">
+          <aliasedObject href="../sources/http_post_source.xmi#mmuuid/7b8676ca-59aa-45ef-9e58-f2ffe1819ec7"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:b30e5941-2ee3-4fd7-8631-6e87c391e317" inputs="mmuuid/7805954f-c69c-4110-a6f7-4e91253461ea" outputs="mmuuid/7805954f-c69c-4110-a6f7-4e91253461ea"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:8d62d266-1ff1-45e6-b652-e7fa8f0d2efb" inputs="mmuuid/1d2beca8-07f2-478f-8184-597498d94af8" outputs="mmuuid/1d2beca8-07f2-478f-8184-597498d94af8"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:d7b3a0c2-e968-4f64-b8c3-b971cd588ae7" inputs="mmuuid/328bfe50-680a-479d-bf4a-5b8c69c29253" outputs="mmuuid/328bfe50-680a-479d-bf4a-5b8c69c29253"/>
+      <inputs href="../sources/http_post_source.xmi#mmuuid/7b8676ca-59aa-45ef-9e58-f2ffe1819ec7"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:79f1d367-195c-40a7-b602-145d9ff8b199" outputs="mmuuid/5f156d9b-d0d9-488d-85c2-0b422574cd5f" target="mmuuid/5f156d9b-d0d9-488d-85c2-0b422574cd5f">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:25fd39a4-7d4d-42fd-a9c9-56883812fe52">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:dd3571a7-238e-47c5-a70a-7a4b43c68867" selectSql="SELECT&#xa;&#x9;&#x9;1 AS id, 'Ciutadella' AS zona, 'IL' AS estacio&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;2 AS id, 'Eixample' AS zona, 'IH' AS estacio&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;3 AS id, 'Gracia-St Gervasi' AS zona, 'IJ' AS estacio&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;4 AS id, 'Palau Reial' AS zona, 'IZ' AS estacio&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;5 AS id, 'Parc Vall d''Hebron' AS zona, 'IN' AS estacio&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;6 AS id, 'Poblenou' AS zona, 'I2' AS estacio&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;7 AS id, 'Sants' AS zona, 'ID' AS estacio"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:f2d3c02c-0d1a-404e-8e3c-05eceb753274" outputs="mmuuid/c5cc6f05-d129-4894-b61d-59c64bf47447"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:ebc9d90a-9544-457a-b243-3d66b655447c" outputs="mmuuid/d25221de-a640-4f2d-b2a5-f5ea67cbca09"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:f8adecc5-b272-4fcb-bde6-d6eae74c4ed8" outputs="mmuuid/2cafba91-3689-483a-9c81-17c9fc7fdec6"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:c8062407-c5aa-4441-8c9e-25901af4900e" inputs="mmuuid/5f156d9b-d0d9-488d-85c2-0b422574cd5f" outputs="mmuuid/06cd723a-bb49-4a74-9b9b-bedfcc7fcec3" target="mmuuid/06cd723a-bb49-4a74-9b9b-bedfcc7fcec3">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:e2694387-f079-4a94-9507-4f23a0ba465f">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:8b8ebe18-da30-4d18-b805-d09ecf9df1ce" selectSql="CREATE VIRTUAL PROCEDURE&#xa;BEGIN&#xa;&#x9;DECLARE string VARIABLES.estacio = (SELECT environment_view.parametres_contaminacio.estacio FROM parametres_contaminacio WHERE environment_view.parametres_contaminacio.id = environment_view.spGetBarcelonaContaminacio.in_id_zona);&#xa;&#x9;SELECT A.out_hora AS out_hora, A.out_so2 AS out_so2, A.out_no AS out_no, A.out_no2 AS out_no2, A.out_o3 AS out_o3, A.out_co AS out_co, A.out_pm10 AS out_pm10 FROM (EXEC http_post_source.spParseContaminacio('http://www.gencat.net:8000/oicqa/owa/b01.validar', '1', '0', VARIABLES.estacio, '99', '0')) AS A;&#xa;END"/>
+        <aliases xmi:uuid="mmuuid:9fbcd1cd-3b79-4363-b104-3cf2e731f6c9" alias="parametres_contaminacio" aliasedObject="mmuuid/5f156d9b-d0d9-488d-85c2-0b422574cd5f"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:c79c3351-ded0-4509-81a9-d16e6b9bf447" inputs="mmuuid/20b83c50-d0d8-4534-a018-98ccce5573fe" outputs="mmuuid/20b83c50-d0d8-4534-a018-98ccce5573fe"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:7d2fd3bc-c36c-4d78-b608-dffb6e716e7f" inputs="mmuuid/e41dbaf2-a255-4aca-9844-2c2bf11130b8" outputs="mmuuid/e41dbaf2-a255-4aca-9844-2c2bf11130b8"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:1d80197c-fed1-4b12-8e37-1c76821856c9" inputs="mmuuid/180c169d-378f-4f9a-90d7-5ca20f44ed8d" outputs="mmuuid/180c169d-378f-4f9a-90d7-5ca20f44ed8d"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:956d0932-b32e-4cc3-b7a6-836eafae1786" inputs="mmuuid/8866d364-0a03-4f39-b7a3-cc918c2a1890" outputs="mmuuid/8866d364-0a03-4f39-b7a3-cc918c2a1890"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:88c74e62-815e-4f2a-b478-9a9185efc896" inputs="mmuuid/03b992d6-2a49-4658-87bd-c659d81d8e5c" outputs="mmuuid/03b992d6-2a49-4658-87bd-c659d81d8e5c"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:81643793-d2d0-448b-9be6-6085b93967be" inputs="mmuuid/f7d97814-a1d9-46ad-9de9-a5a4e5c8f2e9" outputs="mmuuid/f7d97814-a1d9-46ad-9de9-a5a4e5c8f2e9"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:7cebfd2a-8f9c-43f2-a54c-e0182acb93d2" inputs="mmuuid/30a8824c-d956-4018-94ad-925df3a663c6" outputs="mmuuid/30a8824c-d956-4018-94ad-925df3a663c6"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:a269b5a9-290b-4bfc-b75f-e0e222016a0c" inputs="mmuuid/5f156d9b-d0d9-488d-85c2-0b422574cd5f" outputs="mmuuid/3dcacdfc-ebf9-4944-b51d-6b83f9c3cc09" target="mmuuid/3dcacdfc-ebf9-4944-b51d-6b83f9c3cc09">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:381fb970-d1f3-4986-a2c4-c1d4fa059115">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:20b37ade-d485-4d4c-add8-b165292b4ffb" selectSql="CREATE VIRTUAL PROCEDURE&#xa;BEGIN&#xa;&#x9;SELECT p.id AS out_id, p.zona AS out_zona, p.estacio AS out_estacio FROM parametres_contaminacio AS p WHERE (environment_view.spGetBarcelonaParametresContaminacio.in_id IS NULL) OR (environment_view.spGetBarcelonaParametresContaminacio.in_id = p.id);&#xa;END"/>
+        <aliases xmi:uuid="mmuuid:87a0916c-628c-4f30-8eb3-1dea690f1598" alias="p" aliasedObject="mmuuid/5f156d9b-d0d9-488d-85c2-0b422574cd5f"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:eaf63c16-dd4c-4809-9591-0c5c74b82f7a" inputs="mmuuid/d7e79e2f-e042-4dcd-894d-a788d04744cc" outputs="mmuuid/d7e79e2f-e042-4dcd-894d-a788d04744cc"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:3409d3e8-9e8f-48ed-85ef-d992e244ba80" inputs="mmuuid/3fa709e4-8c79-4658-94a1-f144bf42b080" outputs="mmuuid/3fa709e4-8c79-4658-94a1-f144bf42b080"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:3127faa7-1528-49e3-b5a7-b2890db5100b" inputs="mmuuid/13c5ffc6-d0fb-4e65-ab87-67fff0e7a87d" outputs="mmuuid/13c5ffc6-d0fb-4e65-ab87-67fff0e7a87d"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:b73fea3b-ace3-4d34-b2f0-181b82845114" inputs="mmuuid/3d7908f0-8f6f-4d48-aab5-02c524408736" outputs="mmuuid/7469a9f8-0dd1-4f5a-9227-f151d07df969" target="mmuuid/7469a9f8-0dd1-4f5a-9227-f151d07df969">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:e967bfa4-ad63-47ed-8a7b-a67675110e94">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:300eb35c-03ff-4fb9-89b2-ec6d948a40da" selectSql="CREATE VIRTUAL PROCEDURE&#xa;BEGIN&#xa;&#x9;SELECT environment_view.barcelona_transit_actual.id AS out_id, environment_view.barcelona_transit_actual.tstamp AS out_tstamp, environment_view.barcelona_transit_actual.status AS out_status, environment_view.barcelona_transit_actual.forecast AS out_forecast FROM barcelona_transit_actual;&#xa;END"/>
+        <aliases xmi:uuid="mmuuid:2cf81999-4e81-4f1e-a742-fc64e0f1bdfb" alias="barcelona_transit_actual" aliasedObject="mmuuid/3d7908f0-8f6f-4d48-aab5-02c524408736"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:481325d4-fd61-4a12-990c-493bb7892afa" inputs="mmuuid/137eb2da-c2b4-4ce2-925c-6b0f8aec4a42" outputs="mmuuid/137eb2da-c2b4-4ce2-925c-6b0f8aec4a42"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:769c5506-c86b-4098-9b9d-74f0ef843e14" inputs="mmuuid/bd3deb43-e3e9-4249-9ee5-b5762adf9edd" outputs="mmuuid/bd3deb43-e3e9-4249-9ee5-b5762adf9edd"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:28c03af8-57fb-4de1-8f2e-ed75855bd9b1" inputs="mmuuid/0108fbd9-105e-4e40-b335-9f53442f9005" outputs="mmuuid/0108fbd9-105e-4e40-b335-9f53442f9005"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:9e8e60f7-b8ff-4fde-942d-db5ecdd58f09" inputs="mmuuid/f6d2739a-350e-4dfa-ae52-1c1e1901eaad" outputs="mmuuid/f6d2739a-350e-4dfa-ae52-1c1e1901eaad"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:6816b308-46f5-42d3-9179-38bcedbd81c2" inputs="mmuuid/9207fbed-a67f-44c8-a570-0ae7f7dca1d8" outputs="mmuuid/4b430383-6a32-4aac-8e7e-c7b87bca721d" target="mmuuid/4b430383-6a32-4aac-8e7e-c7b87bca721d">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:f07983ec-4450-42aa-aebd-619f71bae6a2">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:c4a73b71-edb3-4b82-9ea2-b92d5b5e6b61" selectSql="CREATE VIRTUAL PROCEDURE&#xa;BEGIN&#xa;&#x9;SELECT environment_view.barcelona_transit_incidencies.msg AS out_msg FROM barcelona_transit_incidencies;&#xa;END"/>
+        <aliases xmi:uuid="mmuuid:d7d78b93-0520-4783-89ad-74f1f759c75b" alias="barcelona_transit_incidencies" aliasedObject="mmuuid/9207fbed-a67f-44c8-a570-0ae7f7dca1d8"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:f7236db9-ae2a-4e6b-896a-efec06999663" inputs="mmuuid/872d2458-d395-4598-a0a4-27f02c5c37c6" outputs="mmuuid/872d2458-d395-4598-a0a4-27f02c5c37c6"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:1f52732e-2c1d-41f3-9570-c0d134884b7b" outputs="mmuuid/9aeada3c-4db7-43cc-b650-3c722f0697f8" target="mmuuid/9aeada3c-4db7-43cc-b650-3c722f0697f8">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:ddb8b458-2e24-463e-a590-5395fecf85cb">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:8a1aec25-ea45-4794-8623-aaf5dd5dae9a" selectSql="CREATE VIRTUAL PROCEDURE&#xa;BEGIN&#xa;&#x9;SELECT A.title AS out_title, A.description AS out_description, A.link AS out_link, A.pubDate AS out_pub_date FROM (EXEC meteo_source.invokeHttp(action => 'GET', endpoint => 'http://www.meteo.cat/servmet/rss/ctermini_co_barcelones.xml', stream => TRUE)) AS f, XMLTABLE('/rss/channel/item' PASSING XMLPARSE(DOCUMENT f.result) COLUMNS title string PATH 'title/text()', description string PATH 'description/text()', link string PATH 'link/text()', pubDate string PATH 'pubDate/text()') AS A;&#xa;END"/>
+        <aliases xmi:uuid="mmuuid:98f6783e-a576-4670-a41d-28357b28fca7" alias="invokeHttp">
+          <aliasedObject href="../sources/meteo_source.xmi#mmuuid/3f5ab8bd-453c-4bc7-9c4c-685e1b936853"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:0523a229-2a98-45b8-bab2-dd054ff9490b" inputs="mmuuid/907ec289-6c15-4395-9047-6823774c83ba" outputs="mmuuid/907ec289-6c15-4395-9047-6823774c83ba"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:50acb26b-c880-45f7-a462-092f8628aafd" inputs="mmuuid/24aa11a7-a19e-4f5f-9dd8-a2e0c17f550c" outputs="mmuuid/24aa11a7-a19e-4f5f-9dd8-a2e0c17f550c"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:310bd3b9-b9ae-4457-b3a1-cf9ebb43ab0e" inputs="mmuuid/bd924bae-9d12-44f3-ba70-c30accbc0960" outputs="mmuuid/bd924bae-9d12-44f3-ba70-c30accbc0960"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:c19bdd04-ff75-4797-bf50-05307931dc5d" inputs="mmuuid/a271139d-8ffb-45f8-85b5-1ae4ac5a6d0a" outputs="mmuuid/a271139d-8ffb-45f8-85b5-1ae4ac5a6d0a"/>
+      <inputs href="../sources/meteo_source.xmi#mmuuid/3f5ab8bd-453c-4bc7-9c4c-685e1b936853"/>
+    </transformationMappings>
+  </transformation:TransformationContainer>
+  <relational:View xmi:uuid="mmuuid:f9b5879b-28a3-4dd4-bb08-1c59b93abdc8" name="polen_uab_table" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:3e66a5b3-9dd3-481c-b1db-2264b925eb1e" name="tipo_polen" length="4000">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f45657d1-3d4b-4341-bcd0-d45ada0ddb3b" name="concentracion" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:dbb95587-7e9e-491d-b0b9-4779c4a936ab" name="variacion" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+  </relational:View>
+  <relational:Procedure xmi:uuid="mmuuid:f53a2ecc-58c2-4e77-a75e-55a3823b957e" name="spGetPolenUab">
+    <result xmi:uuid="mmuuid:6ba95d0a-deee-4169-aa37-ba065c1fd8ae" name="spGetPolenUabResultSet">
+      <columns xmi:uuid="mmuuid:176fc561-f932-4a41-8ba3-5fbfc302399b" name="out_tipo_polen" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:8fe3447d-88f9-4ca0-b9d1-01dd188596b1" name="out_concentracion" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:7f9b04fc-d77a-4412-b365-551b686bbaf4" name="out_variacion" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+  <relational:View xmi:uuid="mmuuid:d8ada5dc-99fc-442c-9cc4-409d56668469" name="barcelona_streets_view" supportsUpdate="false" materialized="true">
+    <columns xmi:uuid="mmuuid:20b9cbc8-b42d-4a2d-bc24-95a1eead0bd0" name="codi" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:e8776507-f1e7-4a04-8e51-eca927c2e77f" name="tipus" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b566432f-7ffb-4056-af7f-efc92eed83c0" name="nom18" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4e880f36-192d-43f5-a7a2-427a0b4b5597" name="nom_oficial" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+  </relational:View>
+  <relational:Procedure xmi:uuid="mmuuid:0df6796a-dad1-490a-8560-0575e435c070" name="spGetBarcelonaStreets">
+    <parameters xmi:uuid="mmuuid:02354eee-ed91-4783-80f4-2d2dab23d47c" name="in_codi" nativeType="" length="255" nullable="NULLABLE">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <result xmi:uuid="mmuuid:d90099a6-3bff-4b9a-97d9-ee6ebb6dfefe" name="spGetBarcelonaStreetsResultSet">
+      <columns xmi:uuid="mmuuid:bbba4e69-408b-4ca8-b4da-e555564b4e15" name="out_codi" length="255">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:378b2637-312b-4e50-9bf8-0ee642f8c47a" name="out_tipus" length="255">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:c483e60b-1b6a-4e25-8334-5b89730efc7d" name="out_nom18" length="255">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:13bf76a6-bb9b-4686-848c-0e890191b49f" name="out_nom_oficial" length="255">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+  <relational:View xmi:uuid="mmuuid:5ed2c2f3-5784-40d3-966a-61459c68db13" name="barcelona_trams_via" supportsUpdate="false" materialized="true">
+    <columns xmi:uuid="mmuuid:e8626734-e997-4293-ad57-60c1e223de75" name="tram" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ec51f5fa-0bcb-42bb-9ef1-7fcfc15da17b" name="descripcio" length="4000">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8277812c-b6f4-4d15-94c1-3c3b0516682a" name="coordenades" length="4000">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+  </relational:View>
+  <relational:Procedure xmi:uuid="mmuuid:c446ed75-e03b-486d-9599-1c202c8f8320" name="spGetBarcelonaTramsVia">
+    <parameters xmi:uuid="mmuuid:d53cbe05-e1e4-472f-be68-415b80ffd2f0" name="in_tram" length="10" nullable="NULLABLE">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <result xmi:uuid="mmuuid:93626758-1f61-4fd0-979c-4ac3f2fd89d0" name="spGetBarcelonaTramsViaRS">
+      <columns xmi:uuid="mmuuid:d1a97687-cb2f-4664-84cc-5c82e1e14edc" name="out_tram" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:3bf23f5e-19c7-486c-81f0-abdb826259c5" name="out_descripcio" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:788c87bb-4032-4c5c-9766-f7b7f060e63e" name="out_coordenades" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+  <relational:View xmi:uuid="mmuuid:f50ba542-4f1e-4977-949a-128a032b8ec5" name="barcelona_transit_previst" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:3fd79cfe-23e6-442e-b4d0-622b4b04ccc5" name="id" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:65d47005-92d6-40af-bb0d-f0557a74cd3a" name="available" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:fd9bcacc-8215-41f1-8cdf-1ed1b66ab43c" name="tstamp" length="20">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8c335014-5ff3-44ab-8651-e729ddf3aef4" name="cur_time" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9f2f801b-de04-4ade-bde6-d4246a466845" name="exp_time" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:e625a551-e68d-4bb1-9ad7-43580b7cbddb" name="fut_time" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9b450b6c-2e57-4928-8016-e99b833852a9" name="ref_factor" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:226adf0a-80c4-42a5-9c08-36849c19280f" name="tendency" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+  </relational:View>
+  <relational:View xmi:uuid="mmuuid:3d7908f0-8f6f-4d48-aab5-02c524408736" name="barcelona_transit_actual" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:e5796a6b-eb2c-4e5b-9c8f-24ffd7ff45ca" name="id" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f5594524-5e50-4821-a919-b14fa681b010" name="tstamp" length="20">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:52ffeffb-e1e2-45df-9482-cb408d98d4f1" name="status" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4b0ccdcb-2697-47d0-a6ff-b1657d466056" name="forecast" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+  </relational:View>
+  <relational:View xmi:uuid="mmuuid:9207fbed-a67f-44c8-a570-0ae7f7dca1d8" name="barcelona_transit_incidencies" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:18d1bfaa-6a84-4157-b737-6b22860b55c8" name="msg" length="4000">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+  </relational:View>
+  <relational:Procedure xmi:uuid="mmuuid:03614056-fe6d-48b0-8b49-8f649012681d" name="spGetBarcelonaTransitPrevist">
+    <result xmi:uuid="mmuuid:632277f3-33e6-4d6e-8fca-d15d8a3892f5" name="spGetBarcelonaTransitPrevistRS">
+      <columns xmi:uuid="mmuuid:4210732c-2761-4211-a262-61f06c20caee" name="out_id" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:2d66455d-ee55-4538-8c75-7a0bddf9d202" name="out_available" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:424c18c7-9e3e-460a-9acd-361e9bb61c72" name="out_tstamp" length="20">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:80fdf43a-3b04-4091-9947-0ead958ae225" name="out_cur_time" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:8441ee47-19a6-4b26-b3f6-2b0fd44075d8" name="out_exp_time" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:5df3f102-dca7-4594-9cb6-bb38cbe62cf3" name="out_fut_time" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:0780e876-f647-4391-a544-1e8be03865c0" name="out_ref_factor" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:0f234ddd-3d24-4e95-a22c-e029e051a035" name="out_tendency" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+  <relational:View xmi:uuid="mmuuid:5adf1796-2ad4-4660-98a5-86b12b3ae1fb" name="barcelona_adreces_postals" supportsUpdate="false" materialized="true">
+    <columns xmi:uuid="mmuuid:394ea863-de5e-4e40-a30d-4dc09bf1ca9f" name="codi_carrer" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:cb5d86a7-99ff-4d78-8e0e-6e63cdd73dc3" name="numpost" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6f708f97-0aac-4ed0-9c98-689db2ed79fc" name="llepost" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0cbf55f0-ae8a-4e4b-a671-908200345434" name="tipusnom" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6696c1bd-96f5-4473-a7ba-59bfdcbe6f91" name="dte" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:34279d04-d2e8-415f-a917-b4257e6907d9" name="dist_post" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9083fa05-3ca9-4ecc-a138-de7d51117d59" name="secc_cens" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2b5b72e8-1387-4596-91a8-587edc847b1b" name="secc_est" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:05d2d414-4f20-4cf4-ac59-4944150fb49d" name="barri" length="10">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+  </relational:View>
+  <relational:Procedure xmi:uuid="mmuuid:0ac9b8c2-c37e-4533-aade-d7ebdfe4c747" name="spGetBarcelonaAdrecesPostals">
+    <parameters xmi:uuid="mmuuid:20df3f7f-20c9-404d-9fe9-d4d618cf6176" name="in_codi_carrer" length="20">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <result xmi:uuid="mmuuid:1dbe9c69-63aa-4dc2-b667-841fb3953d31" name="spGetBarcelonaAdrecesPostalsRS">
+      <columns xmi:uuid="mmuuid:4ae05401-652f-4bdc-a2ef-c6875ee32882" name="out_codi_carrer" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:45f193f0-093a-47cb-a636-27a92a4cff2d" name="out_numpost" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:f2f9a627-7a99-4bc5-b209-77bb6cb011c0" name="out_llepost" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:6b10e6e9-8a18-45da-a7d6-c9bb8db5e50a" name="out_tipusnom" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:4be0c451-3b96-421a-b2c3-8b5334cdfd2a" name="out_dte" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:419014c1-9fd0-45f2-8d7f-0d860d82d6e6" name="out_dist_post" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:b3bb03ed-b950-4c3d-a996-1c5808fe1031" name="out_secc_cens" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:46ab51c8-5c4f-4d61-ba1b-8c55752ac682" name="out_secc_est" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:796e5ccc-934a-4dad-ad5a-6f82259b848c" name="out_barri" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+  <relational:Procedure xmi:uuid="mmuuid:632644d8-faf2-41a1-9f21-b880bd9cbc10" name="spGetBarcelonaNoiseLevels">
+    <parameters xmi:uuid="mmuuid:307923fc-af50-4ddd-bde7-9fbabd41a006" name="in_street" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:56aeb954-9da2-49c5-b02c-64eee1df899b" name="in_number" length="4">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <result xmi:uuid="mmuuid:44fe2d31-3db6-4882-b906-721a8d7fa239" name="spGetBarcelonaNoiseLevelsRS">
+      <columns xmi:uuid="mmuuid:6d1bb0f2-4ede-4297-bf72-d768006e59c0" name="out_morning" length="50">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:6be41e6a-0d7e-4706-9e58-79331c853f6e" name="out_evening" length="50">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:31b8c2e8-ae45-44e8-84b7-aac1d58e5267" name="out_night" length="50">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+  <relational:Procedure xmi:uuid="mmuuid:3ff84ca3-fa20-491e-ae1a-3c55a6965c14" name="spGetBarcelonaNoiseLevelsByStretch">
+    <parameters xmi:uuid="mmuuid:c4ffbb48-435d-438a-adad-38286e9e2ea8" name="in_street1" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:acb34c4a-568d-4731-b354-1baf194c1dac" name="in_street2" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <result xmi:uuid="mmuuid:381b0ed2-5d17-4494-9ff2-6a6d65035c43" name="spGetBarcelonaNoiseLevelsRS">
+      <columns xmi:uuid="mmuuid:7805954f-c69c-4110-a6f7-4e91253461ea" name="out_morning" length="50">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:1d2beca8-07f2-478f-8184-597498d94af8" name="out_evening" length="50">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:328bfe50-680a-479d-bf4a-5b8c69c29253" name="out_night" length="50">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+  <relational:BaseTable xmi:uuid="mmuuid:5f156d9b-d0d9-488d-85c2-0b422574cd5f" name="parametres_contaminacio">
+    <columns xmi:uuid="mmuuid:2cafba91-3689-483a-9c81-17c9fc7fdec6" name="id">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c5cc6f05-d129-4894-b61d-59c64bf47447" name="zona" length="4000" nullable="NULLABLE_UNKNOWN" caseSensitive="false" radix="0" signed="false" distinctValueCount="0" nullValueCount="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d25221de-a640-4f2d-b2a5-f5ea67cbca09" name="estacio" length="10" nullable="NULLABLE_UNKNOWN" caseSensitive="false" radix="0" signed="false" distinctValueCount="0" nullValueCount="0">
+      <nativeType xsi:nil="true"/>
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+  </relational:BaseTable>
+  <relational:Procedure xmi:uuid="mmuuid:06cd723a-bb49-4a74-9b9b-bedfcc7fcec3" name="spGetBarcelonaContaminacio">
+    <parameters xmi:uuid="mmuuid:dd5d1f68-e22c-4c01-bb14-2042abbeb713" name="in_id_zona">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </parameters>
+    <result xmi:uuid="mmuuid:c1d224fe-9a19-488d-8742-dd28fc176b3f" name="spGetBarcelonaContaminacioRS">
+      <columns xmi:uuid="mmuuid:30a8824c-d956-4018-94ad-925df3a663c6" name="out_hora" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:e41dbaf2-a255-4aca-9844-2c2bf11130b8" name="out_so2" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:20b83c50-d0d8-4534-a018-98ccce5573fe" name="out_no" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:180c169d-378f-4f9a-90d7-5ca20f44ed8d" name="out_no2" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:8866d364-0a03-4f39-b7a3-cc918c2a1890" name="out_o3" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:03b992d6-2a49-4658-87bd-c659d81d8e5c" name="out_co" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:f7d97814-a1d9-46ad-9de9-a5a4e5c8f2e9" name="out_pm10" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+  <relational:Procedure xmi:uuid="mmuuid:3dcacdfc-ebf9-4944-b51d-6b83f9c3cc09" name="spGetBarcelonaParametresContaminacio">
+    <parameters xmi:uuid="mmuuid:218d0298-e9bd-4c23-9233-8ef799b22590" name="in_id" nullable="NULLABLE">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </parameters>
+    <result xmi:uuid="mmuuid:5d6ca02a-c25a-4d9c-8d7d-61365aa46164" name="spGetBarcelonaParametresContaminacioRS">
+      <columns xmi:uuid="mmuuid:d7e79e2f-e042-4dcd-894d-a788d04744cc" name="out_id">
+        <type href="http://www.w3.org/2001/XMLSchema#int"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:3fa709e4-8c79-4658-94a1-f144bf42b080" name="out_zona" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:13c5ffc6-d0fb-4e65-ab87-67fff0e7a87d" name="out_estacio" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+  <relational:Procedure xmi:uuid="mmuuid:7469a9f8-0dd1-4f5a-9227-f151d07df969" name="spGetBarcelonaTransitActual">
+    <result xmi:uuid="mmuuid:beb5cb53-0ed0-4487-ad7c-0ebe8585fa22" name="spGetBarcelonaTransitActualRS">
+      <columns xmi:uuid="mmuuid:137eb2da-c2b4-4ce2-925c-6b0f8aec4a42" name="out_id" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:bd3deb43-e3e9-4249-9ee5-b5762adf9edd" name="out_tstamp" length="20">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:0108fbd9-105e-4e40-b335-9f53442f9005" name="out_status" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:f6d2739a-350e-4dfa-ae52-1c1e1901eaad" name="out_forecast" length="10">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+  <relational:Procedure xmi:uuid="mmuuid:4b430383-6a32-4aac-8e7e-c7b87bca721d" name="spGetBarcelonaTransitIncidencies">
+    <result xmi:uuid="mmuuid:520557bc-27d4-430a-8381-851b836baee2" name="spGetBarcelonaTransitIncidenciesRS">
+      <columns xmi:uuid="mmuuid:872d2458-d395-4598-a0a4-27f02c5c37c6" name="out_msg" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+  <relational:Procedure xmi:uuid="mmuuid:9aeada3c-4db7-43cc-b650-3c722f0697f8" name="spGetBarcelonaWeatherForecast">
+    <result xmi:uuid="mmuuid:9a4b9be9-b187-4de0-a7a9-a14c7603de55" name="spGetBarcelonaWeatherForecastRS">
+      <columns xmi:uuid="mmuuid:907ec289-6c15-4395-9047-6823774c83ba" name="out_title" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:24aa11a7-a19e-4f5f-9dd8-a2e0c17f550c" name="out_description" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:bd924bae-9d12-44f3-ba70-c30accbc0960" name="out_link" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:a271139d-8ffb-45f8-85b5-1ae4ac5a6d0a" name="out_pub_date" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+</xmi:XMI>

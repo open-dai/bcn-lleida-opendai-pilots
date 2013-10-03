@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+provisioning_profiles/development/32B3E33D-D4B0-4CDD-9A0F-06D1D1C2AA0B/appid=net.djkram.SpotFav
+provisioning_profiles/development/32B3E33D-D4B0-4CDD-9A0F-06D1D1C2AA0B/name=SpotFavDev
+provisioning_profiles/development/32B3E33D-D4B0-4CDD-9A0F-06D1D1C2AA0B/uuid=32B3E33D-D4B0-4CDD-9A0F-06D1D1C2AA0B
+provisioning_profiles/development/43B9DEAC-040A-4310-BABA-8FEED422D546/appid=*
+provisioning_profiles/development/43B9DEAC-040A-4310-BABA-8FEED422D546/name=iOS Team Provisioning Profile\: Wildcard AppID
+provisioning_profiles/development/43B9DEAC-040A-4310-BABA-8FEED422D546/uuid=43B9DEAC-040A-4310-BABA-8FEED422D546
+provisioning_profiles/development/767E3942-B08B-4EC3-B2A3-420CB2264D48/appid=org.bdigital.RI
+provisioning_profiles/development/767E3942-B08B-4EC3-B2A3-420CB2264D48/name=RI
+provisioning_profiles/development/767E3942-B08B-4EC3-B2A3-420CB2264D48/uuid=767E3942-B08B-4EC3-B2A3-420CB2264D48
+provisioning_profiles/development/FA989EA8-23B5-4D43-BDB7-DDCD3FF9F170/appid=*
+provisioning_profiles/development/FA989EA8-23B5-4D43-BDB7-DDCD3FF9F170/name=AppyMaze
+provisioning_profiles/development/FA989EA8-23B5-4D43-BDB7-DDCD3FF9F170/uuid=FA989EA8-23B5-4D43-BDB7-DDCD3FF9F170

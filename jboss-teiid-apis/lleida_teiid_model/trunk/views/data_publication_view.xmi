@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational" xmlns:transformation="http://www.metamatrix.com/metamodels/Transformation">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:a6378f0d-d1b6-4710-a81d-dc5828c046ca" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="VIRTUAL" ProducerName="Teiid Designer" ProducerVersion="8.0.0.Final-v20121212-1505-H1987">
+    <modelImports xmi:uuid="mmuuid:51126f9e-08f1-41ab-bd3e-61dc733de8a7" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:a163c29e-c47c-4daa-af39-a7a6a8ea384d" name="opendata_source" modelLocation="../sources/opendata_source.xmi" uuid="mmuuid:f6a4df08-044b-4664-a32b-34aa03cef152" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
+  </mmcore:ModelAnnotation>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:dbbb7d97-b813-4bca-b1b3-cf9800871cb7">
+    <diagram xmi:uuid="mmuuid:b95a92d9-29ca-4ca5-95db-0c44fba763d7" type="packageDiagramType" target="mmuuid/a6378f0d-d1b6-4710-a81d-dc5828c046ca">
+      <diagramEntity xmi:uuid="mmuuid:7ea92249-35d1-4187-9dab-796486f6c207" name="data_publication_categories" modelObject="mmuuid/2750ab83-6f4a-450f-8e95-2bbbe4257933" xPosition="40" yPosition="30"/>
+      <diagramEntity xmi:uuid="mmuuid:fa9d52d2-f2ba-474d-9d26-f488513ee2f5" modelObject="mmuuid/9efa1f4d-cfa6-4e3c-b2e0-29fc8a10c828" xPosition="41" yPosition="131"/>
+      <diagramEntity xmi:uuid="mmuuid:11e0b2e7-89a0-488c-b6ce-71c1968c05ea" modelObject="mmuuid/bad69ce0-e309-41dc-8c5e-5558a7646943" xPosition="325" yPosition="32"/>
+      <diagramEntity xmi:uuid="mmuuid:2ce6f278-f005-4952-a672-f3a80cf34cf0" modelObject="mmuuid/62b12560-8e96-4265-8c0f-738be3ba8dae" xPosition="327" yPosition="194"/>
+      <diagramEntity xmi:uuid="mmuuid:1027609b-7907-4458-993d-86bcfdbb8f7f" modelObject="mmuuid/a4e21454-c06d-44ba-8e01-3f4c645d350b" xPosition="609" yPosition="30"/>
+      <diagramEntity xmi:uuid="mmuuid:5ee1520f-559e-43d2-a93e-509de9dc8af1" modelObject="mmuuid/b96bb3ba-75d7-4487-b99d-fc327321c971" xPosition="876" yPosition="30"/>
+      <diagramEntity xmi:uuid="mmuuid:fc2fc448-f8c5-4395-921b-6eed8fbdf68c" name="education_coordinates_agg" modelObject="mmuuid/ea6a4d3f-f71f-43d2-9285-00706a3ff54f" xPosition="28" yPosition="385"/>
+      <diagramEntity xmi:uuid="mmuuid:023c7aca-2028-40ab-9aa4-71408ffa6a38" name="education_centers" modelObject="mmuuid/d8dbbd9f-1ddf-4e87-96d4-5beb8b05e727" xPosition="28" yPosition="489"/>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:8261c0da-936e-4d05-b0ca-9680ae8fafa4" type="transformationDiagramType" target="mmuuid/2750ab83-6f4a-450f-8e95-2bbbe4257933">
+      <diagramEntity xmi:uuid="mmuuid:20e4cfd9-08dd-44bd-af12-6ef7db95a7c5" modelObject="mmuuid/2750ab83-6f4a-450f-8e95-2bbbe4257933" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:47d2c741-2ad6-49f0-a4aa-dbc895dc853a" name="T" modelObject="mmuuid/857946bc-a100-421d-94e9-0a26d02973ba" xPosition="292" yPosition="50"/>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:c554940b-09dd-4353-abf9-17dae6015f93" type="transformationDiagramType" target="mmuuid/9efa1f4d-cfa6-4e3c-b2e0-29fc8a10c828">
+      <diagramEntity xmi:uuid="mmuuid:5807f300-dcc7-47f4-afb6-b3f2b23abade" name="data_publication" modelObject="mmuuid/9efa1f4d-cfa6-4e3c-b2e0-29fc8a10c828" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:f095210f-7600-46c9-8b0d-5723c4240cb7" name="T" modelObject="mmuuid/8dfe72e0-6e47-49a7-b560-30bc71a37b0e" xPosition="252" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:6573cb94-86ea-484b-950d-2dce793d058e" xPosition="302" yPosition="50">
+        <modelObject href="../sources/opendata_source.xmi#mmuuid/5fbfbed9-ed0b-4a54-997b-74be5cc985bc"/>
+      </diagramEntity>
+      <diagramEntity xmi:uuid="mmuuid:735f9e45-02d0-46e0-b98d-ec2b10939b27" modelObject="mmuuid/d8dbbd9f-1ddf-4e87-96d4-5beb8b05e727" xPosition="573" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:0b672b2d-163c-45cd-9dfc-e9b406fba534" modelObject="mmuuid/ea6a4d3f-f71f-43d2-9285-00706a3ff54f" xPosition="831" yPosition="50"/>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:b8b185d3-b2b9-495e-8069-25583d0bb583" type="transformationDiagramType" target="mmuuid/bad69ce0-e309-41dc-8c5e-5558a7646943">
+      <diagramEntity xmi:uuid="mmuuid:5fe4acf0-8882-47b9-8035-f9d097619bbe" name="spGetPoiCategories" modelObject="mmuuid/bad69ce0-e309-41dc-8c5e-5558a7646943" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:a1d52cf4-6d13-4c92-9b3b-95272c24ffb2" name="T" modelObject="mmuuid/ed72a3e4-6468-4897-a6b9-288b5f9da9f1" xPosition="317" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:ffb28b6d-dc14-4558-9b8e-98c721f0f458" modelObject="mmuuid/2750ab83-6f4a-450f-8e95-2bbbe4257933" xPosition="367" yPosition="50"/>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:fa70ee89-f887-4e50-a7cc-d090da900e68" type="transformationDiagramType" target="mmuuid/62b12560-8e96-4265-8c0f-738be3ba8dae">
+      <diagramEntity xmi:uuid="mmuuid:89d1e714-bb24-427b-b11f-cf34233d1646" name="spGetPois" modelObject="mmuuid/62b12560-8e96-4265-8c0f-738be3ba8dae" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:99694acf-2503-4290-8b2b-23e63ecf1e74" name="T" modelObject="mmuuid/07f2bf86-f0ee-466b-874c-db7270960e2b" xPosition="295" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:07f35c0a-cea8-4de0-8070-8be70ca9b43f" modelObject="mmuuid/9efa1f4d-cfa6-4e3c-b2e0-29fc8a10c828" xPosition="345" yPosition="50"/>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:936e157c-c3f7-41fb-b6ff-9cd16e210169" type="transformationDiagramType" target="mmuuid/a4e21454-c06d-44ba-8e01-3f4c645d350b">
+      <diagramEntity xmi:uuid="mmuuid:9ebe840d-0aa5-403a-aab7-613d2479de9c" name="spGetPoisByCategory" modelObject="mmuuid/a4e21454-c06d-44ba-8e01-3f4c645d350b" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:070c512e-60d1-45d8-9122-36c3eebe059f" name="T" modelObject="mmuuid/4c5a6b53-f4a0-4941-9baf-4dfdaa0e90f8" xPosition="295" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:8ca87953-f525-4e60-b8fd-c0cfa2827fe0" modelObject="mmuuid/9efa1f4d-cfa6-4e3c-b2e0-29fc8a10c828" xPosition="345" yPosition="50"/>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:af42a540-5a20-42e5-94e5-5f035c121663" type="transformationDiagramType" target="mmuuid/b96bb3ba-75d7-4487-b99d-fc327321c971">
+      <diagramEntity xmi:uuid="mmuuid:8c44dd47-0810-4a68-bf37-507b5e60cf81" name="spGetPoiByIds" modelObject="mmuuid/b96bb3ba-75d7-4487-b99d-fc327321c971" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:3ab48796-19d2-46b3-85f6-5f0fdc972d03" name="T" modelObject="mmuuid/d8633977-43b2-4836-854d-5ffd2bb2e81b" xPosition="295" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:8ca50100-2e13-4b94-94bb-8075ebf31a2d" modelObject="mmuuid/9efa1f4d-cfa6-4e3c-b2e0-29fc8a10c828" xPosition="345" yPosition="50"/>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:29939042-6184-45e9-8f52-b301c51e4ba6" type="transformationDiagramType" target="mmuuid/ea6a4d3f-f71f-43d2-9285-00706a3ff54f">
+      <diagramEntity xmi:uuid="mmuuid:1254f136-dec4-440f-a104-cf49283b9c01" modelObject="mmuuid/ea6a4d3f-f71f-43d2-9285-00706a3ff54f" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:b34ac32c-4a5b-4b38-a0a4-947943f99934" name="T" modelObject="mmuuid/88297537-b6e8-468f-93e1-02d7a2bf5448" xPosition="288" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:27857328-dfa8-4ec9-99e8-1e096d54e0e7" xPosition="338" yPosition="50">
+        <modelObject href="../sources/opendata_source.xmi#mmuuid/1d50595b-e2dd-407f-8897-d691cd239ec9"/>
+      </diagramEntity>
+    </diagram>
+    <diagram xmi:uuid="mmuuid:d8f5f17f-61e5-441e-9788-7ec166f1d3b5" type="transformationDiagramType" target="mmuuid/d8dbbd9f-1ddf-4e87-96d4-5beb8b05e727">
+      <diagramEntity xmi:uuid="mmuuid:9376eff6-bb80-4622-8bd1-e86d03f39766" modelObject="mmuuid/d8dbbd9f-1ddf-4e87-96d4-5beb8b05e727" xPosition="30" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:a03837a1-8476-4ece-b8a6-25e91c341374" name="T" modelObject="mmuuid/af1e0db5-b369-48ac-a4c9-b43d70d06ff9" xPosition="278" yPosition="50"/>
+      <diagramEntity xmi:uuid="mmuuid:f231fc93-1006-4f30-9162-a6f6c75898c7" xPosition="328" yPosition="50">
+        <modelObject href="../sources/opendata_source.xmi#mmuuid/0c523146-d55c-4873-ad8c-68877dcc5cb4"/>
+      </diagramEntity>
+    </diagram>
+  </diagram:DiagramContainer>
+  <relational:View xmi:uuid="mmuuid:2750ab83-6f4a-450f-8e95-2bbbe4257933" name="data_publication_categories" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:34d466f2-b2a9-48b5-89d2-e17212c087d6" name="category" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6798781a-d9f4-45af-a157-c0d8cd1e1a48" name="id" nullable="NO_NULLS" defaultValue="" format="" characterSetName="" collationName="">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+  </relational:View>
+  <transformation:TransformationContainer xmi:uuid="mmuuid:f02833b8-5af1-4f2a-adcc-150869f3b75b">
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:857946bc-a100-421d-94e9-0a26d02973ba" outputs="mmuuid/2750ab83-6f4a-450f-8e95-2bbbe4257933" target="mmuuid/2750ab83-6f4a-450f-8e95-2bbbe4257933">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:de298551-1b5f-4183-aed1-2a0457cdc51d">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:08d82a5e-7c05-4b7c-a583-739e26a5a1a3" selectSql="SELECT&#xa;&#x9;&#x9;'Hospitality' AS category, 1 AS id&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;'Catering' AS category, 2 AS id&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;'Education' AS category, 3 AS id&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;'Sports' AS category, 4 AS id&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;'Pharmacies' AS category, 5 AS id&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;'Health Care' AS category, 6 AS id&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;'Tourism' AS category, 7 AS id&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;'Municipal Services' AS category, 8 AS id&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;'Non Municipal Services' AS category, 9 AS id&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;'Commerce' AS category, 10 AS id&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;'Private transport' AS category, 11 AS id"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:f44bb231-615c-40ff-8903-412df6292d8d" outputs="mmuuid/34d466f2-b2a9-48b5-89d2-e17212c087d6"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:0621b1eb-b2a1-4dfd-a65f-9465c63c42d5" outputs="mmuuid/6798781a-d9f4-45af-a157-c0d8cd1e1a48"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:8dfe72e0-6e47-49a7-b560-30bc71a37b0e" outputs="mmuuid/9efa1f4d-cfa6-4e3c-b2e0-29fc8a10c828" target="mmuuid/9efa1f4d-cfa6-4e3c-b2e0-29fc8a10c828">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:94950b5b-252a-4d98-98ea-0a2eececc05d">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:80c81723-e350-413a-afd0-300c91f327d6" selectSql="SELECT&#xa;&#x9;&#x9;1 AS id_category, opendata_source.AHFederacio.id AS id_orig, opendata_source.AHFederacio.denominacio AS name, opendata_source.AHFederacio.ubicacio AS address, opendata_source.AHFederacio.cp AS pobox, 'Lleida' AS city, opendata_source.AHFederacio.telefon AS phone, opendata_source.AHFederacio.web AS web, opendata_source.AHFederacio.email AS email, null AS business_hours, ((opendata_source.AHFederacio.lon || ',') || opendata_source.AHFederacio.lat) AS coordinates&#xa;&#x9;FROM&#xa;&#x9;&#x9;opendata_source.AHFederacio&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;2 AS id_category, opendata_source.EHFederacio.id AS id_orig, opendata_source.EHFederacio.denominacio AS name, opendata_source.EHFederacio.ubicacio AS address, opendata_source.EHFederacio.cp AS pobox, 'Lleida' AS city, opendata_source.EHFederacio.telefon AS phone, opendata_source.EHFederacio.web AS web, opendata_source.EHFederacio.email AS email, null AS business_hours, ((opendata_source.EHFederacio.lon || ',') || opendata_source.EHFederacio.lat) AS coordinates&#xa;&#x9;FROM&#xa;&#x9;&#x9;opendata_source.EHFederacio&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;3 AS id_category, c.id AS id_orig, k.placemark_name AS name, c.altresadreca AS address, c.cp AS pobox, c.municipi AS city, c.tel1 AS phone, c.web1 AS web, c.correu1 AS email, c.horari AS business_hours, k.coordinates AS coordinates&#xa;&#x9;FROM&#xa;&#x9;&#x9;data_publication_view.education_centers AS c, data_publication_view.education_coordinates_agg AS k&#xa;&#x9;WHERE&#xa;&#x9;&#x9;c.nom = k.placemark_name&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;4 AS id_category, opendata_source.Esports.id AS id_orig, opendata_source.Esports.nom AS name, opendata_source.Esports.altresadreca AS address, opendata_source.Esports.cp AS pobox, opendata_source.Esports.municipi AS city, opendata_source.Esports.tel1 AS phone, opendata_source.Esports.web1 AS web, opendata_source.Esports.correu1 AS email, opendata_source.Esports.horari AS business_hours, null AS coordinates&#xa;&#x9;FROM&#xa;&#x9;&#x9;opendata_source.Esports&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;5 AS id_category, opendata_source.Farmacies.id AS id_orig, opendata_source.Farmacies.nom AS name, opendata_source.Farmacies.altresadreca AS address, opendata_source.Farmacies.cp AS pobox, opendata_source.Farmacies.municipi AS city, opendata_source.Farmacies.tel1 AS phone, opendata_source.Farmacies.web1 AS web, opendata_source.Farmacies.correu1 AS email, opendata_source.Farmacies.horari AS business_hours, null AS coordinates&#xa;&#x9;FROM&#xa;&#x9;&#x9;opendata_source.Farmacies&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;6 AS id_category, opendata_source.RSSanitaris.id AS id_orig, opendata_source.RSSanitaris.nom AS name, opendata_source.RSSanitaris.altresadreca AS address, opendata_source.RSSanitaris.cp AS pobox, opendata_source.RSSanitaris.municipi AS city, opendata_source.RSSanitaris.tel1 AS phone, opendata_source.RSSanitaris.web1 AS web, opendata_source.RSSanitaris.correu1 AS email, opendata_source.RSSanitaris.horari AS business_hours, null AS coordinates&#xa;&#x9;FROM&#xa;&#x9;&#x9;opendata_source.RSSanitaris&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;7 AS id_category, opendata_source.OficinesTurisme.id AS id_orig, opendata_source.OficinesTurisme.nom AS name, opendata_source.OficinesTurisme.altresadreca AS address, opendata_source.OficinesTurisme.cp AS pobox, opendata_source.OficinesTurisme.municipi AS city, opendata_source.OficinesTurisme.tel1 AS phone, opendata_source.OficinesTurisme.web1 AS web, opendata_source.OficinesTurisme.correu1 AS email, opendata_source.OficinesTurisme.horari AS business_hours, null AS coordinates&#xa;&#x9;FROM&#xa;&#x9;&#x9;opendata_source.OficinesTurisme&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;8 AS id_category, opendata_source.ServeisMunicipals.id AS id_orig, opendata_source.ServeisMunicipals.nom AS name, opendata_source.ServeisMunicipals.altresadreca AS address, opendata_source.ServeisMunicipals.cp AS pobox, opendata_source.ServeisMunicipals.municipi AS city, opendata_source.ServeisMunicipals.tel1 AS phone, opendata_source.ServeisMunicipals.web1 AS web, opendata_source.ServeisMunicipals.correu1 AS email, opendata_source.ServeisMunicipals.horari AS business_hours, null AS coordinates&#xa;&#x9;FROM&#xa;&#x9;&#x9;opendata_source.ServeisMunicipals&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;9 AS id_category, opendata_source.ServeisNoMunicipals.id AS id_orig, opendata_source.ServeisNoMunicipals.nom AS name, opendata_source.ServeisNoMunicipals.altresadreca AS address, opendata_source.ServeisNoMunicipals.cp AS pobox, opendata_source.ServeisNoMunicipals.municipi AS city, opendata_source.ServeisNoMunicipals.tel1 AS phone, opendata_source.ServeisNoMunicipals.web1 AS web, opendata_source.ServeisNoMunicipals.correu1 AS email, opendata_source.ServeisNoMunicipals.horari AS business_hours, null AS coordinates&#xa;&#x9;FROM&#xa;&#x9;&#x9;opendata_source.ServeisNoMunicipals&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;10 AS id_category, opendata_source.MEComers.id AS id_orig, opendata_source.MEComers.nom AS name, opendata_source.MEComers.altresadreca AS address, opendata_source.MEComers.cp AS pobox, opendata_source.MEComers.municipi AS city, opendata_source.MEComers.tel1 AS phone, opendata_source.MEComers.web1 AS web, opendata_source.MEComers.correu1 AS email, opendata_source.MEComers.horari AS business_hours, null AS coordinates&#xa;&#x9;FROM&#xa;&#x9;&#x9;opendata_source.MEComers&#xa;UNION ALL&#xa;SELECT&#xa;&#x9;&#x9;11 AS id_category, opendata_source.transports.id AS id_orig, opendata_source.transports.nom AS name, opendata_source.transports.altresadreca AS address, opendata_source.transports.cp AS pobox, opendata_source.transports.municipi AS city, opendata_source.transports.tel1 AS phone, opendata_source.transports.web1 AS web, opendata_source.transports.correu1 AS email, opendata_source.transports.horari AS business_hours, null AS coordinates&#xa;&#x9;FROM&#xa;&#x9;&#x9;opendata_source.transports"/>
+        <aliases xmi:uuid="mmuuid:84f70b42-344c-4080-810a-2c5450371742" alias="AHFederacio">
+          <aliasedObject href="../sources/opendata_source.xmi#mmuuid/5fbfbed9-ed0b-4a54-997b-74be5cc985bc"/>
+        </aliases>
+        <aliases xmi:uuid="mmuuid:e55aa189-9c38-47c3-98a1-76e1dc66a684" alias="c" aliasedObject="mmuuid/d8dbbd9f-1ddf-4e87-96d4-5beb8b05e727"/>
+        <aliases xmi:uuid="mmuuid:bb078823-6b17-4dda-98c1-3057516ffaae" alias="k" aliasedObject="mmuuid/ea6a4d3f-f71f-43d2-9285-00706a3ff54f"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:94d04f2a-c2f9-4ee8-9783-ac7e4a3637fd" outputs="mmuuid/df8d832e-e8ec-4502-adc1-d84ef0676a90"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:bfb369a2-8ac9-4f0f-9ddf-df008ca69ac6" outputs="mmuuid/649c2680-63e0-40f7-8125-c1bcc36d3201">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/0581121f-47a1-4131-8730-8bb4a43abc04"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:e81079bd-8a33-4cd8-9466-5179ac8cebc3" outputs="mmuuid/ec15211e-7f5e-443d-93f4-69ba8c55a6e4">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/56f77a3b-163f-4346-b4f7-721965c06eab"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:719ca0b8-0010-4663-b47a-d353cf6f9c27" outputs="mmuuid/cfe7c113-64ff-4604-b59c-83a80f69c774">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/f1fb35fa-d44f-4772-af02-e6291f6989b8"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:02544301-7601-4c54-a0ee-23013932cbe4" outputs="mmuuid/a6ddc95d-bf2b-4b61-baab-06ef9ada24c7">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/66443146-6cdd-4aa4-b2b3-62163cd2a89f"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:bf3b9793-888c-4e3a-a8ae-5238e60f482b" outputs="mmuuid/8cfdead7-e632-4d91-a826-f4baa19ae358">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/cdf81a27-15ab-4d0d-94d0-aebe14317914"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:078c5848-73e3-449c-a435-1946a5bfabe7" outputs="mmuuid/299f0952-e0a5-4aa4-b2cf-e3f0541ccdfc">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/d3a4a1a5-ab53-4f30-b392-84e68db9679a"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:b184d02a-213a-44b2-bc78-1c2a1540858b" outputs="mmuuid/ddb7c611-4fd5-4a90-bb57-02265361f5aa">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/e8a9637d-31b1-4a18-bb96-252b176c42ee"/>
+        <inputs href="../sources/opendata_source.xmi#mmuuid/27700032-a964-4b88-b509-519a3387b3f5"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:c1d7785f-0499-4ed4-bc06-44c8808f53db" outputs="mmuuid/45250fcc-51c6-480b-820f-9a93362504f2"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:57d0c605-c62c-4090-b3f0-0a9e7096547f" outputs="mmuuid/0654f18d-56be-4c8d-b75e-772603f500be">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/3330b0be-115c-4cc1-8469-54184a7fe9f7"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:34342fa7-766e-43cc-a153-c7a83804603e" outputs="mmuuid/37160512-246c-4607-b9e0-803990b4f8d8"/>
+      <inputs href="../sources/opendata_source.xmi#mmuuid/5fbfbed9-ed0b-4a54-997b-74be5cc985bc"/>
+      <inputs href="#mmuuid/d8dbbd9f-1ddf-4e87-96d4-5beb8b05e727"/>
+      <inputs href="#mmuuid/ea6a4d3f-f71f-43d2-9285-00706a3ff54f"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:ed72a3e4-6468-4897-a6b9-288b5f9da9f1" inputs="mmuuid/2750ab83-6f4a-450f-8e95-2bbbe4257933" outputs="mmuuid/bad69ce0-e309-41dc-8c5e-5558a7646943" target="mmuuid/bad69ce0-e309-41dc-8c5e-5558a7646943">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:9142caf3-c42a-47ad-82c2-3ca9f7cedc71">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:3816c80b-2d25-48a2-b439-938a6d443398" selectSql="CREATE VIRTUAL PROCEDURE&#xa;BEGIN&#xa;&#x9;SELECT data_publication_view.data_publication_categories.id AS out_id, data_publication_view.data_publication_categories.category AS out_category FROM data_publication_categories;&#xa;END"/>
+        <aliases xmi:uuid="mmuuid:61e129e4-2df6-44b4-bfd0-c84e60c84173" alias="data_publication_categories" aliasedObject="mmuuid/2750ab83-6f4a-450f-8e95-2bbbe4257933"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:cf208e39-c385-406b-b410-6d7dfb6453fb" inputs="mmuuid/09158ccf-e6a5-4281-9e35-570f5881b11e" outputs="mmuuid/09158ccf-e6a5-4281-9e35-570f5881b11e"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:c9c3b221-37a5-4260-aafb-d5481263ab6a" inputs="mmuuid/cc28d7b2-a488-4f6b-9320-4dc098ddbcf8" outputs="mmuuid/cc28d7b2-a488-4f6b-9320-4dc098ddbcf8"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:07f2bf86-f0ee-466b-874c-db7270960e2b" inputs="mmuuid/9efa1f4d-cfa6-4e3c-b2e0-29fc8a10c828" outputs="mmuuid/62b12560-8e96-4265-8c0f-738be3ba8dae" target="mmuuid/62b12560-8e96-4265-8c0f-738be3ba8dae">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:a30c6294-9502-4d35-aa36-03a3f1641915">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:dd5b9050-20f9-40d1-8c14-beebe97390f9" selectSql="CREATE VIRTUAL PROCEDURE&#xa;BEGIN&#xa;&#x9;SELECT data_publication_view.data_publication.id_category AS out_id_category, data_publication_view.data_publication.id_orig AS out_id_orig, data_publication_view.data_publication.name AS out_name, data_publication_view.data_publication.address AS out_address, data_publication_view.data_publication.pobox AS out_pobox, data_publication_view.data_publication.city AS out_city, data_publication_view.data_publication.phone AS out_phone, data_publication_view.data_publication.web AS out_web, data_publication_view.data_publication.email AS out_email, data_publication_view.data_publication.business_hours AS out_business_hours, data_publication_view.data_publication.coordinates AS out_coordinates FROM data_publication;&#xa;END"/>
+        <aliases xmi:uuid="mmuuid:23ebb5b8-cd8b-4e01-a8c8-f20edd985191" alias="data_publication" aliasedObject="mmuuid/9efa1f4d-cfa6-4e3c-b2e0-29fc8a10c828"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:b6e3b77d-c7b1-4622-bf7d-6adaf789c3c9" inputs="mmuuid/9d8ea3cf-01d1-457e-9840-9704d9fc0a85" outputs="mmuuid/9d8ea3cf-01d1-457e-9840-9704d9fc0a85"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:e3416ca5-7f9e-4012-8b3b-f3d42e4e454c" inputs="mmuuid/3661be3f-3292-48bf-96ed-594ed24488a5" outputs="mmuuid/3661be3f-3292-48bf-96ed-594ed24488a5"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:100aabd5-8195-47b3-a819-66ea30035417" inputs="mmuuid/d7ba2ab4-133b-4232-abc0-7ddfc5859df3" outputs="mmuuid/d7ba2ab4-133b-4232-abc0-7ddfc5859df3"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:db429c33-ba49-4d8b-ac35-46226dde66cb" inputs="mmuuid/5b102b3a-6211-4471-ad6b-d1b7adfcc322" outputs="mmuuid/5b102b3a-6211-4471-ad6b-d1b7adfcc322"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:45527b27-a42e-48e7-9388-950fb719a459" inputs="mmuuid/d590374d-b928-4fb4-85ca-d03a9e9b5053" outputs="mmuuid/d590374d-b928-4fb4-85ca-d03a9e9b5053"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:ef47d509-719a-41e7-adb6-41e119c6712e" inputs="mmuuid/067d8ac8-2e4c-4cf1-9598-e2519e0094cf" outputs="mmuuid/067d8ac8-2e4c-4cf1-9598-e2519e0094cf"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:2cfd2f5e-a7a5-42f8-a4da-56330331d734" inputs="mmuuid/c3af3edc-d3ca-41af-ac2a-fea7c102aa3f" outputs="mmuuid/c3af3edc-d3ca-41af-ac2a-fea7c102aa3f"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:facdf344-f2ad-4378-b1c0-1e5fd3657aeb" inputs="mmuuid/37eaadef-d797-44c1-ad37-192876387cf2" outputs="mmuuid/37eaadef-d797-44c1-ad37-192876387cf2"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:0e282386-2974-46cd-b99c-a78e0a3eef7f" inputs="mmuuid/a92a0292-5b67-4091-b6ea-0a87d2ca3e24" outputs="mmuuid/a92a0292-5b67-4091-b6ea-0a87d2ca3e24"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:ad0234d9-0345-4d10-b88d-7f20d75b7ac1" inputs="mmuuid/90558817-3afa-44f5-a96b-9dc2bd4ace0a" outputs="mmuuid/90558817-3afa-44f5-a96b-9dc2bd4ace0a"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:4ac77256-37c4-4261-8d97-446288b903f5" inputs="mmuuid/53f9129d-efb1-4981-8975-a2355e08a06f" outputs="mmuuid/53f9129d-efb1-4981-8975-a2355e08a06f"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:4c5a6b53-f4a0-4941-9baf-4dfdaa0e90f8" inputs="mmuuid/9efa1f4d-cfa6-4e3c-b2e0-29fc8a10c828" outputs="mmuuid/a4e21454-c06d-44ba-8e01-3f4c645d350b" target="mmuuid/a4e21454-c06d-44ba-8e01-3f4c645d350b">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:59499690-3d35-4981-9312-f676020b6ccc">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:b22fb157-9b39-42a1-a5d5-2c1a6bcc73cf" selectSql="CREATE VIRTUAL PROCEDURE&#xa;BEGIN&#xa;&#x9;SELECT data_publication_view.data_publication.id_category AS out_id_category, data_publication_view.data_publication.id_orig AS out_id_orig, data_publication_view.data_publication.name AS out_name, data_publication_view.data_publication.address AS out_address, data_publication_view.data_publication.pobox AS out_pobox, data_publication_view.data_publication.city AS out_city, data_publication_view.data_publication.phone AS out_phone, data_publication_view.data_publication.web AS out_web, data_publication_view.data_publication.email AS out_email, data_publication_view.data_publication.business_hours AS out_business_hours, data_publication_view.data_publication.coordinates AS out_coordinates FROM data_publication WHERE data_publication_view.spGetPoisByCategory.in_id_category = data_publication_view.data_publication.id_category;&#xa;END"/>
+        <aliases xmi:uuid="mmuuid:08d19339-6753-43cc-9732-7fdf61f61128" alias="data_publication" aliasedObject="mmuuid/9efa1f4d-cfa6-4e3c-b2e0-29fc8a10c828"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:ac453f67-2f4b-4506-a823-f51c1ef98fc8" inputs="mmuuid/aab3f762-9ebd-44c4-829a-ce0d41fd0d9a" outputs="mmuuid/aab3f762-9ebd-44c4-829a-ce0d41fd0d9a"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:1ba8af32-58d0-464c-9aad-89f95157fbd7" inputs="mmuuid/975187e7-6cba-41ea-b6fe-73d11d331962" outputs="mmuuid/975187e7-6cba-41ea-b6fe-73d11d331962"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:5545fc6e-696f-417e-be88-043f2c3e1607" inputs="mmuuid/8bb8f4f3-ff22-4521-99c8-968d16779dc0" outputs="mmuuid/8bb8f4f3-ff22-4521-99c8-968d16779dc0"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:4ac73599-68b6-422c-bae6-f9801da7e920" inputs="mmuuid/09cfa8c3-a4c0-4262-91d2-dfe33df3fec5" outputs="mmuuid/09cfa8c3-a4c0-4262-91d2-dfe33df3fec5"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:b8869487-529c-46c3-a4c6-ecc6b326a02a" inputs="mmuuid/4de89a0e-837b-4526-b864-6be7f9d7b949" outputs="mmuuid/4de89a0e-837b-4526-b864-6be7f9d7b949"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:97e6fd46-64fa-4410-8c1d-dfa310189959" inputs="mmuuid/a2fd4748-36fe-4f98-bf42-7c26d13d2808" outputs="mmuuid/a2fd4748-36fe-4f98-bf42-7c26d13d2808"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:eb458ac0-5ed0-4b26-9a4e-32bb18aeb68a" inputs="mmuuid/b0bb8d48-7d4c-457b-aff6-7e9af23a062c" outputs="mmuuid/b0bb8d48-7d4c-457b-aff6-7e9af23a062c"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:30cd5e8a-0a8e-4f51-b2f2-2bf1392d2531" inputs="mmuuid/00d345e1-5feb-41a7-a914-0ea8461564d1" outputs="mmuuid/00d345e1-5feb-41a7-a914-0ea8461564d1"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:56032698-fde5-486c-b9a4-4e94a6e3c5ab" inputs="mmuuid/190ce2b6-7cb8-4b2b-8acd-ae5924d692f2" outputs="mmuuid/190ce2b6-7cb8-4b2b-8acd-ae5924d692f2"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:a92b3a6a-632b-4ee5-9f5e-2e2cd3adefed" inputs="mmuuid/09a1ef22-541d-4667-b4c8-cd6e32b6d75f" outputs="mmuuid/09a1ef22-541d-4667-b4c8-cd6e32b6d75f"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:f6ff33b9-ce40-49b4-ba00-2720c9b024c1" inputs="mmuuid/4216a0b5-4944-44c3-99d6-6f92130cb751" outputs="mmuuid/4216a0b5-4944-44c3-99d6-6f92130cb751"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:d8633977-43b2-4836-854d-5ffd2bb2e81b" inputs="mmuuid/9efa1f4d-cfa6-4e3c-b2e0-29fc8a10c828" outputs="mmuuid/b96bb3ba-75d7-4487-b99d-fc327321c971" target="mmuuid/b96bb3ba-75d7-4487-b99d-fc327321c971">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:cfb7abd7-9404-4c8a-88a1-c6706947db73">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:49a09406-f3cb-429c-af0a-50b89299bc4c" selectSql="CREATE VIRTUAL PROCEDURE&#xa;BEGIN&#xa;&#x9;SELECT data_publication_view.data_publication.id_category AS out_id_category, data_publication_view.data_publication.id_orig AS out_id_orig, data_publication_view.data_publication.name AS out_name, data_publication_view.data_publication.address AS out_address, data_publication_view.data_publication.pobox AS out_pobox, data_publication_view.data_publication.city AS out_city, data_publication_view.data_publication.phone AS out_phone, data_publication_view.data_publication.web AS out_web, data_publication_view.data_publication.email AS out_email, data_publication_view.data_publication.business_hours AS out_business_hours, data_publication_view.data_publication.coordinates AS out_coordinates FROM data_publication WHERE (data_publication_view.spGetPoiByIds.in_id_category = data_publication_view.data_publication.id_category) AND (data_publication_view.spGetPoiByIds.in_id_orig = data_publication_view.data_publication.id_orig);&#xa;END"/>
+        <aliases xmi:uuid="mmuuid:1519ef09-c6a2-4ebf-9049-4c8a550d254b" alias="data_publication" aliasedObject="mmuuid/9efa1f4d-cfa6-4e3c-b2e0-29fc8a10c828"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:7bcd9852-6963-4767-94fa-770317add1ad" inputs="mmuuid/78195eb6-d78e-4f53-8cba-69ed611a9ffc" outputs="mmuuid/78195eb6-d78e-4f53-8cba-69ed611a9ffc"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:d33dba05-f28c-44fc-bdd2-e9e8324be2e3" inputs="mmuuid/50b4c145-8b2e-4aa3-9355-cb4ec5f5b4af" outputs="mmuuid/50b4c145-8b2e-4aa3-9355-cb4ec5f5b4af"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:7eca447c-a261-4a00-b39c-7a0517b35cc7" inputs="mmuuid/8cd69b34-a255-471e-a8e4-e3030b2c2142" outputs="mmuuid/8cd69b34-a255-471e-a8e4-e3030b2c2142"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:945b20eb-ba66-4445-8fe8-b14b8e813e9b" inputs="mmuuid/6e224cb7-3750-40c2-8a7c-3742974d65f1" outputs="mmuuid/6e224cb7-3750-40c2-8a7c-3742974d65f1"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:07c7ce18-1b3d-4dd6-856a-4c9fa8e1a60b" inputs="mmuuid/ce761e03-ed6a-450a-9172-51f6071c7a7b" outputs="mmuuid/ce761e03-ed6a-450a-9172-51f6071c7a7b"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:2cb569c8-dd8c-4bdd-8f13-509310b9d536" inputs="mmuuid/2a9ae439-2e6b-448c-9256-ad929a62228f" outputs="mmuuid/2a9ae439-2e6b-448c-9256-ad929a62228f"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:5f5e5dbc-df7e-4b4f-8e31-c7d2f1a4db0f" inputs="mmuuid/030488f0-256f-4f19-baf7-515f04e49fb8" outputs="mmuuid/030488f0-256f-4f19-baf7-515f04e49fb8"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:2799c668-3337-4c60-826d-2d98e2ada224" inputs="mmuuid/d639b83f-3745-4222-9b38-42c18aa238aa" outputs="mmuuid/d639b83f-3745-4222-9b38-42c18aa238aa"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:d1d8ad3c-ddc3-4053-86c7-b63dddb15065" inputs="mmuuid/326768c1-5633-4db9-806a-f8e2f2dd27e6" outputs="mmuuid/326768c1-5633-4db9-806a-f8e2f2dd27e6"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:77ff9a6f-335e-4bb9-9a38-35d761fb4b5a" inputs="mmuuid/c14020a5-5569-478a-90a5-4d1e1c441e80" outputs="mmuuid/c14020a5-5569-478a-90a5-4d1e1c441e80"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:4e8891ee-c426-41e8-92c0-7e3e096c5ec3" inputs="mmuuid/c7a64df3-ae9e-4caa-bbe0-80e926fac03d" outputs="mmuuid/c7a64df3-ae9e-4caa-bbe0-80e926fac03d"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:88297537-b6e8-468f-93e1-02d7a2bf5448" outputs="mmuuid/ea6a4d3f-f71f-43d2-9285-00706a3ff54f" target="mmuuid/ea6a4d3f-f71f-43d2-9285-00706a3ff54f">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:0a4b138c-60c7-49ad-8dbf-33a78f216e91">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:6eb07236-892c-476f-aaea-e31d1871e63e" selectSql="SELECT&#xa;&#x9;&#x9;opendata_source.EducacioInfantil0a3.placemarkName AS placemark_name, opendata_source.EducacioInfantil0a3.coordinates AS coordinates&#xa;&#x9;FROM&#xa;&#x9;&#x9;opendata_source.EducacioInfantil0a3&#xa;UNION&#xa;SELECT&#xa;&#x9;&#x9;opendata_source.EducacioInfantil3a6.placemarkName AS placemark_name, opendata_source.EducacioInfantil3a6.coordinates AS coordinates&#xa;&#x9;FROM&#xa;&#x9;&#x9;opendata_source.EducacioInfantil3a6&#xa;UNION&#xa;SELECT&#xa;&#x9;&#x9;opendata_source.EducacioPrimaria.placemarkName AS placemark_name, opendata_source.EducacioPrimaria.coordinates AS coordinates&#xa;&#x9;FROM&#xa;&#x9;&#x9;opendata_source.EducacioPrimaria&#xa;UNION&#xa;SELECT&#xa;&#x9;&#x9;opendata_source.EducacioSecundaria.placemarkName AS placemark_name, opendata_source.EducacioSecundaria.coordinates AS coordinates&#xa;&#x9;FROM&#xa;&#x9;&#x9;opendata_source.EducacioSecundaria"/>
+        <aliases xmi:uuid="mmuuid:0d383d3a-1e35-46a4-8f7d-20c66d5e2c3b" alias="EducacioInfantil0a3">
+          <aliasedObject href="../sources/opendata_source.xmi#mmuuid/1d50595b-e2dd-407f-8897-d691cd239ec9"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:2054d0d6-e562-4286-8e8d-c0ec983f00e5" outputs="mmuuid/de6ec6f2-542a-43e2-bf94-4364c76e924d">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/b88adcdb-9f4a-4421-b109-089e20fe50a6"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:c68680cb-154b-48cc-8dce-48d948799f05" outputs="mmuuid/6bcb6106-f3ee-4349-a00b-5dc46f495389">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/59e99330-6410-4996-955d-3d80113f338f"/>
+      </nested>
+      <inputs href="../sources/opendata_source.xmi#mmuuid/1d50595b-e2dd-407f-8897-d691cd239ec9"/>
+    </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:af1e0db5-b369-48ac-a4c9-b43d70d06ff9" outputs="mmuuid/d8dbbd9f-1ddf-4e87-96d4-5beb8b05e727" target="mmuuid/d8dbbd9f-1ddf-4e87-96d4-5beb8b05e727">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:e0da2b7c-0202-4ae5-9ba3-7c59db7d2cd7">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:4d90d08c-44ec-4eb9-883c-b310b3eba2bd" selectSql="SELECT&#xa;&#x9;&#x9;opendata_source.Centres_educacio.nom, opendata_source.Centres_educacio.altresadreca, opendata_source.Centres_educacio.horari, opendata_source.Centres_educacio.municipi, opendata_source.Centres_educacio.cp, opendata_source.Centres_educacio.tel1, opendata_source.Centres_educacio.correu1, opendata_source.Centres_educacio.web1, MIN(opendata_source.Centres_educacio.id) AS id&#xa;&#x9;FROM&#xa;&#x9;&#x9;opendata_source.centres_educacio&#xa;&#x9;GROUP BY opendata_source.Centres_educacio.nom, opendata_source.Centres_educacio.altresadreca, opendata_source.Centres_educacio.horari, opendata_source.Centres_educacio.municipi, opendata_source.Centres_educacio.cp, opendata_source.Centres_educacio.tel1, opendata_source.Centres_educacio.correu1, opendata_source.Centres_educacio.web1"/>
+        <aliases xmi:uuid="mmuuid:4840af58-9605-4670-aee7-292ff99702a7" alias="Centres_educacio">
+          <aliasedObject href="../sources/opendata_source.xmi#mmuuid/0c523146-d55c-4873-ad8c-68877dcc5cb4"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:f4eecd40-9719-42a2-b201-83db9e448a89" outputs="mmuuid/e8448971-a70d-49a4-abad-07b9d53bc80d">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/a2f548a1-188c-4ac7-abd0-016039fed7eb"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:8eece832-67c1-4f7a-8233-74f206e0eb27" outputs="mmuuid/4fedf7a4-acd7-433c-86a5-1995a2827129">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/649fb6d3-56ca-4f78-9be3-6116786eef10"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:c7039ef4-a57f-4057-b9f1-6be2551987fb" outputs="mmuuid/328a9df0-4f20-463a-b746-7e4b20f2f1cc">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/cee12516-f78a-47ce-9e9c-f4b1e18f0ea5"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:a1872d4c-a8c5-4665-9cab-6a48128b80a8" outputs="mmuuid/821d3dc7-2dc6-4cf2-924b-a3ff438340e2">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/5725accd-46a3-4fc8-993e-61e73cbc6f50"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:de8113a2-4778-4c7c-b033-0b73b5c133ab" outputs="mmuuid/608c4ac2-7e56-4462-afdf-d7a4617f706a">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/2f26dbd9-ed6d-452f-93bd-a40fc1c32dd5"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:7efcabb4-2fb0-4568-9a19-306934d8d816" outputs="mmuuid/99d841d3-829f-40cf-93ef-f955f657bbae">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/5cbc6759-2538-4a25-b358-498ec808688b"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:4d7042c1-7752-49a3-b6ed-17b9042c0c8c" outputs="mmuuid/d290e6d4-3b50-4413-95ec-2adff28a922d">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/730f540c-8d59-4551-9716-b429821d1bd6"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:b0de669b-2261-4c2f-b46b-778f7ecff803" outputs="mmuuid/5f8942b0-c7e2-4d89-a683-12e489d8b929">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/1eef118a-d7fb-43ae-8b0c-303e2691c57a"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:1791103a-0a8c-449f-a4f3-1685bb628aa1" outputs="mmuuid/4464ec58-dc9e-4273-b246-e5bdc0542e5e">
+        <inputs href="../sources/opendata_source.xmi#mmuuid/5cbbf4e7-9f9f-49d0-bbfd-1e02d3fcc52d"/>
+      </nested>
+      <inputs href="../sources/opendata_source.xmi#mmuuid/0c523146-d55c-4873-ad8c-68877dcc5cb4"/>
+    </transformationMappings>
+  </transformation:TransformationContainer>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:31f35900-e786-40c2-8210-120d9b73ded9"/>
+  <relational:View xmi:uuid="mmuuid:9efa1f4d-cfa6-4e3c-b2e0-29fc8a10c828" name="data_publication" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:df8d832e-e8ec-4502-adc1-d84ef0676a90" name="id_category">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0654f18d-56be-4c8d-b75e-772603f500be" name="id_orig">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:649c2680-63e0-40f7-8125-c1bcc36d3201" name="name" length="4000">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ec15211e-7f5e-443d-93f4-69ba8c55a6e4" name="address" length="4000">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:cfe7c113-64ff-4604-b59c-83a80f69c774" name="pobox" length="5">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:45250fcc-51c6-480b-820f-9a93362504f2" name="city" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a6ddc95d-bf2b-4b61-baab-06ef9ada24c7" name="phone" length="20">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8cfdead7-e632-4d91-a826-f4baa19ae358" name="web" length="4000">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:299f0952-e0a5-4aa4-b2cf-e3f0541ccdfc" name="email" length="4000">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:37160512-246c-4607-b9e0-803990b4f8d8" name="business_hours" length="4000">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ddb7c611-4fd5-4a90-bb57-02265361f5aa" name="coordinates" length="4000">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+  </relational:View>
+  <relational:Procedure xmi:uuid="mmuuid:bad69ce0-e309-41dc-8c5e-5558a7646943" name="spGetPoiCategories">
+    <result xmi:uuid="mmuuid:2fb27fb6-9b88-4c5f-b2ec-fcfc3b2463d8" name="spGetPoiCategoriesResultSet">
+      <columns xmi:uuid="mmuuid:09158ccf-e6a5-4281-9e35-570f5881b11e" name="out_id">
+        <type href="http://www.w3.org/2001/XMLSchema#int"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:cc28d7b2-a488-4f6b-9320-4dc098ddbcf8" name="out_category" length="255">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+  <relational:Procedure xmi:uuid="mmuuid:62b12560-8e96-4265-8c0f-738be3ba8dae" name="spGetPois">
+    <result xmi:uuid="mmuuid:61579972-7c2f-495b-b78e-b2c3e36788b9" name="spGetPoisResultSet">
+      <columns xmi:uuid="mmuuid:9d8ea3cf-01d1-457e-9840-9704d9fc0a85" name="out_id_category">
+        <type href="http://www.w3.org/2001/XMLSchema#int"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:3661be3f-3292-48bf-96ed-594ed24488a5" name="out_id_orig">
+        <type href="http://www.w3.org/2001/XMLSchema#int"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:d7ba2ab4-133b-4232-abc0-7ddfc5859df3" name="out_name" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:5b102b3a-6211-4471-ad6b-d1b7adfcc322" name="out_address" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:d590374d-b928-4fb4-85ca-d03a9e9b5053" name="out_pobox" length="5">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:067d8ac8-2e4c-4cf1-9598-e2519e0094cf" name="out_city" length="255">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:c3af3edc-d3ca-41af-ac2a-fea7c102aa3f" name="out_phone" length="20">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:37eaadef-d797-44c1-ad37-192876387cf2" name="out_web" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:a92a0292-5b67-4091-b6ea-0a87d2ca3e24" name="out_email" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:90558817-3afa-44f5-a96b-9dc2bd4ace0a" name="out_business_hours" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:53f9129d-efb1-4981-8975-a2355e08a06f" name="out_coordinates" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+  <relational:Procedure xmi:uuid="mmuuid:a4e21454-c06d-44ba-8e01-3f4c645d350b" name="spGetPoisByCategory">
+    <parameters xmi:uuid="mmuuid:8e3d3cab-1c03-4734-9355-34f0993366c7" name="in_id_category">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </parameters>
+    <result xmi:uuid="mmuuid:6f83c19e-bc8e-4fda-8ea4-71247c840d6c" name="spGetPoisResultSet">
+      <columns xmi:uuid="mmuuid:aab3f762-9ebd-44c4-829a-ce0d41fd0d9a" name="out_id_category">
+        <type href="http://www.w3.org/2001/XMLSchema#int"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:975187e7-6cba-41ea-b6fe-73d11d331962" name="out_id_orig">
+        <type href="http://www.w3.org/2001/XMLSchema#int"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:8bb8f4f3-ff22-4521-99c8-968d16779dc0" name="out_name" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:09cfa8c3-a4c0-4262-91d2-dfe33df3fec5" name="out_address" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:4de89a0e-837b-4526-b864-6be7f9d7b949" name="out_pobox" length="5">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:a2fd4748-36fe-4f98-bf42-7c26d13d2808" name="out_city" length="255">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:b0bb8d48-7d4c-457b-aff6-7e9af23a062c" name="out_phone" length="20">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:00d345e1-5feb-41a7-a914-0ea8461564d1" name="out_web" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:190ce2b6-7cb8-4b2b-8acd-ae5924d692f2" name="out_email" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:09a1ef22-541d-4667-b4c8-cd6e32b6d75f" name="out_business_hours" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:4216a0b5-4944-44c3-99d6-6f92130cb751" name="out_coordinates" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+  <relational:Procedure xmi:uuid="mmuuid:b96bb3ba-75d7-4487-b99d-fc327321c971" name="spGetPoiByIds">
+    <parameters xmi:uuid="mmuuid:d4addf38-f47c-4df0-8323-b3a38b454e79" name="in_id_category">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:96dc3ace-e603-49db-b95b-a3f62d4d1826" name="in_id_orig">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </parameters>
+    <result xmi:uuid="mmuuid:2b26f06a-333a-48fb-baf0-d1e6e2ab4690" name="spGetPoisResultSet">
+      <columns xmi:uuid="mmuuid:78195eb6-d78e-4f53-8cba-69ed611a9ffc" name="out_id_category">
+        <type href="http://www.w3.org/2001/XMLSchema#int"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:50b4c145-8b2e-4aa3-9355-cb4ec5f5b4af" name="out_id_orig">
+        <type href="http://www.w3.org/2001/XMLSchema#int"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:8cd69b34-a255-471e-a8e4-e3030b2c2142" name="out_name" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:6e224cb7-3750-40c2-8a7c-3742974d65f1" name="out_address" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:ce761e03-ed6a-450a-9172-51f6071c7a7b" name="out_pobox" length="5">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:2a9ae439-2e6b-448c-9256-ad929a62228f" name="out_city" length="255">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:030488f0-256f-4f19-baf7-515f04e49fb8" name="out_phone" length="20">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:d639b83f-3745-4222-9b38-42c18aa238aa" name="out_web" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:326768c1-5633-4db9-806a-f8e2f2dd27e6" name="out_email" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:c14020a5-5569-478a-90a5-4d1e1c441e80" name="out_business_hours" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:c7a64df3-ae9e-4caa-bbe0-80e926fac03d" name="out_coordinates" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+  <relational:View xmi:uuid="mmuuid:ea6a4d3f-f71f-43d2-9285-00706a3ff54f" name="education_coordinates_agg" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:de6ec6f2-542a-43e2-bf94-4364c76e924d" name="placemark_name" length="255">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6bcb6106-f3ee-4349-a00b-5dc46f495389" name="coordinates" length="4000">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+  </relational:View>
+  <relational:View xmi:uuid="mmuuid:d8dbbd9f-1ddf-4e87-96d4-5beb8b05e727" name="education_centers" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:e8448971-a70d-49a4-abad-07b9d53bc80d" name="nom" nameInSource="nom" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4fedf7a4-acd7-433c-86a5-1995a2827129" name="altresadreca" nameInSource="altresadreca" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:328a9df0-4f20-463a-b746-7e4b20f2f1cc" name="horari" nameInSource="horari" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:821d3dc7-2dc6-4cf2-924b-a3ff438340e2" name="municipi" nameInSource="municipi" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:608c4ac2-7e56-4462-afdf-d7a4617f706a" name="cp" nameInSource="cp" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:99d841d3-829f-40cf-93ef-f955f657bbae" name="tel1" nameInSource="tel1" nativeType="varchar" length="50" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d290e6d4-3b50-4413-95ec-2adff28a922d" name="correu1" nameInSource="correu1" nativeType="varchar" length="100" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:5f8942b0-c7e2-4d89-a683-12e489d8b929" name="web1" nameInSource="web1" nativeType="varchar" length="2147483647" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4464ec58-dc9e-4273-b246-e5bdc0542e5e" name="id" nameInSource="id" nativeType="int" fixedLength="true" precision="10" nullable="NO_NULLS" autoIncremented="true" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+  </relational:View>
+</xmi:XMI>
