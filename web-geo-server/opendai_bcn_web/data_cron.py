@@ -4,6 +4,7 @@ Created on 25/07/2013
 @author: bdigital_mob
 '''
 import time
+import random
 
 from opendai_client.api_client import ApiClient
 from opendai_bcn_web.models import Pollution
@@ -40,7 +41,8 @@ class DataCron(object):
                     
                     for d in districts:
                         print "storing result for district : " + d
-                        alert = self.alarm_level(r)
+                        alert = self.alarm_level_fake(r)
+                        print alert
                         
                         p = Pollution(district= d, so2=r['so2'], no=r['no'], no2=r['no2'], o3=r['o3'], co=r['co'], pm10=r['pm10'], alert=alert)
                         p.save()
@@ -75,3 +77,9 @@ class DataCron(object):
             return 1 
         
         return 0
+    
+    def alarm_level_fake(self, r):
+        l = [0,1,2]
+        random.shuffle(l)
+        result = l[0]
+        return result
