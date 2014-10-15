@@ -3,120 +3,85 @@ Created on 20/09/2013
 
 @author: mplanaguma
 '''
-from django.contrib.gis.geos import LineString, Point, MultiLineString
+from django.contrib.gis.geos import LineString, Point, MultiLineString, MultiPoint, LinearRing, Polygon
 from geopy import geocoders
-from opendai_lleida_web.models import GeoResolve
-import logging
-import json
-import geojson
-import utm
-import sys
 
-class GeoCoding(object):
+import logging, sys
+
+class GeoCodingClient(object):
 
 
     def __init__(self):
-        self.g_geonames = geocoders.GeoNames()
+        self.g_geonames = geocoders.GeoNames(username='mplanaguma')
         self.g_google = geocoders.GoogleV3()
+        self.g_bing = geocoders.Bing('Aoouq4D8UL3y9_QmnkA67qP7xvBiDVXWsMZbQ1OPlXWupph9AcA39Z2kltMawU2J')
+        #Pending
+        #geocoders.MediaWiki()
+        #geocoders.SemanticMediaWiki()
+        #geocoders.MapQuest()
+        #geocoders.OpenMapQuest()
+#        geocoders.Yahoo()
         
+    def get_lat_lon_by_address(self, address, bb=None):
         
-    def get_lat_lon_by_address(self, address):
+        if bb:
+            l_box = LinearRing(bb[0],bb[1],bb[2],bb[3],bb[0])
+            bounding_box = Polygon(l_box)
         
         place = None
         lat = None
         lng = None
         
-        try:
-            geoResolved = GeoResolve.objects.get(address__exact=address)
-            logging.debug( "Cached Place: " + geoResolved.place)
-            return geoResolved.place, (float(geoResolved.lat), float(geoResolved.lng))
+        def is_inside(geo_results,bounding_box):
+            if geo_results:
+                for geo_result in geo_results:
+                        p_place, (p_lat, p_lng) = geo_result[0], (geo_result[1][0], geo_result[1][1])
+                        p_candidate = Point(float(p_lng),float(p_lat))
+                        inside = bounding_box.contains(p_candidate)
+                        if inside:
+                            return p_place, (p_lat, p_lng)
+            return None, (None, None)
         
-        except: 
-            logging.warn("Finding error: " + sys.exc_info()[0])
-            # try Geonames api
-            try:  
-                logging.debug( "Georesolving GeoNames"    )   
-                geo_result = self.g_geonames.geocode(address)
-                if geo_result != None:
-                    place, (lat, lng) = geo_result[0], (geo_result[1][0], geo_result[1][1])
-            except:
-                logging.warn( "GeoNames Oops!")
-                
-            # try google api
-            if place == None:
-                try:
-                    logging.debug( "Georesolving Google Maps 1"  )
-                    place, (lat, lng) = self.g_google.geocode(address)
-                except:
-                    try:
-                        logging.debug( "Georesolving Google Maps 2" ) 
-                        place, (lat, lng) = self.g_google.geocode("carrer " + address)   
-                    except:  
-                        logging.warn( "Google Oops!")  
+        # try Geonames api
+        try:  
+            logging.debug( "Georesolving GeoNames")   
+            if bb:
+                geo_results = self.g_geonames.geocode(address, exactly_one=False)
+                place, (lat, lng) = is_inside(geo_results, bounding_box)
+            else:
+                geo_result = self.g_geonames.geocode(address, exactly_one=True)
+                if geo_result:
+                    place, (lat, lng) = geo_result
             
-            # Storing Cache 
-            if place != None: 
-                logging.debug( "Storing Place on DB: " + str(place)) 
-                geoResolved = GeoResolve(address=address , place=place , lat=lat , lng=lng)
-                try:
-                    geoResolved.save()
-                except:
-                    logging.error("Storing error: " + sys.exc_info()[0]);
-                
-            return place, (lat, lng)
-    
-    
-    def get_lat_lon_by_street(self, street, city):
-        return self.get_lat_lon_by_address(street + ", " + city)
-
-
-    def get_bus_line_geojson(self, jsons):
-        
-        line_geojson = {}
-        fc = {"type": "FeatureCollection", "features": []}
-        
-        for j in jsons:
-            
-            bus_line_name = None
-            try: 
-                bus_line_name = str(j.get('description'))
-            except:
-                continue
-            
-            lists = line_geojson.get(bus_line_name, None)
-            if lists == None:
-                lists = []
-            
-            line = []
-                
-            points = [x.replace("0 ", "") for x in j.get('coordinates').split(',')]
-            for position in xrange(len(points)/2):
-                p = position * 2
-                point = Point( float(points[p]) , float(points[p+1]))
-                line.append(point)
-            
-            lstr = LineString(line)
-            lists.append(lstr)
-                
-            line_geojson[str(j.get('description'))] = lists
-        
-        for line, list in line_geojson.iteritems():
-            f = { "type": "Feature", "geometry": {}, "properties": {} }
-            mlstr = MultiLineString(list)
-            ml_geojson = mlstr.json
-            f["geometry"] = json.loads(ml_geojson)
-            f["properties"] = {"bus_line": line}
-            fc["features"].append(f)
-            
-        return fc
-    
-    
-    def convert_utm_to_lat_lng(self, x, y, zone_number, zone_letter):
-        try:
-            return utm.to_latlon(x, y, zone_number, zone_letter)  
         except:
-            return (None, None)
+            logging.warn( "GeoNames Exception: " + str(sys.exc_info()[1]))
             
-            
-        
-        
+        # try google api
+        if place == None:
+            try:
+                logging.debug( "Georesolving Google Maps"  )
+                if bb:
+                    geo_results = self.g_google.geocode(address, region="es", exactly_one=False)
+                    place, (lat, lng) = is_inside(geo_results, bounding_box)
+                else:
+                    place, (lat, lng) = self.g_google.geocode(address, region="es", exactly_one=True)
+                
+            except:
+                logging.warn( "Google Exception: " + str(sys.exc_info()[1]))  
+                
+        # try Bing api
+        if place == None:
+            try:
+                logging.debug( "Georesolving Bing Maps"  )
+                
+                if bb:
+                    geo_results = self.g_bing.geocode(address, exactly_one=False)
+                    place, (lat, lng) = is_inside(geo_results, bounding_box)
+                else:
+                    place, (lat, lng) = self.g_bing.geocode(address, exactly_one=False)
+                
+            except:
+                logging.warn( "Bing Exception: " + str(sys.exc_info()[1]))  
+                
+        return place, (lat, lng)
+    

@@ -5,19 +5,47 @@
 {% block head %}
 	{% leaflet_js plugins="ALL" %}
     {% leaflet_css plugins="ALL" %}
-    
+
+<!-- Bootstrap -->    
 <link rel="stylesheet" href="../static/media/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="../static/media/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../static/media/bootstrap/css/bootstrap-switch.css">
 
 <!--TODO add pluguin-->
-<script src="http://code.jquery.com/jquery-1.10.1.min.js" type="application/javascript"></script>
-    
-<link rel="stylesheet" href="../static/media/jquery-ui-1.10.3.custom/css/redmond/jquery-ui-1.10.3.custom.css">
-<link rel="stylesheet" href="../static/media/jquery-ui-1.10.3.custom/plugins/themes/base/jquery.ui.selectmenu.css">
+<script src="../static/media/jquery-ui-1.10.3.custom/js/jquery-1.9.1.js" type="application/javascript"></script>
 
+<!-- Bootstrap Pluguin--> 
+<script src="../static/media/bootstrap/js/bootstrap-switch.min.js" type="application/javascript"></script>
+
+<!-- jQuery UI  10 Complete 
+<link rel="stylesheet" href="../static/media/jquery-ui-1.10.3.custom/css/redmond/jquery-ui-1.10.3.custom.css">
 <script src="../static/media/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js" type="application/javascript"></script>
+--> 
+<!-- jQuery UI  10 Basic --> 
+<link rel="stylesheet" href="../static/media/jquery-ui-1.10.3.basic/css/redmond/jquery-ui-1.10.3.custom.css">
+<script src="../static/media/jquery-ui-1.10.3.basic/js/jquery-ui-1.10.3.custom.js" type="application/javascript"></script>
+
+<!-- jQuery UI  9 Basic  
+<link rel="stylesheet" href="../static/media/jquery-ui-1.9.2.basic/css/ui-lightness/jquery-ui-1.9.2.custom.css">
+<script src="../static/media/jquery-ui-1.9.2.basic/js/jquery-ui-1.9.2.custom.min.js" type="application/javascript"></script>
+-->
+
+<!-- jQuery Mobile  
+<script src="../static/media/jquery.mobile-1.3.2/jquery.mobile-1.3.2.js" type="application/javascript"></script>
+ --> 
+ 
+<!-- jQuery UI Pluguins -->
+<link rel="stylesheet" href="../static/media/jquery-ui-1.10.3.custom/plugins/themes/base/jquery.ui.selectmenu.css">
 <script src="../static/media/jquery-ui-1.10.3.custom/plugins/ui/jquery.ui.selectmenu.js" type="application/javascript"></script>   
-    
+<script src="../static/media/jquery-ui-1.10.3.custom/plugins/jQuery.Spin.js" type="application/javascript"></script>      
+<!--
+<link rel="stylesheet" href="../static/media/jquery-ui-1.10.3.custom/plugins/toggleswitch.css">
+<script src="../static/media/jquery-ui-1.10.3.custom/plugins/toggleswitch.js" type="application/javascript"></script>   
+-->
+
+<script src="../static/media/spin/spin.min.js" type="application/javascript"></script>
+<script src="../static/media/spin/leaflet.spin.js" type="application/javascript"></script>
+   
 <style>	
 	body {
 		padding: 0;
@@ -41,7 +69,7 @@
 	}
 
 	.menu {
-		width: 400px;
+		width: 300px;
 	}
 	
 	.legend {
@@ -56,25 +84,41 @@
 		margin-right: 8px;
 		opacity: 0.7;
 	}
+	
+	#logo {
+        position: absolute;
+        bottom: 0%;
+        left: 7%;
+        z-index: 1000;
+	}
+	
 </style>
 
 {% endblock %}
 
-{% block title %}Lleida{% endblock %}
-
+{% block title %}Lleida OpenDAI Pilot{% endblock %}
 
 {% block body %}
+
+	<div id="logo"><img src='../static/media/images/open-dai-logo-for-web-bottom.png' style="width:400px"/></div>
 
 	{% leaflet_map "map" %}
 	
 	<script type="text/javascript">
 	
+		function loadSelectMenus(){
+			$('#alert-days').selectmenu();
+		}
+	
 	    function mapInit(map, bounds) {
 	    	
+	    	// CloudMade Tile Provider [Deprecated]
+	    	/*
 		    var minimal_style = 22677,
 		    	normal_style = 997,
 		    	midnight_style = 999;
 	    
+
 		    var	base_key = 'BC9A493B41014CAABB98F0471D759707'
 		     	kram_key = '32186e05680a4c8dacc22302bc6265c1';
 	    
@@ -84,20 +128,40 @@
 			var minimal = L.tileLayer(cloudmadeUrl, {key: kram_key, styleId: minimal_style, attribution: cloudmadeAttribution}),
 				normal = L.tileLayer(cloudmadeUrl, {key: kram_key, styleId: normal_style, attribution: cloudmadeAttribution}),
 				midnight  = L.tileLayer(cloudmadeUrl, {key: kram_key, styleId: midnight_style,   attribution: cloudmadeAttribution});
+				
+			*/
+				
+			// MapBox Tile Provider	
+			var mapboxeUrl = 'https://a.tiles.mapbox.com/v3/mplanaguma.ifj390dn/{z}/{x}/{y}.png',
+				mpaboxAttribution = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://www.mapbox.com/about/maps/">MapBox</a>';
+			
+			var mapboxTiles = L.tileLayer(mapboxeUrl,{attribution:mpaboxAttribution});
+			
+			// OSM Tile Provider	
+			var	osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+				osmAttribution = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>';
+			
+			var osmTiles = L.tileLayer(osmUrl,{attribution:osmAttribution});
 		
 			map.setView([41.6175899, 0.6200146], 14);
-			map.addLayer(normal);
-			
+			map.addLayer(mapboxTiles);
+		
 	    	// colors
-			function getColor(d) {
-			    return d > 1000 * 100 ? '#800026' :
-			           d > 500 * 100  ? '#BD0026' :
-			           d > 200 * 100  ? '#E31A1C' :
-			           d > 100 * 100  ? '#FC4E2A' :
-			           d > 50 * 100   ? '#FD8D3C' :
-			           d > 20 * 100   ? '#FEB24C' :
-			           d > 10 * 100   ? '#FED976' :
-			                      		'#FFEDA0';
+			var lines = ['L1', 'L2', 'L3', 'L4', 'L5', 'L6', 'L7', 'L8', 'L9', 'L10'];
+			
+			function getColorLines(line) {
+		         switch (line) {
+		            case 'L10':  return "#ff0000";
+		            case 'L9':   return "#FF8000";
+		            case 'L8':   return "#FFFF00";
+		            case 'L7':   return "#00FF00";
+		            case 'L6':   return "#00FFFF";
+		            case 'L5':   return "#0080FF";
+		            case 'L4':   return "#0000FF";
+		            case 'L3':   return "#8000FF";
+		            case 'L2':   return "#FF00FF";
+		            case 'L1':   return "#000000";
+		           }
 			}
 		
 			function style(feature) {
@@ -113,14 +177,19 @@
 	    
 	    // controls
 		var baseMaps = {
-		    "Minimal": minimal,
-		    "Normal": normal,
-		    "Night View": midnight
+		    "OSM": osmTiles,
+		    "MapBox": mapboxTiles
 		};
 		
 		// Layers
-		var controlLayer = L.control.layers(baseMaps,null, {collapsed:false});
+		var controlLayer = L.control.layers(baseMaps,null, {collapsed:true, position:'bottomright'});
 		controlLayer.addTo(map);
+		
+		
+		// moving defalt zoom
+		$('.leaflet-control-zoom').hide()
+		var zoomControl = L.control.zoom({position:'bottomleft'});
+		zoomControl.addTo(map);
 		
 		    // Pois Layer
 		   	var poisMarker = L.AwesomeMarkers.icon({
@@ -131,11 +200,12 @@
 		   	var pois_array = [];
 		   	var poiss = L.layerGroup(pois_array);
 		   	map.addLayer(poiss);
-			controlLayer.addOverlay(poiss, "Pois");
+			//controlLayer.addOverlay(poiss, "Pois");
 		
+			// Load Category 1 as default
 			$.ajax({
 				type: "GET",
-				url: "pois/1/",
+				url: "api/pois/1/",
 				success: function(data){
 					
 					poiss.clearLayers()
@@ -143,7 +213,13 @@
 					for (var i=0; i < data.length; i++) {
 						pois_data = data[i];
 						if(pois_data.geo.lat != null){
-							pois_point = L.marker([pois_data.geo.lat, pois_data.geo.lng], {icon: poisMarker}).bindPopup(pois_data.name).on('mouseover',overMarker);
+							pois_point = L.marker([pois_data.geo.lat, pois_data.geo.lng], {icon: poisMarker})
+										.bindPopup("<p>Name: "+pois_data.name+"</p>"+
+													"<p>Phone: "+pois_data.phone+"</p>"+
+													"<p>Web: "+pois_data.web+"</p>"+
+													"<p>email: "+pois_data.email+"</p>"+
+													"<p>Address: "+pois_data.address+"</p>")
+										.on('mouseover',overMarker);
 							pois_point.addTo(poiss);
 						}
 					};
@@ -155,11 +231,14 @@
 				}
 			}); 		
 		
+			// To change Category
 			function change_poi_category(id){
+				
+				map.spin(true);
 				
 				$.ajax({
 				type: "GET",
-				url: "pois/" + id,
+				url: "api/pois/" + id,
 				success: function(data){
 					
 					poiss.clearLayers()
@@ -167,14 +246,24 @@
 					for (var i=0; i < data.length; i++) {
 						pois_data = data[i];
 						if(pois_data.geo.lat != null){
-							pois_point = L.marker([pois_data.geo.lat, pois_data.geo.lng], {icon: poisMarker}).bindPopup(pois_data.name).on('mouseover',overMarker);
+							pois_point = L.marker([pois_data.geo.lat, pois_data.geo.lng], {icon: poisMarker})
+										.bindPopup("<p>Name: "+pois_data.name+"</p>"+
+													"<p>Phone: "+pois_data.phone+"</p>"+
+													"<p>Web: "+pois_data.web+"</p>"+
+													"<p>email: "+pois_data.email+"</p>"+
+													"<p>Address: "+pois_data.address+"</p>")
+										.on('mouseover',overMarker);
 							pois_point.addTo(poiss);
 						}
 					};
 					
+					map.spin(false);
+					
 				},
 				error: function(jqXHR, textStatus, error){
 					console.log(error);
+					
+					map.spin(false);
 				}
 				}); 
 			}
@@ -186,24 +275,26 @@
 			})
 			
 		   	var bustop_array = [];
+		   	var bustops = L.layerGroup(bustop_array);
+		   	//map.addLayer(bustops);
+			//controlLayer.addOverlay(bustops, "Parades de Bus");
 		
 			$.ajax({
 				type: "GET",
-				url: "bustop/all",
+				url: "api/bustop/all",
 				success: function(data){
 			
 					for (var i=0; i < data.length; i++) {
 						bustop_data = data[i];
 						if(bustop_data.geo.lat != null){
-							bustop_point = L.marker([bustop_data.geo.lat, bustop_data.geo.lng], {icon: bustopMarker}).bindPopup(bustop_data.name).on('mouseover',overMarker);
+							bustop_point = L.marker([bustop_data.geo.lat, bustop_data.geo.lng], {icon: bustopMarker})
+													.bindPopup("<p>Bus Stop: "+bustop_data.name+"</p>"+
+															   "<p>Id: "+bustop_data.id+"</p>")
+													.on('mouseover',overMarker);
 							bustop_array.push(bustop_point);
+							bustop_point.addTo(bustops);
 						}
 					};
-					
-					var bustops = L.layerGroup(bustop_array);
-					    
-					map.addLayer(bustops);
-					controlLayer.addOverlay(bustops, "Parades de Bus");
 			
 				},
 				error: function(jqXHR, textStatus, error){
@@ -219,59 +310,99 @@
 			})
 		    
 		    var alerts_array = [];
+		    var alerts = L.layerGroup(alerts_array);
+		    //map.addLayer(alerts);
+		    //controlLayer.addOverlay(alerts, "Alertes");
 		
+			// Load defalut Alert view
 			$.ajax({
 				type: "GET",
-				url: "alert/" + "2/",
+				url: "api/alert/" + "2",
 				success: function(data){
 			
 					for (var i=0; i < data.length; i++) {
 						alert_data = data[i];
 						if(alert_data.geo.lat != null){
-							alert_point = L.marker([alert_data.geo.lat, alert_data.geo.lng], {icon: redMarker}).bindPopup(alert_data.category).on('mouseover',overMarker);
-							alerts_array.push(alert_point);
+							alert_point = L.marker([alert_data.geo.lat, alert_data.geo.lng], {icon: redMarker})
+													.bindPopup("<p>Alert: "+alert_data.category+"</p>"+
+																"<p>District: "+alert_data.district+"</p>"+
+																"<p>Street: "+alert_data.street+"</p>"+
+																"<p>Time: "+alert_data.start+"</p>"+
+																"<p>Num: "+alert_data.number+"</p>"+
+																"<p>Id: "+alert_data.id_incident+"</p>")
+													.on('mouseover',overMarker);
+							alert_point.addTo(alerts);
 						}
 					};
 					
 					//console.log(alerts_array)
-					var alerts = L.layerGroup(alerts_array);
-					    
-					map.addLayer(alerts);
-					controlLayer.addOverlay(alerts, "Alertes");
 			
 				},
 				error: function(jqXHR, textStatus, error){
 					console.log(error);
 				}
 			});  
+
+			// To change Alerts
+			function change_alerts(days){
+				
+				map.spin(true);
+				
+				$.ajax({
+				type: "GET",
+				url: "api/alert/" + days,
+				success: function(data){
+					
+					alerts.clearLayers()
+			
+					for (var i=0; i < data.length; i++) {
+						alert_data = data[i];
+						if(alert_data.geo.lat != null){
+							alert_point = L.marker([alert_data.geo.lat, alert_data.geo.lng], {icon: redMarker})
+													.bindPopup("<p>Alert: "+alert_data.category+"</p>"+
+																"<p>District: "+alert_data.district+"</p>"+
+																"<p>Street: "+alert_data.street+"</p>"+
+																"<p>Time: "+alert_data.start+"</p>"+
+																"<p>Num: "+alert_data.number+"</p>"+
+																"<p>Id: "+alert_data.id_incident+"</p>")
+													.on('mouseover',overMarker);
+							alert_point.addTo(alerts);
+						}
+					};
+					
+					map.spin(false);
+					
+				},
+				error: function(jqXHR, textStatus, error){
+					console.log(error);
+					
+					map.spin(false);
+				}
+				}); 
+			}			
+			
+			
+			// Layer BusLines
+			var busLines = L.geoJson(null,
+				{style: function(feature) {
+	            		return {color: getColorLines(feature.properties.bus_line)}
+				    	},
+				 onEachFeature: function(feature, layer){
+	            			layer.bindPopup('Bus Line: ' + feature.properties.bus_line);
+	            		}	
+				    });
+			
+			//busLines.addTo(map);
+			//controlLayer.addOverlay(geoJsonLayer, "Bus Lines");
 			
 			// Lines Layer
 			$.ajax({
 				type: "GET",
-				url: "buslines.geojson",
+				url: "api/buslines.geojson",
 				success: function(buslines_geojson, textStatus, jqXHR){
 					
-	            var geoJsonLayer =  new L.geoJson(buslines_geojson,
-	            	{style: function(feature) {
-				        switch (feature.properties.bus_line) {
-				            case 'L10': return {color: "#ff0000"};
-				            case 'L9':   return {color: "#FF8000"};
-				            case 'L8':   return {color: "#FFFF00"};
-				            case 'L7':   return {color: "#00FF00"};
-				            case 'L6':   return {color: "#00FFFF"};
-				            case 'L5':   return {color: "#0080FF"};
-				            case 'L4':   return {color: "#0000FF"};
-				            case 'L3':   return {color: "#8000FF"};
-				            case 'L2':   return {color: "#FF00FF"};
-				            case 'L1':   return {color: "#000000"};
-				        }
-				    	},onEachFeature: function(feature, layer){
-	            			layer.bindPopup('District: ' + feature.properties.bus_line);
-	            		}	
-				    });
-	            
-	            controlLayer.addOverlay(geoJsonLayer, "Bus Lines");
-					
+					busLines.addData(buslines_geojson);
+				
 				},
 				error: function(jqXHR, textStatus, error){
 					console.log(error);
@@ -297,15 +428,16 @@
 			
 			// method that we will use to update the control based on feature properties passed
 			info.update = function (props) {
-			    this._div.innerHTML = '<h4>Alert Type</h4>' +  (props ?
+			    this._div.innerHTML = '<h4>Element Info</h4>' +  (props ?
 			        '<b>' + props._popup._content + '</b>'
 			        : 'Hover point');
 			};
 			
 			info.addTo(map);
 	
+	
 			// Menu Overlay
-			
+			// ------------
 			
 			var menu = L.control({position: 'topleft'});
 			
@@ -315,7 +447,7 @@
 		    	this._div.innerHTML += "<div id='accordion'>"
 		    	+ "<h3>POIs</h3><div id='menu-pois'></div>"
 		    	+ "<h3>Bus</h3><div id='menu-bus'></div>"
-		    	+ "<h3>Alertes</h3><div id='menu-alert'></div>"
+		    	+ "<h3>Alerts</h3><div id='menu-alert'></div>"
 		    	+ "</div>";
 
 		    	this.update();
@@ -328,10 +460,14 @@
 			//Functions to ei'her disable (onmouseover) or enable (onmouseout) the map's dragging
 			function controlEnter(e) {
 			    map.dragging.disable();
+			    map.doubleClickZoom.disable();
+	
 			}
 			function controlLeave() {
 			    map.dragging.enable();
+			    map.doubleClickZoom.enable();
 			}
+			
 
 			// Fuction to add content on the menu
 			menu.update = function (props) {
@@ -340,28 +476,54 @@
 		    	var accordion = div.children();
 		    	accordion.accordion({heightStyle: "content"});
 		    	
+		    	//Quick application of event handlers to overall control
+		    	accordion.mouseover(controlEnter);
+		    	accordion.mouseout(controlLeave);
+		    	
+		    	// Menus
+		    	
 		    	var menu_pois = div.find('#menu-pois');
 		    			    	
 				$.ajax({
 					type: "GET",
-					url: "pois/category/all",
+					url: "api/pois/category/all",
 					success: function(data){
 				
-						var selectHTML = "<select name='speedA' id='pois-categories'>";
+						var selectHTML = "<p><div class='make-switch' id='switch-poi' data-on='info' data-off='danger'>";
+    					selectHTML += "<input type='checkbox' checked>";
+						selectHTML += "</div></p>";
+
+						selectHTML += "<p><label>Choose Category</label><select name='pois-categories' id='pois-categories'>";
 					
 						for (var i=0; i < data.length; i++) {
 							element = data[i];
 							var option = "<option value='" +element.id+ "'>" +element.category+ "</option>";
 							selectHTML += option;
-				
 						};
 						
-						selectHTML += "</select>";
-						selectHTML += "<input id='b-pois' type='submit' value='View'/>";
+						selectHTML += "</select></p>";
+						selectHTML += "<p><input id='b-pois' type='submit' value='Execute'/></p>";
+						
 						menu_pois.append(selectHTML);
 						menu_pois.find('#b-pois').button().click(function( event ) {
 							change_poi_category($('#pois-categories option:selected').val());
 							});
+							
+						
+						menu_pois.find('#switch-poi').bootstrapSwitch();
+						menu_pois.find('#switch-poi').on('switch-change', function (e, data) {
+						    var $el = $(data.el)
+						      , value = data.value;
+						    console.log(e, $el, value);
+						    if (value == true){
+						    	map.addLayer(poiss);
+						    }else{
+						    	map.removeLayer(poiss);
+						    }
+						});
+						
+						menu_pois.find('#pois-categories').selectmenu({style:'popup'});
+						
 				
 					},
 					error: function(jqXHR, textStatus, error){
@@ -370,18 +532,91 @@
 				}); 
 				
 		    	var menu_bus = div.find('#menu-bus');
-		    	
-
-				var selectmenu = menu_bus.find('#speedA');
-				//selectmenu.selectmenu({style:'popup'})
+				    
+				    var htmlLegendLines = "<table><tr valign='top'><td style='padding-right: 10px;'><p>Bus Lines</p>";
+				   		htmlLegendLines += "<p><div class='make-switch' id='switch-b-lines' data-on='info' data-off='danger'>";
+    					htmlLegendLines += "<input type='checkbox' unchecked>";
+						htmlLegendLines += "</div></p>";
+				    
+				    	htmlLegendLines += "<div class='legend'>";
+				
+				    // loop through our density intervals and generate a label with a colored square for each interval
+				    for (var i = 0; i < lines.length; i++) {
+				        htmlLegendLines +=
+				            '<i style="background:' + getColorLines(lines[i]) + '"></i> ' +
+				            lines[i] + '<br>' ;
+				    }
+				    
+				    htmlLegendLines += "</div>";
+				    htmlLegendLines += "</td><td><p>Bus Stops</p>";
+				    htmlLegendLines += "<p><div class='make-switch' id='switch-b-stops' data-on='info' data-off='danger'>";
+    				htmlLegendLines += "<input type='checkbox' unchecked><br>";
+					htmlLegendLines += "</div></p>";
+				    htmlLegendLines += "</td></tr></table>";
+				    
+					menu_bus.append(htmlLegendLines);
+			    	menu_bus.find('#switch-b-lines').bootstrapSwitch();
+					menu_bus.find('#switch-b-stops').bootstrapSwitch();
+					menu_bus.find('#switch-b-lines').on('switch-change', function (e, data) {
+							    var $el = $(data.el)
+							      , value = data.value;
+							    console.log(e, $el, value);
+							    if (value == true){
+							    	map.addLayer(busLines);
+							    }else{
+							    	map.removeLayer(busLines);
+							    }
+							});	
+					menu_bus.find('#switch-b-stops').on('switch-change', function (e, data) {
+							    var $el = $(data.el)
+							      , value = data.value;
+							    console.log(e, $el, value);
+							    if (value == true){
+							    	map.addLayer(bustops);
+							    }else{
+							    	map.removeLayer(bustops);
+							    }
+							});
 		    	
 		    	var menu_alert = div.find('#menu-alert');
-		    	menu_alert.append("<input type='text' name='name' id='name' class='text ui-widget-content ui-corner-all' />");
-		    	
-		    	
-		    	//Quick application of event handlers to overall control
-		    	accordion.mouseover(controlEnter);
-		    	accordion.mouseout(controlLeave);
+		    		
+			
+				   	var selectAlertHTML = "<p><div class='make-switch' id='switch-alerts' data-on='info' data-off='danger'>";
+    					selectAlertHTML += "<input type='checkbox' unchecked>";
+						selectAlertHTML += "</div></p>";			
+			
+					selectAlertHTML += "<p><label>Choose period (days)</label><select name='alert-days' id='alert-days'>";
+				
+					for (var i=1; i < 8; i++) {
+						var option = "<option value='" +i+ "'>" +i+ "</option>";
+						selectAlertHTML += option;
+					};
+					
+					selectAlertHTML += "</select></p>";
+					
+					selectAlertHTML += "<p><input id='b-alert-days' type='submit' value='Execute'/></p>";
+					
+					menu_alert.append(selectAlertHTML);
+					
+					menu_alert.find('#b-alert-days').button().click(function( event ) {
+						//change_poi_category($('#pois-categories option:selected').val());
+						change_alerts($('#alert-days option:selected').val())
+						});
+
+					menu_alert.find('#switch-alerts').bootstrapSwitch();
+					menu_alert.find('#switch-alerts').on('switch-change', function (e, data) {
+							    var $el = $(data.el)
+							      , value = data.value;
+							    console.log(e, $el, value);
+							    if (value == true){
+							    	map.addLayer(alerts);
+							    }else{
+							    	map.removeLayer(alerts);
+							    }
+							});
+							
+					// Load in function: loadSelectMenus	
+					//menu_alert.find('#alert-days').selectmenu();
 				
 			};
 			
@@ -406,9 +641,15 @@
 		    return div;
 			};
 			
+			loadSelectMenus();
 			//legend.addTo(map);
 			
 	    }// end MapInit
+	    
+	    
 	</script>
+	
+	<!--<div class="ui-widget-overlay" id="overlay1"></div>-->
+	
 	
 {% endblock %}

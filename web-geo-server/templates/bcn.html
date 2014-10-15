@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 
-{% block title %}BCN{% endblock %}
+{% block load %}{% load leaflet_tags %}{% endblock %}
 
 {% block head %}
+	{% leaflet_js plugins="ALL" %}
+    {% leaflet_css plugins="ALL" %}
 	
+	<!--
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
     <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+   -->
     
     <style>
 		body {
@@ -41,25 +45,39 @@
 			margin-right: 8px;
 			opacity: 0.7;
 		}
+		
+		#logo {
+	        position: absolute;
+	        bottom: -0.7%;
+	        left: 5%;
+	        z-index: 1000;
+    	}
 	</style>
 	
-	<script src="http://code.jquery.com/jquery-1.10.1.min.js" type="application/javascript"></script>
+	<!-- jQuery UI  10 Basic --> 
+	<script src="../static/media/jquery-ui-1.10.3.custom/js/jquery-1.9.1.js" type="application/javascript"></script>
+	<link rel="stylesheet" href="../static/media/jquery-ui-1.10.3.basic/css/redmond/jquery-ui-1.10.3.custom.css">
+	<script src="../static/media/jquery-ui-1.10.3.basic/js/jquery-ui-1.10.3.custom.js" type="application/javascript"></script>
+	<!-- jQuery UI Pluguins -->
+	<link rel="stylesheet" href="../static/media/jquery-ui-1.10.3.custom/plugins/themes/base/jquery.ui.selectmenu.css">
+	<script src="../static/media/jquery-ui-1.10.3.custom/plugins/ui/jquery.ui.selectmenu.js" type="application/javascript"></script>   
+	<script src="../static/media/jquery-ui-1.10.3.custom/plugins/jQuery.Spin.js" type="application/javascript"></script>  
     
 {% endblock %}
+
+{% block title %}BCN OpenDAI Pilot{% endblock %}
 
 {% block body %}
 
 
-	
-	<div id="map"></div>
+	<div id="logo"><img src='../static/media/images/open-dai-logo-for-web-bottom.png' style="width:400px"/></div>
+	{% leaflet_map "map" %}
 	
 	<script type="text/javascript">
 	
-		// punts
-		var punt1 = L.marker([41.3850639, 2.1734035]).bindPopup('Punt 1');
-	    var punt2 = L.marker([41.41338061238166, 2.198638916015625]).bindPopup('Punt 2');
-	    var punts = L.layerGroup([punt1, punt2]);
-	    
+	function mapInit(map, bounds) {
+	
+		/*
 	    var minimal_style = 22677,
 	    	normal_style = 997,
 	    	midnight_style = 999;
@@ -73,48 +91,28 @@
 		var minimal = L.tileLayer(cloudmadeUrl, {key: kram_key, styleId: minimal_style, attribution: cloudmadeAttribution}),
 			normal = L.tileLayer(cloudmadeUrl, {key: kram_key, styleId: normal_style, attribution: cloudmadeAttribution}),
 			midnight  = L.tileLayer(cloudmadeUrl, {key: kram_key, styleId: midnight_style,   attribution: cloudmadeAttribution});
-		
-		var map = L.map('map', {
-			    center: new L.LatLng(41.3850639, 2.1734035),
-    			zoom: 12,
-    			layers: [minimal, punts]
+		*/
 			
-		});
+		// MapBox Tile Provider	
+		var mapboxeUrl = 'https://a.tiles.mapbox.com/v3/mplanaguma.ifj390dn/{z}/{x}/{y}.png',
+			mpaboxAttribution = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://www.mapbox.com/about/maps/">MapBox</a>';
 		
+		var mapboxTiles = L.tileLayer(mapboxeUrl,{attribution:mpaboxAttribution});
 		
-		/*
-		var map = L.map('map').setView([41.3850639, 2.1734035], 12);
+		// OSM Tile Provider	
+		var	osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+			osmAttribution = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>';
 		
-		L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
-			maxZoom: 18,
-			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
-		}).addTo(map);
-		*/
+		var osmTiles = L.tileLayer(osmUrl,{attribution:osmAttribution});
 		
-		/*
-		var map = L.map('map').setView([41.40239928924455,2.1941958212409003], 13);
-
-	    L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png', {
-	        key: '32186e05680a4c8dacc22302bc6265c1',
-	        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
-	        maxZoom: 18,
-	        styleId: 98834
-	    }).addTo(map);
-	    */
-	    
-	    // colors
-	    /*
-		function getColor(d) {
-		    return d > 1000 * 100 ? '#800026' :
-		           d > 500 * 100  ? '#BD0026' :
-		           d > 200 * 100  ? '#E31A1C' :
-		           d > 100 * 100  ? '#FC4E2A' :
-		           d > 50 * 100   ? '#FD8D3C' :
-		           d > 20 * 100   ? '#FEB24C' :
-		           d > 10 * 100   ? '#FED976' :
-		                      		'#FFEDA0';
-		}
-		*/
+		map.setView([41.3850639, 2.1734035], 12);
+		map.addLayer(mapboxTiles);
+		
+		// moving defalt zoom
+		$('.leaflet-control-zoom').hide()
+		var zoomControl = L.control.zoom({position:'bottomleft'});
+		zoomControl.addTo(map);
+		
 		function getColor(d) {
 		    return d >= 2 ? '#800026' :
 		           d >= 1 ? '#FC4E2A' :
@@ -134,24 +132,75 @@
 		
 	    // controls
 		var baseMaps = {
-		    "Minimal": minimal,
-		    "Normal": normal,
-		    "Night View": midnight
+		    "OSM": osmTiles,
+		    "MapBox": mapboxTiles
 		};
 		
 		var overlayMaps = {
-		    "Punts": punts
+		    //"Punts": punts
 		};
 		
-		var controlLayer = L.control.layers(baseMaps, overlayMaps);
+		var controlLayer = L.control.layers(baseMaps, overlayMaps, {position:'bottomright'});
 		controlLayer.addTo(map);
+/*		
+		// Menu Overlay
+		// ------------
+		var menu = L.control({position: 'topleft'});
+			
+			menu.onAdd = function (map) {
+
+		    	this._div = L.DomUtil.create('div', 'info menu');
+		    	this._div.innerHTML += "<div id='accordion'>"
+		    	+ "<h3>Pollution</h3><div id='menu-pollution'></div>"
+		    	+ "<h3>Traffic</h3><div id='menu-traffic'></div>"
+		    	//+ "<h3>Alerts</h3><div id='menu-alert'></div>"
+		    	+ "</div>";
+
+		    	this.update();
+		        //div.innerHTML += "<div style='background-color:orange;height:300px;width:100px;'>This div has height and width applied.</div>";
+		
+		    	return this._div;
+			};
+			
+			// HACK to disable the mouse control to the map over the menu
+			//Functions to ei'her disable (onmouseover) or enable (onmouseout) the map's dragging
+			function controlEnter(e) {
+			    map.dragging.disable();
+			    map.doubleClickZoom.disable();
+	
+			}
+			function controlLeave() {
+			    map.dragging.enable();
+			    map.doubleClickZoom.enable();
+			}
+			
+			// Fuction to add content on the menu
+			menu.update = function (props) {
+						
+			var div = $(this._div);		    
+	    	var accordion = div.children();
+	    	accordion.accordion({heightStyle: "content"});
+	    	
+	    	//Quick application of event handlers to overall control
+	    	accordion.mouseover(controlEnter);
+	    	accordion.mouseout(controlLeave);
+	    	
+	    	// Menus
+	    	var menu_pollution = div.find('#menu-pollution');
+	    	
+		   };
+		
+		menu.addTo(map);	
+		// -------------
+*/
 		
 		var neighborhoods = [];
 		var geoJsonLayer;
 
+		// GeoJson Pollution
 	    $.ajax({
 	        type: "GET",
-	        url: "bcn.geojson",
+	        url: "pollution_async.geojson",
 	        success: function(bcnMap, textStatus, jqXHR){
 	        	
 	            var features = bcnMap.features;
@@ -162,11 +211,17 @@
 	            	style: style,
 	            	onEachFeature: function(feature, layer){
 	            		// 
-	            		layer.bindPopup('District: ' + feature.properties.Pollution.district + ' \n ' +
-	            						 'so2: ' + feature.properties.Pollution.so2);
+	            		layer.bindPopup('District: ' + feature.properties.Pollution.district + ' <br> ' +
+	            						 'so2: ' + feature.properties.Pollution.so2+ ' <br> ' +
+	            						 'no2: ' + feature.properties.Pollution.no2+ ' <br> ' +
+	            						 'o3: ' + feature.properties.Pollution.o3+ ' <br> ' +
+	            						 'co: ' + feature.properties.Pollution.co+ ' <br> ' +
+	            						 'pm10: ' + feature.properties.Pollution.pm10+ ' \n ');
 	            	}});
 	            
 	            controlLayer.addOverlay(geoJsonLayer, "Pollution");
+	            map.addLayer(geoJsonLayer);
+	            
 	            //geoJsonLayer.addTo(map);
 	            //controlLayer.addTo(map);
 	            
@@ -195,13 +250,13 @@
 	        }
 	    });
 	    
-	    	var legend = L.control({position: 'bottomright'});
+	    	var legend = L.control({position: 'topright'});
 			
 			legend.onAdd = function (map) {
 
 		    var div = L.DomUtil.create('div', 'info legend'),
 		        grades = [0, 1, 2],
-		        labels = ["Optimal", "Regular", "Bad"];
+		        labels = ["Normal", "Poor", "Bad"];
 		
 		    // loop through our density intervals and generate a label with a colored square for each interval
 		    for (var i = 0; i < grades.length; i++) {
@@ -214,6 +269,57 @@
 			};
 			
 			legend.addTo(map);
+			
+			
+		// GeoJson Traffic
+		
+		function getColorTraffic(d) {
+		    return 	d >= 5 ? '#000000' :
+		    		d >= 4 ? '#8B0000' :
+		    		d >= 3 ? '#EE0000' :
+		    		d >= 2 ? '#EE4000' :
+		           	d >= 1 ? '#FFD700' :
+		                     '#99CC32' ;
+		}
+		
+		function styleTraffic(feature) {
+		    return {
+		        //fillColor: getColorTraffic(feature.properties.status),
+		        weight: 2,
+		        opacity: 1,
+		        color: getColorTraffic(feature.properties.status),
+		        //dashArray: '3',
+		        fillOpacity: 0.7
+		    };
+		}		
+		
+	    $.ajax({
+	        type: "GET",
+	        url: "traffic.geojson",
+	        success: function(bcnMap, textStatus, jqXHR){
+	        	
+	            var features = bcnMap.features;
+	            var polygons = [];
+	            
+	            //L.geoJson(bcnMap, {style: style}).addTo(map);
+	            var geoJsonLayer =  new L.geoJson(bcnMap, {
+	            	style: styleTraffic,
+	            	onEachFeature: function(feature, layer){
+	            		// 
+	            		layer.bindPopup('Status: ' + feature.properties.status + ' \n ' +
+	            						 'Forecat: ' + feature.properties.forecast);
+	            	}});
+	            
+	            controlLayer.addOverlay(geoJsonLayer, "Traffic");
+	            map.addLayer(geoJsonLayer);
+	
+	        },
+	        error: function(jqXHR, textStatus, error){
+	            console.log(error);
+	        }
+	    });
+	    
+	  } // InitMap  
 
 		
 	</script>

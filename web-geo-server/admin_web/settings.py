@@ -1,6 +1,10 @@
 # Django settings for opendai_lleida_web project.
 import os
 
+# Celery framwork
+import djcelery
+djcelery.setup_loader()
+
 # Project Path
 PROJECT_ROOT = os.path.dirname(__file__) #gets directory settings is in
 
@@ -8,7 +12,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+     ('Marc Planaguma', 'mplanaguma@bdigital.org'),
 )
 
 MANAGERS = ADMINS
@@ -26,15 +30,19 @@ DATABASES = {
 
 #SPATIALITE_LIBRARY_PATH='/Library/Frameworks/SQLite3.framework/SQLite3'
 
+# Hosts/domain names that are valid for this site; required if DEBUG is False
+# See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
+ALLOWED_HOSTS = ['lleida.opendai.eu', 'bcn.opendai.eu', '0.0.0.0', '127.0.0.1']
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Europe/Andorra'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ca-ES'
 
 SITE_ID = 1
 
@@ -131,6 +139,9 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     # 3rd party Apps
     'leaflet',
+    # Delery scheduling
+    'kombu.transport.django',
+    'djcelery',
     #'djgeojson',
     # internal Apps
     'opendai_bcn_web',
@@ -146,8 +157,20 @@ LEAFLET_CONFIG = {
             'js':  os.path.join(STATIC_URL, 'media/js/leaflet.awesome-markers.min.js')
             }
         },
-
+    'RESET_VIEW': False
 }
+
+# Celery Broker
+#BROKER_URL = 'amqp://guest:guest@localhost:5672/' #RabbiMQ
+#BROKER_URL = 'django://' #Django ORM
+#BROKER_HOST = "localhost"
+#BROKER_PORT = 5672
+#BROKER_USER = "admin"
+#BROKER_PASSWORD = "20272027"
+#BROKER_VHOST = "testhost"
+#CELERY_SEND_TASK_SENT_EVENT = True
+CELERY_ALWAYS_EAGER = True
+CELERY_TIMEZONE = TIME_ZONE
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
@@ -177,3 +200,78 @@ LOGGING = {
         },
     }
 }
+'''
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '[%(levelname)s %(asctime)s %(thread)d] %(module)s:%(funcName)s - %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+        },
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+        }
+    },
+    'handlers': {
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler'
+        },    
+        'null': {
+            'level': 'DEBUG',
+            'class': 'django.utils.log.NullHandler'
+        }, 
+        'console':{
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+        'logfile': {
+            'level':'INFO',
+            'filters': ['require_debug_false'],
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename' : '/var/log/opendai/django/django.log',
+            'maxBytes': 1024*1024*50, # 50MB
+            'backupCount': 5,
+            'formatter': 'verbose',
+        }        
+    },
+    'loggers': {
+        'urbevo_api': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': False
+        },
+        'urbevo_server': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': False
+        },
+        'urbevo_ui': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': False
+        },                
+        'celery': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': True
+        },
+        'django': {
+            'handlers': ['console', 'logfile'],
+            'level': 'INFO',
+            'propagate': True
+        },
+        'django.request': {
+            'handlers': ['mail_admins'],
+            'level': 'ERROR',
+            'propagate': True,
+        }
+    }
+}
+'''
