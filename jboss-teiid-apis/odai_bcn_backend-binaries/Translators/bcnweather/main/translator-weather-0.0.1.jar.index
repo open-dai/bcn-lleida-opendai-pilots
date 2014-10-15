@@ -1,0 +1,11 @@
+
+META-INF/maven
+org/teiid/translator/bcnweather
+org/teiid/translator/yahoo
+META-INF/services
+org/teiid/translator
+org/teiid
+org
+META-INF
+META-INF/maven/org.jboss.teiid.connectors/translator-weather
+META-INF/maven/org.jboss.teiid.connectors
