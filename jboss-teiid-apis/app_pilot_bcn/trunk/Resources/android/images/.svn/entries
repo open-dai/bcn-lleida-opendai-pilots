@@ -1,64 +1,0 @@
-10
-
-dir
-324
-svn+ssh://mplanaguma@repositori.bdigital.org/opt/repositorio/seguridad/opendai/app_pilot_bcn/trunk/Resources/android/images
-svn+ssh://mplanaguma@repositori.bdigital.org/opt/repositorio/seguridad/opendai
-
-
-
-2013-10-07T14:09:01.545458Z
-253
-dsolans
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-b138095a-2169-44bf-9a76-6aedfe8dcf1b
-
-res-notlong-port-ldpi
-dir
-
-res-mdpi
-dir
-
-res-notlong-port-mdpi
-dir
-
-res-long-land-hdpi
-dir
-
-res-notlong-land-hdpi
-dir
-
-res-long-land-ldpi
-dir
-
-res-notlong-land-ldpi
-dir
-
-res-long-port-hdpi
-dir
-
-res-notlong-land-mdpi
-dir
-
-res-hdpi
-dir
-
-res-notlong-port-hdpi
-dir
-
-res-long-port-ldpi
-dir
-
