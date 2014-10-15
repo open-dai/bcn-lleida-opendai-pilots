@@ -1,0 +1,14 @@
+K 10
+svn:ignore
+V 50
+build
+
+.settings
+
+build.log
+
+.project
+
+.gitignore
+
+END
