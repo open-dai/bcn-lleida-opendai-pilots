@@ -1,64 +1,0 @@
-10
-
-dir
-252
-svn+ssh://mplanaguma@172.20.10.42/opt/repositorio/seguridad/opendai/app_pilot_bcn/trunk/Resources/android/images
-svn+ssh://mplanaguma@172.20.10.42/opt/repositorio/seguridad/opendai
-
-
-
-2013-08-01T11:30:56.856442Z
-211
-dsolans
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-b138095a-2169-44bf-9a76-6aedfe8dcf1b
-
-res-notlong-port-ldpi
-dir
-
-res-mdpi
-dir
-
-res-notlong-port-mdpi
-dir
-
-res-long-land-hdpi
-dir
-
-res-notlong-land-hdpi
-dir
-
-res-long-land-ldpi
-dir
-
-res-notlong-land-ldpi
-dir
-
-res-long-port-hdpi
-dir
-
-res-notlong-land-mdpi
-dir
-
-res-hdpi
-dir
-
-res-notlong-port-hdpi
-dir
-
-res-long-port-ldpi
-dir
-
